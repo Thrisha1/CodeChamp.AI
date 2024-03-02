@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 // CodeEditor.jsx
+>>>>>>> cd1b6e05652cf0621d852f46abc48d098800f524
 import React, { useState } from 'react';
 
 export default function CodeEditor({ getCode }) {
@@ -37,7 +40,26 @@ export default function CodeEditor({ getCode }) {
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
     console.log(codeData);
-    getCode(codeData) // Log the codeData object
+    getCode(codeData); // Log the codeData object
+    setShowContent(true); // Show the additional content after submission
+  };
+
+  // Function to hide the additional content
+  const hideContent = () => {
+    setShowContent(false);
+    setError(null); // Clear previous error
+    setLoading(true); // Set loading state
+
+    try {
+      console.log(codeData);
+      await getCode(codeData); // Log the codeData object
+      setSuccessMessage("Code submitted successfully!"); // Set success message
+    } catch (error) {
+      console.error('Error:', error);
+      setError(error.message); // Set error state
+    } finally {
+      setLoading(false); // Reset loading state
+    }
   };
 
   return (
