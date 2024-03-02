@@ -1,24 +1,27 @@
-"use client";
+"use client"
 import React, { useState } from 'react';
 
-export default function CodeEditor() {
+export default function CodeEditor({getCode}) {
   // State variables
-  const [language, setLanguage] = useState('c++');
-  const [code, setCode] = useState('');
-  const [defaultInput, setDefaultInput] = useState('123');
-  const [darkMode, setDarkMode] = useState(false); // Set default dark mode to true
+  const [codeData, setcodeData] = useState({
+    language: "java",
+    code: "",
+    input: "123"
+  });
+
+  const [darkMode, setDarkMode] = useState(false); // Set default dark mode to false
 
   // Event handlers
   const handleLanguageChange = (event) => {
-    setLanguage(event.target.value);
+    setcodeData({ ...codeData, language: event.target.value });
   };
 
   const handleCodeChange = (event) => {
-    setCode(event.target.value);
+    setcodeData({ ...codeData, code: event.target.value });
   };
 
   const handleDefaultInputChange = (event) => {
-    setDefaultInput(event.target.value);
+    setcodeData({ ...codeData, input: event.target.value });
   };
 
   // Function to toggle dark mode
@@ -26,21 +29,11 @@ export default function CodeEditor() {
     setDarkMode(!darkMode);
   };
 
-  // Function to log the collected information and reset values
-  const handleSubmit = () => {
-    const formData = {
-      language: language,
-      code: code,
-      defaultInput: defaultInput
-    };
-    console.log(formData);
-  };
-
-  // Function to reset state variables to default values
-  const handleReset = () => {
-    setLanguage('c++');
-    setCode('');
-    setDefaultInput('');
+  // Function to log the collected information and prevent default form submission
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+    console.log(codeData);
+    getCode(codeData) // Log the codeData object
   };
 
   return (
@@ -62,29 +55,27 @@ export default function CodeEditor() {
           {/* Language dropdown */}
           <div>
             <label htmlFor="lan" className="mr-2">Language:</label>
-            <select name="lan" id="lan" className="border border-gray-300 rounded-md px-4 py-1 mr-8" onChange={handleLanguageChange} value={language}>
+            <select name="lan" id="lan" className="border border-gray-300 rounded-md px-4 py-1 mr-8" onChange={handleLanguageChange} value={codeData.language}>
               <option value="c++">C++</option>
               <option value="java">Java</option>
               <option value="python">Python</option>
             </select>
           </div>
-          <img onClick={toggleDarkMode}  src='/eye.png' alt='icon' className='w-8 '>
-          </img>
+          <img onClick={toggleDarkMode} src='/eye.png' alt='icon' className='w-8 ' />
         </div>
         {/* Code editor textarea */}
         <textarea
           className={`w-full h-[500px] border border-gray-300 p-4 ${darkMode ? 'bg-black text-white' : 'bg-white text-black'} shadow-xl`}
           placeholder="Enter your code here..."
           onChange={handleCodeChange}
-          value={code}
+          value={codeData.code}
         ></textarea>
         {/* Default input textarea */}
-        
         <div className="absolute bottom-0 right-0 mb-16 mr-4">
           <button onClick={handleSubmit} className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
             Run
           </button>
-          <button onClick={handleReset} className="ml-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600">
+          <button className="ml-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600">
             Submit
           </button>
         </div>
