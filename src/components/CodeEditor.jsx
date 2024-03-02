@@ -34,8 +34,10 @@ export default function CodeEditor() {
       defaultInput: defaultInput
     };
     console.log(formData);
+  };
 
-    // Reset values
+  // Function to reset state variables to default values
+  const handleReset = () => {
     setLanguage('c++');
     setCode('');
     setDefaultInput('');
@@ -82,7 +84,7 @@ export default function CodeEditor() {
           <button onClick={handleSubmit} className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
             Run
           </button>
-          <button className="ml-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600">
+          <button onClick={handleReset} className="ml-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600">
             Submit
           </button>
         </div>
