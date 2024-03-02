@@ -1,3 +1,4 @@
+// CodeEditor.jsx
 import React, { useState } from 'react';
 
 export default function CodeEditor({ getCode }) {
@@ -7,6 +8,9 @@ export default function CodeEditor({ getCode }) {
     code: "",
     input: "123"
   });
+  const [loading, setLoading] = useState(false); // Loading state
+  const [error, setError] = useState(null); // Error state
+  const [successMessage, setSuccessMessage] = useState(""); // Success message state
 
   const [darkMode, setDarkMode] = useState(false); // Set default dark mode to false
   const [showContent, setShowContent] = useState(false); // State variable to control the visibility of the additional content
@@ -29,17 +33,11 @@ export default function CodeEditor({ getCode }) {
     setDarkMode(!darkMode);
   };
 
-  // Function to log the collected information and prevent default form submission
-  const handleSubmit = (event) => {
+  // Function to handle form submission
+  const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
     console.log(codeData);
-    getCode(codeData); // Log the codeData object
-    setShowContent(true); // Show the additional content after submission
-  };
-
-  // Function to hide the additional content
-  const hideContent = () => {
-    setShowContent(false);
+    getCode(codeData) // Log the codeData object
   };
 
   return (
@@ -79,11 +77,13 @@ export default function CodeEditor({ getCode }) {
         {/* Default input textarea */}
         <div className="absolute bottom-0 right-0 mb-16 mr-4">
           <button onClick={handleSubmit} className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-            Run
+            {loading ? 'Loading...' : 'Run'} {/* Show loading text when loading */}
           </button>
           <button className="ml-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600">
             Submit
           </button>
+          {error && <div className="bg-red-100 p-4 mt-2 border border-red-500 rounded-md">{error}</div>} {/* Display error message */}
+          {successMessage && <div className="bg-green-100 p-4 mt-2 border border-green-500 rounded-md">{successMessage}</div>} {/* Display success message */}
         </div>
         {/* Additional content */}
         {showContent && (
