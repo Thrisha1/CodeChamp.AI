@@ -1,27 +1,27 @@
-"use client"
 import React, { useState } from 'react';
 
-export default function CodeEditor({getCode}) {
+export default function CodeEditor({ getCode }) {
   // State variables
-  const [codeData, setcodeData] = useState({
+  const [codeData, setCodeData] = useState({
     language: "java",
     code: "",
     input: "123"
   });
 
   const [darkMode, setDarkMode] = useState(false); // Set default dark mode to false
+  const [showContent, setShowContent] = useState(false); // State variable to control the visibility of the additional content
 
   // Event handlers
   const handleLanguageChange = (event) => {
-    setcodeData({ ...codeData, language: event.target.value });
+    setCodeData({ ...codeData, language: event.target.value });
   };
 
   const handleCodeChange = (event) => {
-    setcodeData({ ...codeData, code: event.target.value });
+    setCodeData({ ...codeData, code: event.target.value });
   };
 
   const handleDefaultInputChange = (event) => {
-    setcodeData({ ...codeData, input: event.target.value });
+    setCodeData({ ...codeData, input: event.target.value });
   };
 
   // Function to toggle dark mode
@@ -33,7 +33,13 @@ export default function CodeEditor({getCode}) {
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent default form submission behavior
     console.log(codeData);
-    getCode(codeData) // Log the codeData object
+    getCode(codeData); // Log the codeData object
+    setShowContent(true); // Show the additional content after submission
+  };
+
+  // Function to hide the additional content
+  const hideContent = () => {
+    setShowContent(false);
   };
 
   return (
@@ -79,6 +85,20 @@ export default function CodeEditor({getCode}) {
             Submit
           </button>
         </div>
+        {/* Additional content */}
+        {showContent && (
+          <div className="absolute left-0 bottom-0 w-full p-4 bg-white border border-gray-400 rounded-b-lg">
+            <div className="flex justify-between items-center">
+              <h2 className="text-xl font-semibold">Submission Result</h2>
+              <button onClick={hideContent} className="text-gray-600 hover:text-gray-800 focus:outline-none">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <p>Here is the result of your submission.</p>
+          </div>
+        )}
       </div>
     </main>
   );
