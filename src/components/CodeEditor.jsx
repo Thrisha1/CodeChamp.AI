@@ -1,15 +1,12 @@
-<<<<<<< HEAD
-=======
-// CodeEditor.jsx
->>>>>>> cd1b6e05652cf0621d852f46abc48d098800f524
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 
 export default function CodeEditor({ getCode }) {
   // State variables
   const [codeData, setCodeData] = useState({
     language: "java",
     code: "",
-    input: "123"
+    input: "123",
   });
   const [loading, setLoading] = useState(false); // Loading state
   const [error, setError] = useState(null); // Error state
@@ -45,7 +42,7 @@ export default function CodeEditor({ getCode }) {
   };
 
   // Function to hide the additional content
-  const hideContent = () => {
+  const hideContent = async () => {
     setShowContent(false);
     setError(null); // Clear previous error
     setLoading(true); // Set loading state
@@ -55,7 +52,7 @@ export default function CodeEditor({ getCode }) {
       await getCode(codeData); // Log the codeData object
       setSuccessMessage("Code submitted successfully!"); // Set success message
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
       setError(error.message); // Set error state
     } finally {
       setLoading(false); // Reset loading state
@@ -69,9 +66,10 @@ export default function CodeEditor({ getCode }) {
           {/* Problem statement */}
           <h2 className="text-xl font-semibold mb-4">Problem Statement</h2>
           <p>
-            Here goes the problem statement... Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Atque enim architecto sapiente dolor hic nemo, numquam obcaecati eveniet? Non blanditiis error,
-            neque officiis eos eius eum commodi doloribus porro quia.
+            Here goes the problem statement... Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Atque enim architecto sapiente dolor
+            hic nemo, numquam obcaecati eveniet? Non blanditiis error, neque
+            officiis eos eius eum commodi doloribus porro quia.
           </p>
         </div>
       </div>
@@ -80,41 +78,84 @@ export default function CodeEditor({ getCode }) {
           {/* Button to toggle dark mode */}
           {/* Language dropdown */}
           <div>
-            <label htmlFor="lan" className="mr-2">Language:</label>
-            <select name="lan" id="lan" className="border border-gray-300 rounded-md px-4 py-1 mr-8" onChange={handleLanguageChange} value={codeData.language}>
+            <label htmlFor="lan" className="mr-2">
+              Language:
+            </label>
+            <select
+              name="lan"
+              id="lan"
+              className="border border-gray-300 rounded-md px-4 py-1 mr-8"
+              onChange={handleLanguageChange}
+              value={codeData.language}
+            >
               <option value="c++">C++</option>
               <option value="java">Java</option>
               <option value="python">Python</option>
             </select>
           </div>
-          <img onClick={toggleDarkMode} src='/eye.png' alt='icon' className='w-8 ' />
+          <img
+            onClick={toggleDarkMode}
+            src="/eye.png"
+            alt="icon"
+            className="w-8 "
+          />
         </div>
         {/* Code editor textarea */}
         <textarea
-          className={`w-full h-[500px] border border-gray-300 p-4 ${darkMode ? 'bg-black text-white' : 'bg-white text-black'} shadow-xl`}
+          className={`w-full h-[500px] border border-gray-300 p-4 ${
+            darkMode ? "bg-black text-white" : "bg-white text-black"
+          } shadow-xl`}
           placeholder="Enter your code here..."
           onChange={handleCodeChange}
           value={codeData.code}
         ></textarea>
         {/* Default input textarea */}
         <div className="absolute bottom-0 right-0 mb-16 mr-4">
-          <button onClick={handleSubmit} className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-            {loading ? 'Loading...' : 'Run'} {/* Show loading text when loading */}
+          <button
+            onClick={handleSubmit}
+            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+          >
+            {loading ? "Loading..." : "Run"}{" "}
+            {/* Show loading text when loading */}
           </button>
           <button className="ml-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600">
             Submit
           </button>
-          {error && <div className="bg-red-100 p-4 mt-2 border border-red-500 rounded-md">{error}</div>} {/* Display error message */}
-          {successMessage && <div className="bg-green-100 p-4 mt-2 border border-green-500 rounded-md">{successMessage}</div>} {/* Display success message */}
+          {error && (
+            <div className="bg-red-100 p-4 mt-2 border border-red-500 rounded-md">
+              {error}
+            </div>
+          )}{" "}
+          {/* Display error message */}
+          {successMessage && (
+            <div className="bg-green-100 p-4 mt-2 border border-green-500 rounded-md">
+              {successMessage}
+            </div>
+          )}{" "}
+          {/* Display success message */}
         </div>
         {/* Additional content */}
         {showContent && (
           <div className="absolute left-0 bottom-0 w-full p-4 bg-white border border-gray-400 rounded-b-lg">
             <div className="flex justify-between items-center">
               <h2 className="text-xl font-semibold">Submission Result</h2>
-              <button onClick={hideContent} className="text-gray-600 hover:text-gray-800 focus:outline-none">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <button
+                onClick={hideContent}
+                className="text-gray-600 hover:text-gray-800 focus:outline-none"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
