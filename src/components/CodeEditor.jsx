@@ -1,13 +1,13 @@
 "use client";
 import React, { useState, useContext, useEffect } from "react";
-import { ProblemContext } from "./Question";
+import { ProblemContext } from "@/app/layout";
+import syllabus_dsa from "../../syllabus_dsa/dsa.json"
 
-
-export default function CodeEditor({ getCode, Response }) {
-    console.log("response", Response)
-    // const problemContext = useContext(ProblemContext);
-    let { x } = useContext(ProblemContext)
-    console.log("key", x)
+export default function CodeEditor({ getCode, result }) {
+    console.log("response", syllabus_dsa)
+    const {contextValues} = useContext(ProblemContext);
+    console.log("contextValues", contextValues)
+    console.log("result", result)
     // State variables
     const [codeData, setCodeData] = useState({
         language: "java",
@@ -82,7 +82,7 @@ export default function CodeEditor({ getCode, Response }) {
                     {/* Problem statement */}
                     <h2 className="text-xl font-semibold mb-4">Problem Statement</h2>
                     <p>
-                        {x}
+                        {contextValues.question}
                     </p>
                 </div>
             </div>
@@ -171,7 +171,11 @@ export default function CodeEditor({ getCode, Response }) {
                                 </svg>
                             </button>
                         </div>
-                        <p>{Response?.output}</p>
+                        {
+                            result.error && (
+                                <p>Error : {result?.output}</p>
+                            )
+                        }
                     </div>
                 )}
             </div>
