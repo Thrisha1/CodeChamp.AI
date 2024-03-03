@@ -2,8 +2,8 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="antialiased bg-blue-900">
-      <nav className="px-4 lg:px-6 py-2.5 bg-dark-blue">
+    <header className="antialiased bg-blue-400">
+      <nav className="px-4 lg:px-6 py-2.5 bg-dark-blue items-center">
         <div className="flex flex-wrap justify-between items-center">
           <div className="flex justify-between items-center">
             {/* Logo */}
