@@ -1,5 +1,5 @@
 export default function page(){
     return(
-        <div>editor</div>
+        <div className="text-5xl text-red-500">editor</div>
     )
 }
