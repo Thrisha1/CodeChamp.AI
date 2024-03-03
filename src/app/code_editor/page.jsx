@@ -5,15 +5,14 @@ import CodeEditor from "@/components/CodeEditor";
 import  Navbar  from "@/components/Navbar";
 import {useRouter} from "next/navigation"
 
-export default function page({params}) {
+export default function page() {
 
-    // const [ Response, setResponse ] = useState()
-    let response = {};
-    console.log("params",params.code_editor)
+    const [ Response, setResponse ] = useState({})
+    // let response = {};
 
     const getCode = async (a) => {
         console.log("received data from client", a)
-        const res = await fetch("http://localhost:3001/api/codeEditor", {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/codeEditor`, {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             mode: "cors", // no-cors, *cors, same-origin
             cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -26,7 +25,7 @@ export default function page({params}) {
         try {
             const responseData = await res.json(); // Parse response as JSON
             const result = JSON.parse(responseData);
-            response = result
+            setResponse(result)
             console.log("result", response)
         } catch (error) {
             console.error("Error parsing response:", error);
@@ -37,7 +36,7 @@ export default function page({params}) {
     return (
         <div>
             <Navbar/>
-            <CodeEditor getCode={getCode} result={response}/>
+            <CodeEditor getCode={getCode} result={Response}/>
         </div>
     )
 }
