@@ -9,7 +9,6 @@ export default async function page() {
             <div >
 
                 <Questionnaire questions={data}/>
-
             </div>
         </div>
 

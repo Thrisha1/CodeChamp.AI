@@ -14,7 +14,7 @@ const RatingPage = () => {
       setLikeCount(likeCount + 1);
       setLastClickedIndex(index);
     } else {
-      // Reset the counter if the clicked index is not consecutive
+      
       setLikeCount(0);
       setLastClickedIndex(-1);
     }
