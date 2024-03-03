@@ -1,23 +1,43 @@
 "use client"
 
+import {useState} from "react"
 import CodeEditor from "@/components/CodeEditor";
 import  Navbar  from "@/components/Navbar";
 
-export default function page(){
+export default function page() {
 
-    const data = async () =>{
-        const res = await fetch('http://localhost:3000/api/codeEditor')
-        console.log("testing",res.json())
-    }
-    data();
+    // const [ Response, setResponse ] = useState()
+    let response = {};
 
-    const getCode = (a) => {
-        console.log("received data from client",a)
+    const getCode = async (a) => {
+        console.log("received data from client", a)
+        const res = await fetch("http://localhost:3001/api/codeEditor", {
+            method: "POST", // *GET, POST, PUT, DELETE, etc.
+            mode: "cors", // no-cors, *cors, same-origin
+            cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+            headers: {
+                "Content-Type": "application/json",
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: JSON.stringify(a)
+        })
+        try {
+            const responseData = await res.json(); // Parse response as JSON
+            const result = JSON.parse(responseData);
+            response = result
+            console.log("result", response)
+        } catch (error) {
+            console.error("Error parsing response:", error);
+            // Handle error if response cannot be parsed as JSON
+        }
+
     }
-    return(
+    return (
         <div>
             <Navbar/>
-            <CodeEditor getCode={getCode} />
+            <CodeEditor getCode={getCode} result={response}/>
         </div>
     )
 }
+
+

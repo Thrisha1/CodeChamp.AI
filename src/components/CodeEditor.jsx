@@ -15,14 +15,14 @@ export default function CodeEditor({ getCode }) {
 
   const [darkMode, setDarkMode] = useState(false); // Set default dark mode to false
 
-  // Event handlers
-  const handleLanguageChange = (event) => {
-    setCodeData({ ...codeData, language: event.target.value });
-  };
+    // Event handlers
+    const handleLanguageChange = (event) => {
+        setCodeData({ ...codeData, language: event.target.value });
+    };
 
-  const handleCodeChange = (event) => {
-    setCodeData({ ...codeData, code: event.target.value });
-  };
+    const handleCodeChange = (event) => {
+        setCodeData({ ...codeData, code: event.target.value });
+    };
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // Prevent default form submission behavior

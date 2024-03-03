@@ -1,9 +1,16 @@
+"use client"
+
 // pages/index.js
-"use client";
+
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, createContext } from 'react';
+import dsa from "../../syllabus_dsa/dsa.json";
+
+// Create the context outside of the component
+export const ProblemContext = createContext("");
 
 const Question = () => {
+
   const [showSubCardIndex, setShowSubCardIndex] = useState(null);
 
   const toggleSubCard = (index) => {
@@ -14,28 +21,45 @@ const Question = () => {
     <div className="container w-full p-5  ">
       <h1 className="text-3xl font-bold mb-8">Topics</h1>
       <div className="flex flex-wrap">
-        <Card title="Basic" index={0} prompt1="Prompt 1 for Basic" prompt2="Prompt 2 for Basic" showSubCardIndex={showSubCardIndex} toggleSubCard={toggleSubCard} />
-        <Card title="Array" index={1} prompt1="Prompt 1 for Array" prompt2="Prompt 2 for Array" showSubCardIndex={showSubCardIndex} toggleSubCard={toggleSubCard} />
-        <Card title="String" index={2} prompt1="Prompt 1 for String" prompt2="Prompt 2 for String" showSubCardIndex={showSubCardIndex} toggleSubCard={toggleSubCard} />
-        <Card title="Linked List" index={3} prompt1="Prompt 1 for Linked List" prompt2="Prompt 2 for Linked List" showSubCardIndex={showSubCardIndex} toggleSubCard={toggleSubCard} />
-        <Card title="Recursion" index={4} prompt1="Prompt 1 for Recursion" prompt2="Prompt 2 for Recursion" showSubCardIndex={showSubCardIndex} toggleSubCard={toggleSubCard} />
+        {Object.keys(dsa).map((topic, index) => (
+          <Card key={index} title={dsa[topic].heading} index={index} subtopics={dsa[topic]} showSubCardIndex={showSubCardIndex} toggleSubCard={toggleSubCard} />
+        ))}
       </div>
     </div>
   );
 };
 
-const Card = ({ title, index, prompt1, prompt2, showSubCardIndex, toggleSubCard }) => {
-  const startIndex = index * 2 + 1;
-  const endIndex = startIndex + 1;
-
+const Card = ({ title, index, subtopics, showSubCardIndex, toggleSubCard }) => {
   return (
     <div className="w-full p-4">
       <div className="bg-gray-200 p-4 rounded-lg shadow-md" onClick={() => toggleSubCard(index)}>
         <h2 className="text-lg font-semibold">{title}</h2>
         {showSubCardIndex === index && (
           <>
-            <SubCard level={startIndex} prompt={prompt1} />
-            <SubCard level={endIndex} prompt={prompt2} />
+            {subtopics.beginner && subtopics.beginner.map((subtopic, subIndex) => (
+              <SubCard key={subIndex}
+                level="Beginner"
+                title={subtopic.title}
+                question={subtopic.question}
+                input={subtopic.input}
+                output={subtopic.output} />
+            ))}
+            {subtopics.intermediate && subtopics.intermediate.map((subtopic, subIndex) => (
+              <SubCard key={subIndex}
+                level="Intermediate"
+                title={subtopic.title}
+                question={subtopic.question}
+                input={subtopic.input}
+                output={subtopic.output} />
+            ))}
+            {subtopics.advanced && subtopics.advanced.map((subtopic, subIndex) => (
+              <SubCard key={subIndex}
+                level="Advanced"
+                title={subtopic.title}
+                question={subtopic.question}
+                input={subtopic.input}
+                output={subtopic.output} />
+            ))}
           </>
         )}
       </div>
@@ -43,19 +67,23 @@ const Card = ({ title, index, prompt1, prompt2, showSubCardIndex, toggleSubCard 
   );
 };
 
-const SubCard = ({ level, prompt }) => {
+const SubCard = ({ level, title, question, input, output }) => {
+  // Use the context provider to wrap the content of SubCard
+    let x = "hi";
   return (
-    <div className="w-full p-4 mt-4">
-      <div className="bg-white p-4 rounded-lg shadow-md">
-        <h2 className="text-lg font-semibold">Prompt: {prompt}</h2>
-        <h2 className="text-lg font-semibold">Level: {level}</h2>
-        <Link href='/code-editor'>
-          <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-            Solve
-          </button>
-        </Link>
+    <ProblemContext.Provider value={{x}}>
+      <div className="w-full p-4 mt-4">
+        <div className="bg-white p-4 rounded-lg shadow-md">
+          <h2 className="text-lg font-semibold">Level: {level}</h2>
+          <h2 className="text-lg font-semibold">Title: {title}</h2>
+          <Link href='/code-editor'>
+            <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+              Solve
+            </button>
+          </Link>
+        </div>
       </div>
-    </div>
+    </ProblemContext.Provider>
   );
 };
 
