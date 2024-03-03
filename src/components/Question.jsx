@@ -11,7 +11,7 @@ const Question = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container w-full p-5  ">
       <h1 className="text-3xl font-bold mb-8">Topics</h1>
       <div className="flex flex-wrap">
         <Card title="Basic" index={0} prompt1="Prompt 1 for Basic" prompt2="Prompt 2 for Basic" showSubCardIndex={showSubCardIndex} toggleSubCard={toggleSubCard} />
