@@ -7,7 +7,7 @@ export default function page(){
 
     const data = async () =>{
         const res = await fetch('http://localhost:3000/api/codeEditor')
-        console.log("testing",res.json())
+        // console.log("testing",res.json())
     }
     data();
 
