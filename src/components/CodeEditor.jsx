@@ -12,7 +12,7 @@ export default function CodeEditor({ getCode, result }) {
     const [codeData, setCodeData] = useState({
         language: "java",
         code: "",
-        input: "153",
+        input: contextValues.input,
     });
     const [Probdata, setProbData] = useState(null);
     const [loading, setLoading] = useState(false); // Loading state

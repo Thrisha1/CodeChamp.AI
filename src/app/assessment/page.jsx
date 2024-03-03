@@ -18,7 +18,7 @@ export default async function page() {
 
 // fetch data from /api/gemini using getData function
 async function getData() {
-    const res = await fetch("http://localhost:3001/api/questions-api")
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/questions-api`)
     const responseData = await res.json()
     return responseData;
 }

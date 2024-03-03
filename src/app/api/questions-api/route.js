@@ -16,12 +16,13 @@ export async function GET() {
 
     try {
         const result = await model.generateContent(prompt);
-        const response = await result.response;
+        const response = result.response;
 
         const text = response.text();
-        // console.log("text data : +", text);
+        console.log("text data : +", text);
 
         const questions = await parseQuestions(text);
+        console.log("questions data : +", questions);
 
         return Response.json(questions);
 
@@ -34,7 +35,7 @@ export async function GET() {
 async function parseQuestions(responseText) {
     try {
         // Remove leading and trailing whitespace, including backticks if any
-        const trimmedResponseText = responseText.trim().replace(/^```json\n/, "").replace(/\n```$/, "");
+        const trimmedResponseText = responseText.trim().replace(/^```json\n/, "").replace(/^```\n/, "").replace(/^```JSON\n/, "").replace(/\n```$/, "");
 
         // // Parse the trimmed response text as JSON
         let inter_result =  JSON.parse(trimmedResponseText);
