@@ -3,6 +3,7 @@
         "heading": "Basics",
         "beginner": [
             {
+                "id": "1",
                 "title": "largest element",
                 "question": "Given an array ‘arr’ of size ‘n’ find the largest element in the array.",
                 "input": {
@@ -13,6 +14,7 @@
                 "explanation": "From the array {1, 2, 3, 4, 5}, the largest element is 5."
             },
             {
+                "id": "2",
                 "title": "second smalles and largest",
                 "question": "You have been given an array ‘a’ of ‘n’ unique non-negative integers. Find the second largest and second smallest element from the array. Return the two elements (second largest and second smallest) as another array of size 2.",
                 "input": {
@@ -25,6 +27,7 @@
         ],
         "intermediate": [
             {
+                "id": "3",
                 "title": "shift the element",
                 "question": "Given an array 'arr' containing 'n' elements, rotate this array left once and return it. Rotating the array left by one means shifting all elements by one place to the left and moving the first element to the last position in the array.",
                 "input": {
@@ -35,6 +38,7 @@
                 "explanation": "We moved the 2nd element to the 1st position, 3rd element to the 2nd position, 4th element to the 3rd position, 5th element to the 4th position, and moved the 1st element to the 5th position."
             },
             {
+                "id": "4",
                 "title": "Remove Duplicates from Sorted Array",
                 "question": "You are given a sorted integer array 'arr' of size 'n'. Remove the duplicates from the array such that each element appears only once. Return the length of this new array. Note: Do not allocate extra space for another array. You need to do this by modifying the given input array in place with O(1) extra memory.",
                 "input": {
@@ -47,6 +51,7 @@
         ],
         "advanced": [
             {
+                "id": "5",
                 "title": "Best Time to Buy and Sell Stock",
                 "question": "You are given an array/list 'prices' where the elements of the array represent the prices of the stock as they were yesterday and indices of the array represent minutes. Your task is to find and return the maximum profit you can make by buying and selling the stock. You can buy and sell the stock only once. Note: You can’t sell without buying first. For example, for the given array [2, 100, 150, 120], the maximum profit can be achieved by buying the stock at minute 0 when its price is Rs. 2 and selling it at minute 2 when its price is Rs. 150. So, the output will be 148.",
                 "input": {
@@ -56,6 +61,7 @@
                 "explanation": "For the given input array [1, 2, 3, 4], it’s optimal to buy the stock at minute 0 and sell it at minute 3 to get a maximum profit of 3."
             },
             {
+                "id": "6",
                 "title": "Subarray Sum Equals K",
                 "question": "You are given an integer array 'arr' of size 'N' and an integer 'K'. Your task is to find the total number of subarrays of the given array whose sum of elements is equal to k. A subarray is defined as a contiguous block of elements in the array.",
                 "input": {

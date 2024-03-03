@@ -1,75 +1,74 @@
 "use client"
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useForm } from 'react-hook-form';
 
 export default function Questionnaire({ questions }) {
-    const [type, setType] = useState('Technical'); // Set initial type to Technical
-    const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0); // Keep track of current category index
+    const { register, handleSubmit, reset } = useForm();
+    const [score, setScore] = useState(0); // Keep track of the total score
+    const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0); // Keep track of the current category index
+    const [submitted, setSubmitted] = useState(false); // Keep track of whether the form has been submitted
 
-    useEffect(() => {
-        console.log(type);
-    }, [type]);
+    const calculateScore = (data) => {
+        let totalScore = 0;
+        Object.keys(data).forEach((key) => {
+            const [category, index] = key.split('-');
+            const question = questions[category][index];
+            if (data[key] === question.Answer) {
+                totalScore++;
+            }
+        });
+        setScore(totalScore);
+    };
+
+    const onSubmit = (data) => {
+        calculateScore(data);
+        setSubmitted(true);
+    };
 
     const handleNextClick = () => {
-        const categories = Object.keys(questions);
-        const nextIndex = currentCategoryIndex + 1;
-        if (nextIndex < categories.length) {
-            setCurrentCategoryIndex(nextIndex);
-            setType(categories[nextIndex]);
-        }
+        reset(); // Reset the form data
+        setSubmitted(false); // Reset the submitted state
+        setCurrentCategoryIndex(prevIndex => prevIndex + 1);
     };
 
-    const handleCategoryClick = (category) => {
-        setType(category);
-    };
-
-    let isLastCategory = currentCategoryIndex === Object.keys(questions).length - 1;
-
-    function handleSubmit() {
-        isLastCategory = Object.keys(questions).length - 1;
-        console.log()
-    }
+    const currentCategory = Object.keys(questions)[currentCategoryIndex] || ""; // Ensure currentCategory is defined
+    const isLastCategory = currentCategoryIndex === Object.keys(questions).length - 1;
 
     return (
-        <div>
-            <div className="pt-32 px-24">
-                <h1 className={"text-3xl font-bold underline underline-offset-2"}>Questionnaire</h1>
-                {questions[type] && (
-                    <form>
-                        {questions[type].map((question, index) => (
-                            <div className={"my-5"} key={index}>
-                                <label className={"text-xl my-12 font-bold"}>{index + 1}.{question?.Question}</label>
-                                <div>
-                                    {question?.Options?.map((option, index) => (
-                                        <div className={"flex gap-3"} key={index}>
-                                            {/* register the question id and answer selected */}
-                                            <input
-                                                className="p-2"
-                                                type="radio"
-                                                value={option}
-                                                name={question?.id}
-                                            />
-                                            <label className={"text-xl"}>{option}</label>
-                                        </div>
-                                    ))}
-                                </div>
+        <div className="pt-32 px-24">
+            <h1 className="text-3xl font-bold underline underline-offset-2">Questionnaire</h1>
+            <form onSubmit={handleSubmit(onSubmit)}>
+                {currentCategory && questions[currentCategory].map((question, index) => (
+                    <div key={index} className="my-5">
+                        <label className="text-xl my-12 font-bold">{index + 1}. {question.Question}</label>
+                        {question.Options.map((option, optionIndex) => (
+                            <div key={optionIndex} className="flex gap-3">
+                                <input
+                                    className="p-2"
+                                    type="radio"
+                                    value={option}
+                                    {...register(`${currentCategory}-${index}`)}
+                                />
+                                <label className="text-xl">{option}</label>
                             </div>
                         ))}
-                    </form>
+                    </div>
+                ))}
+                <button
+                    type="button"
+                    onClick={handleNextClick}
+                    disabled={!currentCategory} // Disable the "Next" button if no category is selected
+                    className="bg-gray-500 text-white p-2 m-2 text-end rounded w-max"
+                >
+                    {isLastCategory ? 'Submit' : 'Next'}
+                </button>
+                {submitted && (
+                    <div>
+                        <p>Total Score: {score}</p>
+                    </div>
                 )}
-                <div>
-                    <button onClick={isLastCategory ? handleSubmit : handleNextClick} className="bg-gray-500 text-white p-2 m-2 text-end rounded w-max">
-                        {isLastCategory ? 'Submit' : 'Next'}
-                    </button>
-                </div>
-                {/*<div>*/}
-                {/*    {Object.keys(questions).map(category => (*/}
-                {/*        <p onClick={() => handleCategoryClick(category)} key={category} className="bg-gray-500 text-white p-2 m-2 text-end rounded w-max">*/}
-                {/*            {category}*/}
-                {/*        </p>*/}
-                {/*    ))}*/}
-                {/*</div>*/}
-            </div>
+            </form>
         </div>
     );
 }
