@@ -8,8 +8,9 @@ export default function Home() {
   return (
       <div>
       <Navbar/>
-        <RatingPage/>
+        
        <Hero/>
+       <RatingPage/>
       </div>
   );
 }
