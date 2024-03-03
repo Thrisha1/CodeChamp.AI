@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react";
+import {useForm} from 'react-hook-form'
 
 export default function Questionnaire({ questions }) {
     const [type, setType] = useState('Technical'); // Set initial type to Technical

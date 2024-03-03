@@ -3,15 +3,18 @@
 // pages/index.js
 
 import Link from 'next/link';
-import React, { useState, createContext } from 'react';
+import React, {useState, createContext, useContext} from 'react';
 import dsa from "../../syllabus_dsa/dsa.json";
+import {ProblemContext} from '../app/layout'
 
 // Create the context outside of the component
-export const ProblemContext = createContext("");
+// export const ProblemContext = createContext(null);
 
 const Question = () => {
 
-  const [showSubCardIndex, setShowSubCardIndex] = useState(null);
+      const [showSubCardIndex, setShowSubCardIndex] = useState(null);
+
+
 
   const toggleSubCard = (index) => {
     setShowSubCardIndex(showSubCardIndex === index ? null : index);
@@ -67,23 +70,34 @@ const Card = ({ title, index, subtopics, showSubCardIndex, toggleSubCard }) => {
   );
 };
 
-const SubCard = ({ level, title, question, input, output }) => {
+const SubCard = () => {
+
+    const { contextValues, updateVariables } = useContext(ProblemContext);
+    const { level, title } = contextValues; // Destructure level and title from contextValues
+
+    const handleUpdateContext = () => {
+        // Example of updating context values
+        updateVariables({
+            level: 'newLevel',
+            title: 'newTitle',
+            question: 'newQuestion',
+            input: 'newInput',
+            output: 'newOutput'
+        });
+    };
   // Use the context provider to wrap the content of SubCard
-    let x = "hi";
   return (
-    <ProblemContext.Provider value={{x}}>
       <div className="w-full p-4 mt-4">
         <div className="bg-white p-4 rounded-lg shadow-md">
           <h2 className="text-lg font-semibold">Level: {level}</h2>
           <h2 className="text-lg font-semibold">Title: {title}</h2>
-          <Link href='/code-editor'>
-            <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+          <Link href='/code_editor'>
+            <button onClick={()=>{handleUpdateContext()}} className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
               Solve
             </button>
           </Link>
         </div>
       </div>
-    </ProblemContext.Provider>
   );
 };
 

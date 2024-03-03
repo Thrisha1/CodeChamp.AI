@@ -1,19 +1,43 @@
-import { Inter } from "next/font/google";
+"use client"
+
+import {Inter} from "next/font/google";
 import './globals.css';
+import {createContext, useState} from 'react'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({subsets: ["latin"]});
 
-export const metadata = {
-  title: "CodeChamp.AI",
-  description: "AI Personalised DSA learrning platform",
-};
+export const ProblemContext = createContext(null);
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
+// export const metadata = {
+//   title: "CodeChamp.AI",
+//   description: "AI Personalised DSA learrning platform",
+// };
+
+
+export default function RootLayout({children}) {
+    const [contextValues, setContextValues] = useState({
+        level: '',
+        title: '',
+        question: '',
+        input: '',
+        output: ''
+    });
+
+    const updateVariables = (newValue) => {
+        setContextValues(prevValues => ({
+            ...prevValues,
+            ...newValue // Spread the properties of newValue
+        }));
+    };
+
+
+    return (
+        <html lang="en">
+        <body className={inter.className}>
+        <ProblemContext.Provider value={{contextValues, updateVariables}}>
+            {children}
+        </ProblemContext.Provider>
         </body>
-    </html>
-  );
+        </html>
+    );
 }

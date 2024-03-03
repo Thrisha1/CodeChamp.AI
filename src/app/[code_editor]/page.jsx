@@ -3,11 +3,13 @@
 import {useState} from "react"
 import CodeEditor from "@/components/CodeEditor";
 import  Navbar  from "@/components/Navbar";
+import {useRouter} from "next/navigation"
 
-export default function page() {
+export default function page({params}) {
 
     // const [ Response, setResponse ] = useState()
     let response = {};
+    console.log("params",params.code_editor)
 
     const getCode = async (a) => {
         console.log("received data from client", a)
