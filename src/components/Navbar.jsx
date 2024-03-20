@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <header className="antialiased bg-blue-400">
+    <header className="antialiased bg-purple-400">
       <nav className="px-4 lg:px-6 py-2.5 bg-dark-blue items-center">
         <div className="flex flex-wrap justify-between items-center">
           <div className="flex justify-between items-center">
@@ -10,7 +10,7 @@ const Navbar = () => {
             <img src="/c.svg" alt="Logo" className="h-8 w-8" />
             <text className="text-white font-bold">CODEchampAI</text>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 items-center">
             <ul className="flex gap-4">
               <li>
                 <a href="#" className="text-white  hover:text-blue-500">Home</a>

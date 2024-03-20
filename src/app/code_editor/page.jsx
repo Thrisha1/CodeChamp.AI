@@ -12,7 +12,7 @@ export default function page() {
 
     const getCode = async (a) => {
         console.log("received data from client", a)
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/codeEditor`, {
+        const res = await fetch("http://localhost:3000/api/codeEditor", {
             method: "POST", // *GET, POST, PUT, DELETE, etc.
             mode: "cors", // no-cors, *cors, same-orig in
             cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached

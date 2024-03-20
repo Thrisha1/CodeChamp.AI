@@ -12,7 +12,7 @@ export default function CodeEditor({ getCode, result }) {
     const [codeData, setCodeData] = useState({
         language: "java",
         code: "",
-        input: contextValues.input,
+        input: JSON.stringify(contextValues.input),
     });
     const [Probdata, setProbData] = useState(null);
     const [loading, setLoading] = useState(false); // Loading state
@@ -65,16 +65,6 @@ export default function CodeEditor({ getCode, result }) {
         }
     };
 
-    // console.log("data",problemContext);
-    // useEffect(() => {
-    //     const loadData = () => {
-    //         setProbData(problemContext);
-    //     };
-    //     loadData();
-    // }, []);
-
-    // console.log("test", Probdata);
-
     return (
         <main className="flex w-full h-screen relative">
             <div className="w-1/2 h-[700px] overflow-scroll">
@@ -83,6 +73,15 @@ export default function CodeEditor({ getCode, result }) {
                     <h2 className="text-xl font-semibold mb-4">Problem Statement</h2>
                     <p>
                         {contextValues.question}
+                    </p>
+                    <p className={"mt-12 text-xl font-semibold"}>
+                        Test cases 1
+                    </p>
+                    <p className={"py-4"}>
+                        Input : {JSON.stringify(contextValues.input)}
+                    </p>
+                    <p className={"py-4"}>
+                        Output : {JSON.stringify(contextValues.output)}
                     </p>
                 </div>
             </div>
@@ -172,9 +171,13 @@ export default function CodeEditor({ getCode, result }) {
                             </button>
                         </div>
                         {
-                            result.error && (
+                            result.error ? (
                                 <p>Error : {result?.output}</p>
-                            )
+                            ):
+                                (
+                                    <p>Output : {result?.output}</p>
+                                )
+
                         }
                     </div>
                 )}

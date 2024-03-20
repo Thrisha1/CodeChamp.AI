@@ -1,16 +1,13 @@
 "use client";
 
-// pages/index.js
-
 import Link from "next/link";
 import React, { useState, createContext, useContext } from "react";
 import dsa from "../../syllabus_dsa/dsa.json";
 import { ProblemContext } from "../app/layout";
+import {useRouter} from "next/navigation"
 
-// Create the context outside of the component
-// export const ProblemContext = createContext(null);
-
-const Question = () => {
+const Question = ({level}) => {
+    const router = useRouter();
   const [showSubCardIndex, setShowSubCardIndex] = useState(null);
 
   const toggleSubCard = (index) => {
@@ -29,6 +26,7 @@ const Question = () => {
             subtopics={dsa[topic]}
             showSubCardIndex={showSubCardIndex}
             toggleSubCard={toggleSubCard}
+            level = {level}
           />
         ))}
       </div>
@@ -36,9 +34,9 @@ const Question = () => {
   );
 };
 
-const Card = ({ title, index, subtopics, showSubCardIndex, toggleSubCard }) => {
+const Card = ({ title, index, subtopics, showSubCardIndex, toggleSubCard, level }) => {
   return (
-    <div className="w-full p-4">
+    <div className="w-3/4 p-4">
       <div
         className="bg-gray-200 p-4 rounded-lg shadow-md"
         onClick={() => toggleSubCard(index)}
@@ -46,39 +44,42 @@ const Card = ({ title, index, subtopics, showSubCardIndex, toggleSubCard }) => {
         <h2 className="text-lg font-semibold">{title}</h2>
         {showSubCardIndex === index && (
           <>
-            {subtopics.beginner &&
-              subtopics.beginner.map((subtopic, subIndex) => (
-                <SubCard
-                  key={subIndex}
-                  level="Beginner"
-                  title={subtopic.title}
-                  question={subtopic.question}
-                  input={subtopic.input}
-                  output={subtopic.output}
-                />
-              ))}
-            {subtopics.intermediate &&
-              subtopics.intermediate.map((subtopic, subIndex) => (
-                <SubCard
-                  key={subIndex}
-                  level="Intermediate"
-                  title={subtopic.title}
-                  question={subtopic.question}
-                  input={subtopic.input}
-                  output={subtopic.output}
-                />
-              ))}
-            {subtopics.advanced &&
-              subtopics.advanced.map((subtopic, subIndex) => (
-                <SubCard
-                  key={subIndex}
-                  level="Advanced"
-                  title={subtopic.title}
-                  question={subtopic.question}
-                  input={subtopic.input}
-                  output={subtopic.output}
-                />
-              ))}
+              {level === "Beginner" && subtopics.beginner &&
+                  subtopics.beginner.map((subtopic, subIndex) => (
+                      <SubCard
+                          key={subIndex}
+                          level="Beginner"
+                          title={subtopic.title}
+                          question={subtopic.question}
+                          input={subtopic.input}
+                          output={subtopic.output}
+                      />
+                  ))
+              }
+              {level === "Intermediate" && subtopics.intermediate &&
+                  subtopics.intermediate.map((subtopic, subIndex) => (
+                      <SubCard
+                          key={subIndex}
+                          level="Intermediate"
+                          title={subtopic.title}
+                          question={subtopic.question}
+                          input={subtopic.input}
+                          output={subtopic.output}
+                      />
+                  ))}
+              {level === "Expert" && subtopics.advanced &&
+                  subtopics.advanced.map((subtopic, subIndex) => (
+                      <SubCard
+                          key={subIndex}
+                          level="Advanced"
+                          title={subtopic.title}
+                          question={subtopic.question}
+                          input={subtopic.input}
+                          output={subtopic.output}
+                      />
+                  ))}
+
+
           </>
         )}
       </div>
@@ -102,10 +103,15 @@ const SubCard = ({ key, level, title, question, input, output }) => {
   };
   // Use the context provider to wrap the content of SubCard
   return (
-    <div className="w-full p-4 mt-4">
-      <div className="bg-white p-4 rounded-lg shadow-md">
-        <h2 className="text-lg font-semibold">Level: {level}</h2>
-        <h2 className="text-lg font-semibold">Title: {title}</h2>
+    <div className="bg-white w-full p-4 mt-4 flex justify-between items-center">
+      <div className=" p-4 rounded-lg gap-5 flex flex-col w-full">
+        <h2 className="text-lg font-semibold">{title}</h2>
+          <div className="w-full flex gap-20">
+            <h2 className="text-sm text-gray-500 font-semibold"> Level: {level}</h2>
+            <h2 className="text-sm text-gray-500 font-semibold"> Attempts: 3124</h2>
+
+          </div>
+      </div>
         <Link href="/code_editor">
           <button
             onClick={() => {
@@ -116,7 +122,6 @@ const SubCard = ({ key, level, title, question, input, output }) => {
             Solve
           </button>
         </Link>
-      </div>
     </div>
   );
 };

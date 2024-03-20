@@ -1,0 +1,326 @@
+{
+  "questions": [
+    {
+      "question": "What is the purpose of a variable in programming?",
+      "type": "textInput",
+      "answer": "To store data values",
+      "category": "Conceptual"
+    },
+    {
+      "question": "What is the result of 5 + 3 * 2?",
+      "type": "textInput",
+      "answer": "11",
+      "category": "Logical"
+    },
+    {
+      "question": "Which symbol is used to define a single-line comment in many programming languages?",
+      "type": "mcq",
+      "options": ["//", "#", "/*", "%"],
+      "answer": "//",
+      "category": "Syntax"
+    },
+    {
+      "question": "What is the purpose of error handling in programming?",
+      "options": ["To improve code readability", "To intentionally introduce bugs", "To gracefully deal with unexpected errors", "To speed up program execution"],
+      "type": "mcq",
+      "answer": "To gracefully deal with unexpected errors",
+      "category": "Error"
+    },
+
+
+    {
+      "question": "Which data type is used to store whole numbers in programming?",
+      "type": "mcq",
+      "options": ["Float", "String", "Integer", "Boolean"],
+      "answer": "Integer",
+      "category": "Conceptual"
+    },
+    {
+      "question": "What is the output of the following code snippet?\n\npython\nx = 10\nif x > 5:\n    print('x is greater than 5')\nelse:\n    print('x is not greater than 5')",
+      "type": "mcq",
+      "options": ["x is greater than 5", "x is not greater than 5", "Error", "No output"],
+      "answer": "x is greater than 5",
+      "category": "Logical"
+    },
+    {
+      "question": "What is the syntax error in the following code snippet?\n\njava\nfor (int i = 0; i < 5; i++\n    System.out.println(i);",
+      "type": "textInput",
+      "answer": "Missing closing parenthesis in the loop declaration",
+      "category": "Syntax"
+    },
+    {
+      "question": "What does the 'try...except' block in Python accomplish?",
+      "type": "textInput",
+      "answer": "It allows you to handle exceptions by catching them and executing alternative code in case of an error.",
+      "category": "Error"
+    },
+
+
+
+    {
+      "question": "What is the primary purpose of a constructor in object-oriented programming?",
+      "type": "mcq",
+      "options": ["To create objects", "To define class variables", "To perform mathematical calculations", "To handle errors and exceptions"],
+      "answer": "To create objects",
+      "category": "Conceptual"
+    },
+    {
+      "question": "Which loop is suitable for situations where the number of iterations is known?",
+      "type": "textInput",
+      "answer": "for loop",
+      "category": "Logical"
+    },
+    {
+      "question": "What is the operator used for exponentiation in many programming languages?",
+      "type": "textInput",
+      "answer": "**",
+      "category": "Syntax"
+    },
+    {
+      "question": "How can you handle division by zero errors in programming?",
+      "type": "textInput",
+      "answer": "By checking if the divisor is zero before performing the division operation, or by catching the ArithmeticException that may occur.",
+      "category": "Error"
+    },
+
+
+
+    {
+      "question": "What is meant by the term 'code refactoring'?",
+      "type": "mcq",
+      "options": ["Rewriting code from scratch", "Optimizing code for better performance", "Making improvements to existing code without changing its external behavior", "Testing code for bugs and errors"],
+      "answer": "Making improvements to existing code without changing its external behavior",
+      "category": "Conceptual"
+    },
+    {
+      "question": "What is the value of 'x' after the following code executes?\n\npython\nx = 5\nx += 3",
+      "type": "textInput",
+      "answer": "8",
+      "category": "Logical"
+    },
+    {
+      "question": "Which symbol is used to define a single-line comment in many programming languages?",
+      "type": "mcq",
+      "options": ["//", "#", "/*", "%"],
+      "answer": "//",
+      "category": "Syntax"
+    },
+    {
+      "question": "How can you handle division by zero errors in programming?",
+      "type": "textInput",
+      "answer": "By checking if the divisor is zero before performing the division operation, or by catching the ArithmeticException that may occur.",
+      "category": "Error"
+    },
+
+
+
+    {
+      "question": "What is the purpose of a function in programming?",
+      "type": "textInput",
+      "answer": "To organize code into reusable blocks",
+      "category": "Conceptual"
+    },
+    {
+      "question": "What control structure is used to execute a block of code only if a condition is true?",
+      "type": "mcq",
+      "options": ["while loop", "for loop", "if statement", "switch statement"],
+      "answer": "if statement",
+      "category": "Logical"
+    },
+
+    {
+      "question": "What is the syntax error in the following code snippet?\n\njava\nfor (int i = 0; i < 5; i++\n    System.out.println(i);",
+      "type": "textInput",
+      "answer": "Missing closing parenthesis in the loop declaration",
+      "category": "Syntax"
+    },
+    {
+      "question": "In Java, how do you declare that a method can throw an exception?",
+      "type": "textInput",
+      "answer": "By using the 'throws' keyword in the method signature.",
+      "category": "Error"
+    },
+
+
+
+    {
+      "question": "What is the purpose of a variable in programming?",
+      "type": "textInput",
+      "answer": "To store data values",
+      "category": "Conceptual"
+    },
+    {
+      "question": "What is the result of 5 + 3 * 2?",
+      "type": "textInput",
+      "answer": "11",
+      "category": "Logical"
+    },{
+      "question": "What is the operator used for exponentiation in many programming languages?",
+      "type": "textInput",
+      "answer": "**",
+      "category": "Syntax"
+    },{
+      "question": "What is the purpose of error handling in programming?",
+      "options": ["To improve code readability", "To intentionally introduce bugs", "To gracefully deal with unexpected errors", "To speed up program execution"],
+      "type": "mcq",
+      "answer": "To gracefully deal with unexpected errors",
+      "category": "Error"
+    },
+
+
+
+    {
+      "question": "Which data type is used to store whole numbers in programming?",
+      "type": "mcq",
+      "options": ["Float", "String", "Integer", "Boolean"],
+      "answer": "Integer",
+      "category": "Conceptual"
+    },
+    {
+      "question": "What is the output of the following code snippet?\n\npython\nx = 10\nif x > 5:\n    print('x is greater than 5')\nelse:\n    print('x is not greater than 5')",
+      "type": "mcq",
+      "options": ["x is greater than 5", "x is not greater than 5", "Error", "No output"],
+      "answer": "x is greater than 5",
+      "category": "Logical"
+    },{
+      "question": "What is the purpose of a semicolon in many programming languages?",
+      "type": "textInput",
+      "answer": "To terminate a statement",
+      "category": "Syntax"
+    },{
+      "question": "What is the error in the following Python code snippet?\n\npython\nx = 10\nif x == 5:\n    print('x is 5')\nelse:\n    print('x is not 5')",
+      "type": "textInput",
+      "answer": "No error",
+      "category": "Error"
+    },
+
+
+
+    {
+      "question": "What is the primary purpose of a constructor in object-oriented programming?",
+      "type": "mcq",
+      "options": ["To create objects", "To define class variables", "To perform mathematical calculations", "To handle errors and exceptions"],
+      "answer": "To create objects",
+      "category": "Conceptual"
+    },
+    {
+      "question": "Which loop is suitable for situations where the number of iterations is known?",
+      "type": "textInput",
+      "answer": "for loop",
+      "category": "Logical"
+    }, {
+      "question": "Identify the syntax error in the following code snippet:\n\npython\nif x == 5:\nprint('x is 5')",
+      "type": "textInput",
+      "answer": "Missing indentation before the print statement",
+      "category": "Syntax"
+    },{
+      "question": "In Java, how do you declare that a method can throw an exception?",
+      "type": "textInput",
+      "answer": "By using the 'throws' keyword in the method signature.",
+      "category": "Error"
+    },
+
+
+
+    {
+      "question": "What is the purpose of a function in programming?",
+      "type": "textInput",
+      "answer": "To organize code into reusable blocks",
+      "category": "Conceptual"
+    },
+    {
+      "question": "What control structure is used to execute a block of code only if a condition is true?",
+      "type": "mcq",
+      "options": ["while loop", "for loop", "if statement", "switch statement"],
+      "answer": "if statement",
+      "category": "Logical"
+    },{
+      "question": "What is the correct syntax to declare a constant variable in Java?",
+      "type": "textInput",
+      "answer": "final int CONSTANT_VARIABLE = value;",
+      "category": "Syntax"
+    },{
+      "question": "What does the 'try...except' block in Python accomplish?",
+      "type": "textInput",
+      "answer": "It allows you to handle exceptions by catching them and executing alternative code in case of an error.",
+      "category": "Error"
+    },
+
+
+
+    {
+      "question": "What is the purpose of the 'return' statement in functions?",
+      "type": "textInput",
+      "answer": "To return a value from the function and terminate its execution.",
+      "category": "Conceptual"
+    },
+    {
+      "question": "What is the value of 'x' after the following code executes?\n\npython\nx = 5\nx += 3",
+      "type": "textInput",
+      "answer": "8",
+      "category": "Logical"
+    },
+    {
+      "question": "In C++, what does the 'endl' manipulator do when used with 'cout'?",
+      "type": "textInput",
+      "answer": "It inserts a new line and flushes the output buffer",
+      "category": "Syntax"
+    },{
+      "question": "Identify the error in the following Java code snippet:\n\njava\npublic static void main(String[] args) {\n    int x = 10;\n    if (x == 5) {\n        System.out.println('x is 5');\n    else\n        System.out.println('x is not 5');\n}",
+      "type": "textInput",
+      "answer": "Incorrect placement of 'else' block",
+      "category": "Error"
+    },
+
+
+
+    {
+      "question": "What is the purpose of the 'return' statement in functions?",
+      "type": "textInput",
+      "answer": "To return a value from the function and terminate its execution.",
+      "category": "Conceptual"
+    },
+    {
+      "question": "What is the output of the following code snippet?\n\njavascript\nvar a = 5;\nvar b = 3;\nconsole.log(a + b);",
+      "type": "textInput",
+      "answer": "8",
+      "category": "Logical"
+    },
+    {
+      "question": "What is the correct syntax to comment out multiple lines of code in Python?",
+      "type": "textInput",
+      "answer": "''' This is a multi-line comment '''",
+      "category": "Syntax"
+    },{
+      "question": "What error does the following C++ code have?\n\nc++\n#include <iostream>\n\nint main() {\n    int x = 5\n    std::cout << x << std::endl;\n    return 0;\n}",
+      "type": "textInput",
+      "answer": "Missing semicolon (;) after 'int x = 5'",
+      "category": "Error"
+    },
+
+
+
+    {
+      "question": "What is the purpose of the 'else' statement in an 'if' statement?",
+      "type": "textInput",
+      "answer": "To execute a block of code when the condition in the 'if' statement is false.",
+      "category": "Conceptual"
+    },
+    {
+      "question": "What is the value of 'x' after the following code executes?\n\npython\nx = 5\nx += 3",
+      "type": "textInput",
+      "answer": "8",
+      "category": "Logical"
+    },{
+      "question": "Identify the syntax error in the following code snippet:\n\njavascript\nfor (let i = 0; i < 5; i++)\n{\nconsole.log(i);",
+      "type": "textInput",
+      "answer": "Missing closing brace '}' for the 'for' loop",
+      "category": "Syntax"
+    },{
+      "question": "Identify the error in the following JavaScript code snippet:\n\njavascript\nlet x = 5;\nif (x == 5) {\n    console.log('x is 5');\n}",
+      "type": "textInput",
+      "answer": "No error",
+      "category": "Error"
+    }
+  ]
+}

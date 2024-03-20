@@ -10,14 +10,22 @@
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
     "@google/generative-ai": "^0.2.1",
+    "@mui/material": "^5.15.14",
     "@mui/material-nextjs": "^5.15.11",
+    "@mui/x-charts": "^6.19.5",
+    "@supabase/ssr": "^0.1.0",
+    "@supabase/supabase-js": "^2.39.8",
+    "bootstrap": "^5.3.3",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.2",
     "next": "14.1.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-hook-form": "^7.51.0"
+    "react-hook-form": "^7.51.0",
+    "recharts": "^2.12.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
