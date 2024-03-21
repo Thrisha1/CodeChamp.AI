@@ -1,0 +1,298 @@
+[
+  {
+    "question": "Which of the following algorithms are used for string and pattern matching problems?",
+    "type": "mcq",
+    "options": [
+      "Z Algorithm",
+      "Rabin Karp Algorithm",
+      "KMP Algorithm",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "category": "Conceptual",
+    "topic": "String and Pattern Matching"
+  },
+  {
+    "question": "Consider we have a function, getLCA(), which returns us the Lowest Common Ancestor between 2 nodes of a tree. Using this getLCA() function, how can we calculate the distance between 2 nodes, given that distance from the root, to each node is calculated?",
+    "type": "mcq",
+    "options": [
+      "dist(u) + dist(v) - 2 * dist(getLCA(u, v))",
+      "dist(u) + dist(v) + 2 * dist(getLCA(u, v))",
+      "dist(u) + dist(v)",
+      "dist(u) + dist(v) - dist(getLCA(u, v))"
+    ],
+    "answer": "dist(u) + dist(v) - 2 * dist(getLCA(u, v))",
+    "category": "Conceptual",
+    "topic": "Tree Algorithms"
+  },
+  {
+    "question": "Which of the following algorithms are useful for processing queries on trees?",
+    "type": "mcq",
+    "options": [
+      "Centroid Decomposition.",
+      "Heavy Light Decomposition.",
+      "Both (A) and (B).",
+      "Neither (A) nor (B)."
+    ],
+    "answer": "Both (A) and (B).",
+    "category": "Conceptual",
+    "topic": "Tree Algorithms"
+  },
+  {
+    "question": "What will the output of the following code snippet be? void solve() { vector<int> a = {1, 2, 3, 4, 5}; sort(a.begin(), a.end(), [&](const int &x, const int &y) { return x % 2 < y % 2; }); for(int x: a) { cout << x << \" \"; } cout << endl; }",
+    "type": "TextInput",
+    "answer": "2 4 1 3 5",
+    "category": "Syntax",
+    "topic": "C++"
+  },
+  {
+    "question": "Consider the following code snippet: void solve(vector<int> &a) { int queries; cin >> queries; while(queries--) { int type; cin >> type; if(type == 1) { int index, value; cin >> index >> value; update(a, index, value); } else { int l, r; cin >> l >> r; cout << getXOR(a, l, r) << endl; } } } The update() function updates the element at the given index in the array to some given value. The getXOR() function returns the XOR of the elements in the array a, in the range [l, r]. Which of the following data structures can perform the above tasks optimally?",
+    "type": "TextInput",
+    "answer": "Segment Trees.",
+    "category": "Conceptual",
+    "topic": "Data Structures"
+  },
+  {
+    "question": "What is the time complexity of the binary search algorithm?",
+    "type": "mcq",
+    "options": [
+      "O(n)",
+      "O(1)",
+      "O(log2n)",
+      "O(n^2)"
+    ],
+    "answer": "O(log2n)",
+    "category": "Conceptual",
+    "topic": "Algorithms"
+  },
+  {
+    "question": "Kruskal’s Algorithm for finding the Minimum Spanning Tree of a graph is a kind of a?",
+    "type": "mcq",
+    "options": [
+      "DP Problem.",
+      "Greedy Algorithm.",
+      "Adhoc Problem.",
+      "None of the above."
+    ],
+    "answer": "Greedy Algorithm.",
+    "category": "Conceptual",
+    "topic": "Algorithms"
+  },
+  {
+    "question": "What will be the output of the following code snippet?",
+    "type": "TextInput",
+    "answer": "7",
+    "category": "Code Output",
+    "topic": "Binary Search"
+  },
+  {
+    "question": "Maps in C++ are implemented using which of the following data structures?",
+    "type": "mcq",
+    "options": [
+      "Red-Black Trees.",
+      "Binary Search Trees.",
+      "AVL Trees.",
+      "Hash Tables."
+    ],
+    "answer": "Red-Black Trees.",
+    "category": "Conceptual",
+    "topic": "Data Structures"
+  },
+  {
+    "question": "What will be the output of the following code snippet?",
+    "type": "TextInput",
+    "answer": "4",
+    "category": "Code Output",
+    "topic": "Binary Search"
+  },
+  {
+    "question": "What is the time complexity of the Sieve of Eratosthenes to check if a number is prime?",
+    "type": "mcq",
+    "options": [
+      "O(nlog(logn)) Precomputation, O(1) for check.",
+      "O(n) Precomputation, O(1) for the check.",
+      "O(n * logn) Precomputation, O(logn) for check.",
+      "O(n) Precomputation, O(logn) for check."
+    ],
+    "answer": "O(nlog(logn)) Precomputation, O(1) for check.",
+    "category": "Conceptual",
+    "topic": "Algorithms"
+  },
+  {
+    "question": "What will be the output of the following code snippet?",
+    "type": "TextInput",
+    "answer": "3",
+    "category": "Code Output",
+    "topic": "Binary Search"
+  },
+  {
+    "question": "What is the best case time complexity of the binary search algorithm?",
+    "type": "mcq",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log2n)",
+      "O(n^2)"
+    ],
+    "answer": "O(1)",
+    "category": "Conceptual",
+    "topic": "Algorithms"
+  },
+  {
+    "question": "What is the time complexity to insert an element to the front of a LinkedList(head pointer given)?",
+    "type": "mcq",
+    "options": [
+      "O(n)",
+      "O(1)",
+      "O(logn)",
+      "O(n * logn)"
+    ],
+    "answer": "O(1)",
+    "category": "Conceptual",
+    "topic": "Data Structures"
+  },
+  {
+    "question": "What is the time complexity to insert an element to the rear of a LinkedList(head pointer given)?",
+    "type": "mcq",
+    "options": [
+      "O(n)",
+      "O(1)",
+      "O(logn)",
+      "O(n * logn)"
+    ],
+    "answer": "O(n)",
+    "category": "Conceptual",
+    "topic": "Data Structures"
+  },
+  {
+    "question": "What will be the value of 'sum' after the following code snippet terminates?",
+    "code_snippet": "void solve(ListNode* root) {\n   /*\n   The LinkedList is defined as:\n   root-> val = value of the node\n   root-> next = address of next element from the node\n   The List is 1 -> 2 -> 3 -> 4 -> 5\n   */\n   int sum = 0;\n   while(root -> next != NULL) {\n       sum += root -> val;\n       root = root -> next;\n   }\n   cout << sum << endl;\n}",
+    "type": "mcq",
+    "options": [
+      "10",
+      "20",
+      "5",
+      "1"
+    ],
+    "answer": "10",
+    "category": "Conceptual",
+    "topic": "LinkedLists"
+  },
+  {
+    "question": "Which of the following can be done with LinkedList?",
+    "type": "mcq",
+    "options": [
+      "Implementation of Stacks and Queues",
+      "Implementation of Binary Trees",
+      "Implementation of Data Structures that can simulate Dynamic Arrays",
+      "All of the above"
+    ],
+    "answer": "All of the above",
+    "category": "Conceptual",
+    "topic": "LinkedLists"
+  },
+  {
+    "question": "What is the information, which a LinkedList’s Node must store?",
+    "type": "text_input",
+    "answer": "Both (A) and (B)",
+    "category": "Conceptual",
+    "topic": "LinkedLists"
+  },
+  {
+    "question": "What is the maximum number of children a node can have in an n-ary tree?",
+    "type": "text_input",
+    "answer": "n",
+    "category": "Conceptual",
+    "topic": "Trees"
+  },
+  {
+    "question": "Worst case time complexity to access an element in a BST can be?",
+    "type": "mcq",
+    "options": [
+      "O(n)",
+      "O(n * logn)",
+      "O(1)",
+      "O(logn)"
+    ],
+    "answer": "O(n)",
+    "category": "Conceptual",
+    "topic": "Binary Search Trees"
+  },
+  {
+    "question": "Which of the following represents the Postorder Traversal of a Binary Tree?",
+    "type": "mcq",
+    "options": [
+      "Left -> Right -> Root",
+      "Left -> Root -> Right",
+      "Right -> Left -> Root",
+      "Right -> Root -> Left"
+    ],
+    "answer": "Left -> Right -> Root",
+    "category": "Conceptual",
+    "topic": "Binary Trees"
+  },
+  [
+    {
+      "question": "In what time complexity can we find the diameter of a binary tree optimally?",
+      "type": "mcq",
+      "options": [
+        "O(V + E)",
+        "O(V)",
+        "O(E)",
+        "O(V * logE)"
+      ],
+      "answer": "O(V + E)",
+      "explanation": "We can compute the diameter of a binary tree using a single DFS, which takes the time of O(V + E)."
+    },
+    {
+      "question": "Which of the following statements is true about AVL Trees?",
+      "type": "mcq",
+      "options": [
+        "The difference between the heights of left and right nodes cannot be more than 1.",
+        "The height of an AVL Tree always remains of the order of O(logn)",
+        "AVL Trees are a type of self-balancing Binary Search Trees.",
+        "All of the above."
+      ],
+      "answer": "All of the above.",
+      "explanation": "All the above options are applicable for an AVL Tree."
+    },
+    {
+      "question": "What does the following code snippet calculate (edges represent the adjacency list representation of a graph)?\n\nvoid solve(vector<vector<int>> edges) {\n   int count = 0;\n   for(auto x: edges) {\n       for(auto y: x) {\n           count += 1;\n       }\n   }\n   cout << count / 2 << endl;\n}",
+      "type": "mcq",
+      "code_snippet": "void solve(vector<vector<int>> edges) {\n   int count = 0;\n   for(auto x: edges) {\n       for(auto y: x) {\n           count += 1;\n       }\n   }\n   cout << count / 2 << endl;\n}",
+      "options": [
+        "Calculates the number of edges in an undirected graph.",
+        "Calculates the number of nodes in a given graph.",
+        "Calculates the sum of degrees of all nodes in a given graph.",
+        "None of the above."
+      ],
+      "answer": "Calculates the number of edges in an undirected graph.",
+      "explanation": "The above code snippet calculates the number of edges in an undirected graph."
+    },
+    {
+      "question": "In a graph of n nodes and n edges, how many cycles will be present?",
+      "type": "mcq",
+      "options": [
+        "Exactly 1",
+        "At most 1",
+        "At most 2",
+        "Depends on the graph"
+      ],
+      "answer": "Exactly 1",
+      "explanation": "A tree contains by definition n nodes and n - 1 edges, and it is an acyclic graph. When we add 1 edge to the tree, we can form exactly one cycle by adding this edge."
+    },
+    {
+      "question": "A node in a tree, such that removing it splits the tree into forests, with size of each connected component being not greater than n / 2 is called?",
+      "type": "mcq",
+      "options": [
+        "Center",
+        "Diameter",
+        "Centroid",
+        "Path"
+      ],
+      "answer": "Centroid",
+      "explanation": "Such a node in a tree is called a centroid of the tree."
+    }
+  ]
+
+]
