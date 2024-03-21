@@ -1,9 +1,10 @@
 "use client";
 
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import supabase from "@/supabase";
 
 const page = () => {
+    const [Lessons,setLessons] = useState([])
 
     async function geminiLessonRequest(data){
         const res = await fetch("http://localhost:3000/api/lessons-api", {
@@ -28,12 +29,18 @@ const page = () => {
         return student_test_data[0]
     }
 
+
+
     useEffect(()=>{
         console.log("Entered Lessons page")
         fetchData().then((data)=>{
             console.log("Data", data)
             geminiLessonRequest(data).then((res)=>{
                 console.log("res", res)
+                // if(res.error) {
+                    setLessons(data.lessons.result)
+                // }
+                
             })
         })
 
