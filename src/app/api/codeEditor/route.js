@@ -6,7 +6,7 @@ export async function POST(req) {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
-            'X-RapidAPI-Key': '1126204450mshd83ba7fa13b491dp1ebe3djsnae766e33565f',
+            'X-RapidAPI-Key': '79341866admsha4445ac837114b2p155188jsnabefb660ee45',
             'X-RapidAPI-Host': 'online-code-compiler.p.rapidapi.com'
         },
         body: JSON.stringify({

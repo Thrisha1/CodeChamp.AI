@@ -32,31 +32,7 @@ export const page = () => {
             setResults(r[0]);
         });
     },[])
-
-
-    const data = [
-        {
-            category: "HTML",
-            score: 20, // Score for HTML
-        },
-        {
-            category: "React",
-            score: 60, // Score for React
-
-        },
-        {
-            category: "CSS",
-            score: 80, // Score for CSS
-        },
-        {
-            category: "Next.js",
-            score: 95, // Score for Next.js
-        },
-        {
-            category: "Node.js",
-            score: 75, // Score for Node.js
-        },
-    ];
+    
     return (
         <div className="h-screen overflow-hidden">
             <Navbar />

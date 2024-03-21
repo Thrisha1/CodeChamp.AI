@@ -1,0 +1,21 @@
+const prompt = `Now we have the data from the user, we can use this data to generate the specified learning material for that user.
+    The user have the following knowledge in DSA : 
+    Conceptual Knowledge : ${data.percentages[0].value}
+    Logical Knowledge : ${data.percentages[1].value}
+    Syntax : ${data.percentages[2].value}
+    Error handling : ${data.percentages[3].value}
+
+    the user have also attempted a series of questions to test his knowledge in DSA, the user have attempted these questions and results are : ${JSON.stringify(data.attempeted_questions_data)}.
+
+    now create a learning material for the user based on the above data.
+    from the questions in the attempted questions find the topic which the question refers to : 
+    the learning material should contain the following : 
+    1. Topics to be covered where the user needs to improve his knowledge in all 4 catgories conceptual, logical, and semantic and error handling.
+    2. Contents of these topics like explanantion, examples , code samples, applications of these topics.
+    3. Coding questions related to these topics in which the ser needs to write the code in a programming language to solve a programming logic with that topic.The question should well defined with 3 sample test cases and its output. 
+    4. Additional resources for learning in web
+    5. Suggested Youtube videos for each topics
+ 
+    convert the whole data as a json with nessessary headings and subheadings and return the data as a response.
+    
+    `

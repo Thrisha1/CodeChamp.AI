@@ -5,35 +5,55 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 export async function POST(req) {
     const data = await req.json();
-    console.log("inside the post method", data);
+    // console.log("inside the post method", data);
 
-    return Response.json({ message: "Hello from the API" });
     // For text-only input, use the gemini-pro model
-    // const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
     //
-    // const prompt = "Generate a JSON object representing a set of multiple-choice questions for a personalized Data Structure & Algorithm (DSA) learning platform. The questions should cover four distinct categories: technical, problem_solving, mathematical, and DSA_concepts. Add category as key name of an array containing 2 questions each. Each category must contain one questions. For each question, include the following elements:" +
-    //     "Question: Clearly state the problem or scenario to be solved." +
-    //     "Options: Provide four possible solutions or answers." +
-    //     "Answer: Specify the correct solution." +
-    //     "Explanation: Offer a brief explanation or rationale behind why the correct answer is indeed correct" +
-    //     "Ensure that the questions are drawn from a comprehensive database built on 10 years of experience in DSA content and cover a range of difficulty levels. Prioritize clarity, accuracy, and relevance to the learning objectives of the DSA curriculum. The JSON object should be structured with categories as arrays, each containing objects representing individual questions along with their options, correct answers, and explanations. Aim to create an output that can be easily converted into an object format for seamless integration into the learning platform.";
-    //
-    // try {
-    //     const result = await model.generateContent(prompt);
-    //     const response = result.response;
-    //
-    //     const text = response.text();
-    //     console.log("text data : +", text);
-    //
-    //     const questions = await parseQuestions(text);
-    //     // console.log("questions data : +", questions);
-    //
-    //     return Response.json(questions);
-    //
-    // } catch (error) {
-    //     console.log("error is : " + error);
-    //     return Response.error({ error: error });
-    // }
+    const prompt = `Now we have the data from the user, we can use this data to generate the specified learning material for that user.
+    The user have the following percentage knowledge in DSA : 
+    Conceptual Knowledge : ${data.percentages[0].value}
+    Logical Knowledge : ${data.percentages[1].value}
+    Syntax : ${data.percentages[2].value}
+    Error handling : ${data.percentages[3].value}
+
+    now create a learning material for the user based on the above data.
+    from the questions in the attempted questions find the topic which the question refers to : 
+    the learning material should contain the following : 
+    
+
+    the result should be in the format : 
+    {
+        result : [
+            {
+                topic_heading : The topic name which the user have less knowledge about from the questions.
+                topic_content : description about the topic and explanation.
+                youtube_videos : youtube_videos related to it
+                website : website data related to the topic.
+            }
+        ]
+    }
+ 
+    convert the whole data as a json with nessessary headings and subheadings and return the data as a response.
+    
+    `
+
+    try {
+        const result = await model.generateContent(prompt);
+        const response = result.response;
+
+        const text = response.text();
+        console.log("text data : +", text);
+
+        const questions = await parseQuestions(text);
+        // console.log("questions data : +", questions);
+
+        return Response.json(questions);
+
+    } catch (error) {
+        console.log("error is : " + error);
+        return Response.error({ error: error });
+    }
 }
 
 async function parseQuestions(responseText) {
@@ -44,7 +64,7 @@ async function parseQuestions(responseText) {
 
 
         // // Parse the trimmed response text as JSON
-        let inter_result =  JSON.parse(trimmedResponseText);
+        let inter_result = JSON.parse(trimmedResponseText);
         return inter_result
     } catch (error) {
         console.log(error);
