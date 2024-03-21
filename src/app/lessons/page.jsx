@@ -1,6 +1,6 @@
 "use client";
 
-import {useState,useEffect} from "react";
+import {useEffect, useState} from "react";
 import supabase from "@/supabase";
 import Table from "@/components/lessons/Table";
 
@@ -31,14 +31,20 @@ const page = () => {
         return student_test_data[0]
     }
 
+
+
     useEffect(()=>{
         console.log("Entered Lessons page")
         fetchData().then((data)=>{
             console.log("Data", data)
+            console.log("res.error", data.lessons.result)
+            setLessons(data?.lessons.result)
             geminiLessonRequest(data).then((res)=>{
-                console.log("res", res)
-                console.log("typeof res", res.result)
-                setLessons(res.result)
+                // console.log("typeof res", res.result)
+                // setLessons(res.result)
+                // if(res.error) {
+                // }
+
             })
         })
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -22,15 +23,16 @@ const Navbar = () => {
                 <a href="#" className="text-white  hover:text-blue-500">Contact Us</a>
               </li>
             </ul>
-            <select className="bg-blue-700 px-6 py-1  text-white rounded-lg">
-              <option>English</option>
-              <option>Hindi</option>
-              <option>Telugu</option>
-              <option>Arabic</option>
-            </select>
-            <button className="border-2 border-blue-500 hover:bg-blue-500 duration-300 ease-in-out px-6 py-1  text-white rounded-lg ml-4">
-              Sign In
-            </button>
+
+            {/*<select className="bg-blue-700 px-6 py-1  text-white rounded-lg">*/}
+            {/*  <option>English</option>*/}
+            {/*  <option>Hindi</option>*/}
+            {/*  <option>Telugu</option>*/}
+            {/*  <option>Arabic</option>*/}
+            {/*</select>*/}
+            <Link href={"/dashboard"} className="border-2 border-blue-500 hover:bg-blue-500 duration-300 ease-in-out px-6 py-1  text-white rounded-lg ml-4">
+              Dashboard
+            </Link>
           </div>
         </div>
       </nav>
