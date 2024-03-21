@@ -164,15 +164,16 @@ export default function Questionnare2({ func, result }) {
   }
 
   return (
-    <div className="w-3/4 mx-10">
-      <p className="text-3xl font-bold text-center p-5">
+    <div className="w-full bg-black">
+      <div className="w-3/4 mx-10">
+      <p className="text-3xl font-bold text-center p-5 text-purple-600">
         Questionnaire : Basics of DSA
       </p>
       {nextBatch.map((q, index) => (
         <form key={index}>
           <div
-            className={`my-5 bg-gray-200 p-10 w-full border-4 ${
-              q && q?.correct === true ? "border-green-500" : "border-black"
+            className={`my-5 bg-black text-white p-10 w-full border-4 rounded-xl ${
+              q && q?.correct === true ? "border-green-500" : "border-purple-500"
             }`}
           >
             <label className="text-xl flex mb-5 font-bold">
@@ -183,7 +184,7 @@ export default function Questionnare2({ func, result }) {
                 {q.type === "mcq" && (
                   <div className={"flex items-center gap-3"}>
                     <input
-                      className="p-2"
+                      className="p-2  "
                       type="radio"
                       name={q.question}
                       value={option}
@@ -200,7 +201,7 @@ export default function Questionnare2({ func, result }) {
             {q.type === "textInput" && (
               <div className="flex gap-3 py-2 items-center">
                 <input
-                  className="p-2"
+                  className="p-2 rounded-lg text-black"
                   type="text"
                   onChange={(e) => {
                     setOptionSelected(e.target.value);
@@ -240,7 +241,7 @@ export default function Questionnare2({ func, result }) {
                       e.preventDefault();
                       handleSubmit();
                     }}
-                    className="bg-gray-500 text-white p-2 rounded-md"
+                    className="bg-purple-500 text-white p-2 rounded-md"
                   >
                     {Submit ? "Loading.." : "Submit"}
                   </button>
@@ -300,6 +301,7 @@ export default function Questionnare2({ func, result }) {
           </svg>
         </button>
       </div>
+    </div>
     </div>
   );
 }

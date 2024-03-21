@@ -36,6 +36,7 @@ export async function POST(req) {
         let parsedData = JSON.parse(text);
         parsedData.question = data.currentQns.question;
         parsedData.category = data.currentQns.category;
+        parsedData.topic = data.currentQns.topic
 
         // console.log("parsedData", parsedData);
 

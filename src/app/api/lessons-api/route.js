@@ -6,19 +6,50 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 export async function POST(req) {
     const data = await req.json();
     // console.log("inside the post method", data);
+    const learnings = [
+        "Variables",
+        "Data Types",
+        "Operators",
+        "Control Structures",
+        "Functions",
+        "Classes",
+        // "Inheritance",
+        // "Polymorphism",
+        // "Abstraction",
+        // "Encapsulation",
+        "Exception Handling",
+        // "File Handling",
+        "Data Structures",
+        "Algorithms",
+        "Recursion",
+        // "Sorting",
+        // "Searching",
+        // "Graphs",
+        // "Trees",
+        // "Linked Lists",
+        // "Stacks",
+        // "Queues",
+        // "Hash Tables",
+        // "Heaps",
+        // "Sets",
+        // "Maps",
+        // "Tries",
+        // "Graph Traversal",
+        // "Dynamic Programming",
+        // "Greedy Algorithms",
+        // "Backtracking"
+    ]
 
     // For text-only input, use the gemini-pro model
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
     //
     const prompt = `Now we have the data from the user, we can use this data to generate the specified learning material for that user.
     The user have the following percentage knowledge in DSA : 
-    Conceptual Knowledge : ${data.percentages[0].value}
-    Logical Knowledge : ${data.percentages[1].value}
-    Syntax : ${data.percentages[2].value}
-    Error handling : ${data.percentages[3].value}
+    
+    he the user have also attempted a series of questions to test his knowledge in DSA, the user have attempted these questions and results are : ${JSON.stringify(data.attempeted_questions_data)}.
+    in that each question have a topic and if its correct is false then the topic need to be studied by the user so we need to creeate a lesson plan
+    and there many be topics in ${JSON.stringify(learnings)} which the user have not yet discovered during the questions. so check which all topics user have not yet covered and create a learning material for that.    
 
-    now create a learning material for the user based on the above data.
-    from the questions in the attempted questions find the topic which the question refers to : 
     the learning material should contain the following : 
     
 
@@ -27,7 +58,8 @@ export async function POST(req) {
         result : [
             {
                 topic_heading : The topic name which the user have less knowledge about from the questions.
-                topic_content : description about the topic and explanation.
+                topic_content : Detailed explanantion of the topic is required
+                examples : examples of the topic with code examples
                 youtube_videos : youtube_videos related to it
                 website : website data related to the topic.
             }
