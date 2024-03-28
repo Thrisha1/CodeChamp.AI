@@ -1,0 +1,320 @@
+{
+    "topic0": {
+        "heading": "Basics",
+        "beginner": [
+            {
+                "id": "1",
+                "title": "largest element",
+                "question": "Given an array ‘arr’ of size ‘n’ find the largest element in the array.",
+                "input": {
+                    "n": "5",
+                    "arr": "[1, 2, 3, 4, 5]"
+                },
+                "output": "5",
+                "explanation": "From the array {1, 2, 3, 4, 5}, the largest element is 5."
+            },
+            {
+                "id": "2",
+                "title": "second smalles and largest",
+                "question": "You have been given an array ‘a’ of ‘n’ unique non-negative integers. Find the second largest and second smallest element from the array. Return the two elements (second largest and second smallest) as another array of size 2.",
+                "input": {
+                    "n": "5",
+                    "a": "[1, 2, 3, 4, 5]"
+                },
+                "output": "[4, 2]",
+                "explanation": "The second largest element after 5 is 4, and the second smallest element after 1 is 2."
+            }
+        ],
+        "intermediate": [
+            {
+                "id": "3",
+                "title": "shift the element",
+                "question": "Given an array 'arr' containing 'n' elements, rotate this array left once and return it. Rotating the array left by one means shifting all elements by one place to the left and moving the first element to the last position in the array.",
+                "input": {
+                    "n": "5",
+                    "arr": "[1, 2, 3, 4, 5]"
+                },
+                "output": "[2, 3, 4, 5, 1]",
+                "explanation": "We moved the 2nd element to the 1st position, 3rd element to the 2nd position, 4th element to the 3rd position, 5th element to the 4th position, and moved the 1st element to the 5th position."
+            },
+            {
+                "id": "4",
+                "title": "Remove Duplicates from Sorted Array",
+                "question": "You are given a sorted integer array 'arr' of size 'n'. Remove the duplicates from the array such that each element appears only once. Return the length of this new array. Note: Do not allocate extra space for another array. You need to do this by modifying the given input array in place with O(1) extra memory.",
+                "input": {
+                    "n": "10",
+                    "arr": "[1, 2, 2, 3, 3, 3, 4, 4, 5, 5]"
+                },
+                "output": "5",
+                "explanation": "The new array will be [1, 2, 3, 4, 5]. So our answer is 5."
+            }
+        ],
+        "advanced": [
+            {
+                "id": "5",
+                "title": "Best Time to Buy and Sell Stock",
+                "question": "You are given an array/list 'prices' where the elements of the array represent the prices of the stock as they were yesterday and indices of the array represent minutes. Your task is to find and return the maximum profit you can make by buying and selling the stock. You can buy and sell the stock only once. Note: You can’t sell without buying first. For example, for the given array [2, 100, 150, 120], the maximum profit can be achieved by buying the stock at minute 0 when its price is Rs. 2 and selling it at minute 2 when its price is Rs. 150. So, the output will be 148.",
+                "input": {
+                    "prices": "[1, 2, 3, 4]"
+                },
+                "output": "3",
+                "explanation": "For the given input array [1, 2, 3, 4], it’s optimal to buy the stock at minute 0 and sell it at minute 3 to get a maximum profit of 3."
+            },
+            {
+                "id": "6",
+                "title": "Subarray Sum Equals K",
+                "question": "You are given an integer array 'arr' of size 'N' and an integer 'K'. Your task is to find the total number of subarrays of the given array whose sum of elements is equal to k. A subarray is defined as a contiguous block of elements in the array.",
+                "input": {
+                    "N": "4",
+                    "arr": "[3, 1, 2, 4]",
+                    "K": "6"
+                },
+                "output": 2,
+                "explanation": "The subarrays that sum up to '6' are: [3, 1, 2], and [2, 4]."
+            }
+        ]
+    },
+    "topic1": {
+        "heading": "Array",
+        "beginner": [
+            {
+                "title": "Segregate 0s and 1s",
+                "question": "Given an array of length N consisting of only 0s and 1s in random order. Modify the array to segregate 0s on the left and 1s on the right side of the array.",
+                "input": "[0, 1, 0, 1, 0, 0, 1, 1]",
+                "output": "[0, 0, 0, 0, 1, 1, 1, 1]",
+                "explanation": "After segregating 0s on the left and 1s on the right, the modified array becomes [0, 0, 0, 0, 1, 1, 1, 1]."
+            },
+            {
+                "title": "Find Min and Max",
+                "question": "Given an array, write functions to find the minimum and maximum elements in it.",
+                "input": "[4, 7, 2, 9, 5]",
+                "output": {
+                    "min": "2",
+                    "max": "9"
+                },
+                "explanation": "The minimum element in the array is 2, and the maximum element is 9."
+            }
+        ],
+        "intermediate": [
+            {
+                "title": "Find Missing Element",
+                "question": "Given an array of size N-1 such that it only contains distinct integers in the range of 1 to N. Find the missing element.",
+                "input": "[3, 7, 1, 2, 8, 4, 5]",
+                "output": "6",
+                "explanation": "The missing element in the array [3, 7, 1, 2, 8, 4, 5] is 6."
+            },
+            {
+                "title": "Find Duplicate Elements",
+                "question": "Given an array a of size N which contains elements from 0 to N-1, you need to find all the elements occurring more than once in the given array. Return the answer in ascending order. If no such element is found, return list containing [-1].",
+                "input": "[1, 2, 3, 2, 1, 4]",
+                "output": "[1, 2]",
+                "explanation": "The elements occurring more than once in the array [1, 2, 3, 2, 1, 4] are 1 and 2."
+            }
+        ],
+        "advanced": [
+            {
+                "title": "Rotate Array",
+                "question": "Given an unsorted array arr[] of size N. Rotate the array to the left (counter-clockwise direction) by D steps, where D is a positive integer.",
+                "input": {
+                    "array": "[1, 2, 3, 4, 5]",
+                    "D": "2"
+                },
+                "output": "[3, 4, 5, 1, 2]",
+                "explanation": "After rotating the array [1, 2, 3, 4, 5] by 2 steps to the left, it becomes [3, 4, 5, 1, 2]."
+            },
+            {
+                "title": "Minimum Index Distance",
+                "question": "You are given an array a, of n elements. Find the minimum index based distance between two distinct elements of the array, x and y. Return -1, if either x or y does not exist in the array.",
+                "input": {
+                    "array": "[3, 4, 5, 2, 6, 8, 9, 1]",
+                    "x": "2",
+                    "y": "6"
+                },
+                "output": "3",
+                "explanation": "The minimum index based distance between 2 and 6 in the array [3, 4, 5, 2, 6, 8, 9, 1] is 3."
+            }
+        ]
+    },
+    "topic2": {
+        "heading": "String",
+        "beginner": [
+            {
+                "title": "Reverse String",
+                "question": "Given a String S, print the reverse of the string as output.",
+                "input": "hello",
+                "output": "olleh",
+                "explanation": "The reverse of the string 'hello' is 'olleh'."
+            },
+            {
+                "title": "Convert to Uppercase",
+                "question": "Given a string str containing only lowercase letters, generate a string with the same letters, but in uppercase.",
+                "input": "hello",
+                "output": "HELLO",
+                "explanation": "Converting the string 'hello' to uppercase results in 'HELLO'."
+            },
+            {
+                "title": "Maximum Occurring Character",
+                "question": "Given a string str of lowercase alphabets. Find the maximum occurring character in the string str. If more than one character occurs the maximum number of times then print the lexicographically smaller character.",
+                "input": "hello",
+                "output": "e",
+                "explanation": "In the string 'hello', the character 'e' occurs the maximum number of times."
+            },
+            {
+                "title": "Remove Consecutive Characters",
+                "question": "Given a string S. For each index i (1<=i<=N-1), erase it if s[i] is equal to s[i-1] in the string.",
+                "input": "hello",
+                "output": "helo",
+                "explanation": "Removing consecutive characters results in the string 'helo'."
+            }
+        ],
+        "intermediate": [
+            {
+                "title": "Anagram Check",
+                "question": "Given two strings a and b consisting of lowercase characters. Check whether two given strings are an anagram of each other or not.",
+                "input": {
+                    "a": "listen",
+                    "b": "silent"
+                },
+                "output": "true",
+                "explanation": "The strings 'listen' and 'silent' are anagrams of each other."
+            },
+            {
+                "title": "Palindrome Check",
+                "question": "Given a string S, check if it is palindrome or not.",
+                "input": "radar",
+                "output": "true",
+                "explanation": "The string 'radar' is a palindrome."
+            }
+        ],
+        "advanced": [
+            {
+                "title": "Anagram Check",
+                "question": "Given two strings a and b consisting of lowercase characters. The task is to check whether two given strings are an anagram of each other or not. An anagram of a string is another string that contains the same characters, only the order of characters can be different. For example, act and tac are an anagram of each other.",
+                "input": {
+                    "a": "listen",
+                    "b": "silent"
+                },
+                "output": "true",
+                "explanation": "The strings 'listen' and 'silent' are anagrams of each other."
+            },
+            {
+                "title": "Palindrome Check",
+                "question": "Given a string S, check if it is palindrome or not.",
+                "input": "radar",
+                "output": "true",
+                "explanation": "The string 'radar' is a palindrome."
+            }
+        ]
+    },
+    "topic3": {
+        "heading": "Linkedlist",
+        "beginner": [
+            {
+                "title": "Create Linked List",
+                "question": "Create a linked list of size N according to the given input literals. Each integer input is accompanied by an indicator which can either be 0 or 1. If it is 0, insert the integer in the beginning of the linked list. If it is 1, insert the integer at the end of the linked list.",
+                "input": {
+                    "literals": "[1, 0, 2, 1, 3]",
+                    "indicators": "[0, 1, 0, 1, 0]"
+                },
+                "output": "1 -> 2 -> 3",
+                "explanation": "The linked list created from the given literals is 1 -> 2 -> 3."
+            },
+            {
+                "title": "Find Length of Linked List",
+                "question": "Given a singly linked list. Find the length of the linked list, where length is defined as the number of nodes in the linked list.",
+                "input": "1 -> 2 -> 3 -> 4",
+                "output": "4",
+                "explanation": "The length of the linked list 1 -> 2 -> 3 -> 4 is 4."
+            }
+        ],
+        "intermediate": [
+            {
+                "title": "Identical Linked Lists",
+                "question": "Given two singly linked lists of N and M nodes respectively. Check whether two linked lists are identical or not.",
+                "input": {
+                    "list1": "1 -> 2 -> 3",
+                    "list2": "1 -> 2 -> 3"
+                },
+                "output": "true",
+                "explanation": "The two linked lists 1 -> 2 -> 3 and 1 -> 2 -> 3 are identical."
+            },
+            {
+                "title": "Check Even or Odd Length",
+                "question": "Given a linked list of size n, check whether the length of the linked list is even or odd.",
+                "input": "1 -> 2 -> 3 -> 4",
+                "output": "Even",
+                "explanation": "The length of the linked list 1 -> 2 -> 3 -> 4 is even."
+            }
+        ],
+        "advanced": [
+            {
+                "title": "Find Middle of Linked List",
+                "question": "Given a singly linked list of N nodes. Find the middle of the linked list. If there are two middle nodes (in case, when N is even), print the second middle element.",
+                "input": "1 -> 2 -> 3 -> 4 -> 5",
+                "output": "3",
+                "explanation": "The middle element of the linked list 1 -> 2 -> 3 -> 4 -> 5 is 3."
+            },
+            {
+                "title": "Reverse Linked List",
+                "question": "Given a linked list of N nodes. Reverse this list.",
+                "input": "1 -> 2 -> 3 -> 4",
+                "output": "4 -> 3 -> 2 -> 1",
+                "explanation": "The reversed linked list of 1 -> 2 -> 3 -> 4 is 4 -> 3 -> 2 -> 1."
+            }
+        ]
+    },
+    "topic4": {
+        "heading": "Recursion",
+        "beginner": [
+            {
+                "title": "Spiral Order Traversal of Binary Tree",
+                "question": "Given a binary tree, find the spiral order traversal of the tree. Spiral order Traversal means starting from level 0 for the root node, for all the even levels print the node's value from right to left and for all the odd levels print the node's value from left to right.",
+                "input": "1 / \\ 2 3 / \\ / \\ 4 5 6 7",
+                "output": "[1, 2, 3, 7, 6, 5, 4]",
+                "explanation": "The spiral order traversal of the given binary tree results in the sequence [1, 2, 3, 7, 6, 5, 4]."
+            },
+            {
+                "title": "Print Numbers without Loops",
+                "question": "Print numbers from 1 to N without the help of loops.",
+                "input": "5",
+                "output": "[1, 2, 3, 4, 5]",
+                "explanation": "The numbers from 1 to 5 are printed without using loops."
+            }
+        ],
+        "intermediate": [
+            {
+                "title": "Delete Middle Element of Stack",
+                "question": "Given a stack, delete the middle element of the stack without using any additional data structure. Middle element: floor((size_of_stack+1)/2) (1-based indexing) from the bottom of the stack.",
+                "input": "[1, 2, 3, 4, 5]",
+                "output": "[1, 2, 4, 5]",
+                "explanation": "The middle element of the stack [1, 2, 3, 4, 5] is 3, and it is removed."
+            },
+            {
+                "title": "Print Sequence of Numbers",
+                "question": "Print a sequence of numbers starting with N, without using a loop, where replace N with N - 5, until N > 0. After that replace N with N + 5 until N regains its initial value.",
+                "input": "10",
+                "output": "[10, 5, 0, 5, 10]",
+                "explanation": "The sequence of numbers starting with 10 is printed according to the given conditions."
+            }
+        ],
+        "advanced": [
+            {
+                "title": "Fibonacci Series modulo 10^9+7",
+                "question": "Given an integer n, return the Fibonacci series till the nth(0-based indexing) term. Since the terms can become very large, return the terms modulo 10^9+7.",
+                "input": "5",
+                "output": "[0, 1, 1, 2, 3]",
+                "explanation": "The Fibonacci series till the 5th term, modulo 10^9+7, is [0, 1, 1, 2, 3]."
+            },
+            {
+                "title": "Insert Element at Bottom of Stack",
+                "question": "You are given a stack st of n integers and an element x. Insert x at the bottom of the given stack.",
+                "input": {
+                    "stack": "[1, 2, 3, 4, 5]",
+                    "element": "6"
+                },
+                "output": "[6, 1, 2, 3, 4, 5]",
+                "explanation": "The element 6 is inserted at the bottom of the stack [1, 2, 3, 4, 5]."
+            }
+        ]
+    }
+}

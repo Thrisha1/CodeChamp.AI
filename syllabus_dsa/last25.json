@@ -1,0 +1,581 @@
+{
+  "questions": [
+    {
+      "question": "How is an array initialized in C language?",
+      "type": "textInput",
+      "answer": "int a[3] = {1, 2, 3};",
+      "category": "Syntax",
+      "topic": "arrays",
+      "code_snippet": null
+    },
+    {
+      "question": "Which of the following is a linear data structure?",
+      "type": "mcq",
+      "options": ["Array", "AVL Trees", "Binary Trees", "Graphs"],
+      "answer": "Array",
+      "category": "conceptual",
+      "topic": "data structures",
+      "code_snippet": null
+    },
+    {
+      "question": "How is the 2nd element in an array accessed based on pointer notation?",
+      "type": "textInput",
+      "answer": "*(a + 2)",
+      "category": "logical",
+      "topic": "pointers",
+      "code_snippet": null
+    },
+    {
+      "question": "Which of the following is not the type of queue?",
+      "type": "mcq",
+      "options": [
+        "Priority queue",
+        "Single-ended queue",
+        "Circular queue",
+        "Ordinary queue"
+      ],
+      "answer": "Single-ended queue",
+      "category": "conceptual",
+      "topic": "queues",
+      "code_snippet": null
+    },
+    {
+      "question": "Which of the following is not an operation of a data structure?",
+      "type": "mcq",
+      "options": [
+        "Operations that manipulate data in some way",
+        "Operations that perform a computation",
+        "Operations that check for Syntax errors",
+        "Operations that monitor an object for the occurrence of a controlling event"
+      ],
+      "answer": "Operations that manipulate data in some way",
+      "category": "logical",
+      "topic": "data structures",
+      "code_snippet": null
+    },
+    {
+      "question": "What will be the output of the following code snippet?",
+      "type": "mcq",
+      "options": ["5", "15", "9", "6"],
+      "answer": "9",
+      "category": "logical",
+      "topic": "arrays",
+      "code_snippet": "void solve() {\n     int a[] = {1, 2, 3, 4, 5};\n     int sum = 0;\n     for(int i = 0; i < 5; i++) {\n         if(i % 2 == 0) {\n             sum += a[i];\n         }\n     }\n     cout << sum << endl;\n  }"
+    },
+    {
+      "question": "What will the output of the following code snippet?",
+      "type": "mcq",
+      "options": ["2", "15", "Syntax Error", "3"],
+      "answer": "3",
+      "category": "logical",
+      "topic": "arrays",
+      "code_snippet": "void solve() {\n     int a[] = {1, 2, 3, 4, 5};\n     int sum = 0;\n     for(int i = 0; i < 5; i++) {\n         if(i % 2 == 0) {\n             sum += *(a + i);\n         }\n         else {\n             sum -= *(a + i);\n         }\n     }\n     cout << sum << endl;\n  }"
+    },
+    {
+      "question": "What is the disadvantage of array data structure?",
+      "type": "mcq",
+      "options": [
+        "The amount of memory to be allocated should be known beforehand.",
+        "Elements of an array can be accessed in constant time.",
+        "Elements are stored in contiguous memory blocks.",
+        "Multiple other data structures can be implemented using arrays."
+      ],
+      "answer": "The amount of memory to be allocated should be known beforehand.",
+      "category": "conceptual",
+      "topic": "data structures",
+      "code_snippet": null
+    },
+    {
+      "question": "How are Strings represented in memory in C?",
+      "type": "mcq",
+      "options": [
+        "An array of characters.",
+        "The object of some class.",
+        "Same as other primitive data types.",
+        "LinkedList of characters."
+      ],
+      "answer": "An array of characters.",
+      "category": "conceptual",
+      "topic": "C programming",
+      "code_snippet": null
+    },
+    {
+      "question": "What is the output of the following code snippet?",
+      "type": "mcq",
+      "options": ["3 2 1", "1 2 3", "3", "1"],
+      "answer": "3 2 1",
+      "category": "logical",
+      "topic": "stacks",
+      "code_snippet": "void solve() {\n     stack<int> s;\n     s.push(1);\n     s.push(2);\n     s.push(3);\n     for(int i = 1; i <= 3; i++) {\n         cout << s.top() << \" \";\n         s.pop();\n     }\n  }"
+    },
+    {
+      "question": "Which of the following is the advantage of the array data structure?",
+      "type": "mcq",
+      "options": [
+        "Elements of mixed data types can be stored.",
+        "Easier to access the elements in an array",
+        "Index of the first element starts from 1.",
+        "Elements of an array cannot be sorted"
+      ],
+      "answer": "Easier to access the elements in an array",
+      "category": "conceptual",
+      "topic": "arrays",
+      "code_snippet": null
+    },
+    {
+      "question": "What function is used to append a character at the back of a string in C++?",
+      "type": "mcq",
+      "options": ["push_back()", "append()", "push()", "insert()"],
+      "answer": "push_back()",
+      "category": "Syntax",
+      "topic": "strings",
+      "code_snippet": null
+    },
+    {
+      "question": "Which one of the following is an application of queue data structure?",
+      "type": "mcq",
+      "options": [
+        "When a resource is shared among multiple consumers.",
+        "When data is transferred asynchronously",
+        "Load Balancing",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "category": "conceptual",
+      "topic": "queues",
+      "code_snippet": null
+    },
+    {
+      "question": "When a pop() operation is called on an empty queue, what is the condition called?",
+      "type": "mcq",
+      "options": ["Overflow", "Underflow", "Syntax Error", "Garbage Value"],
+      "answer": "Underflow",
+      "category": "conceptual",
+      "topic": "queues",
+      "code_snippet": null
+    },
+    {
+      "question": "What is the time complexity of the following code snippet in C++?",
+      "type": "mcq",
+      "options": ["O(n)", "O(n^2)", "O(1)", "O(log n)"],
+      "answer": "O(n^2)",
+      "category": "complexity",
+      "topic": "time complexity",
+      "code_snippet": "void solve() {\n     string s = \"scaler\";\n     int n = s.size();\n     for(int i = 0; i < n; i++) {\n         s = s + s[i];\n     }\n     cout << s << endl;\n  }"
+    },
+    {
+      "question": "Which of the following data structures can be used to implement queues?",
+      "type": "mcq",
+      "options": ["Stack", "Arrays", "LinkedList", "All of the Above"],
+      "answer": "All of the Above",
+      "category": "conceptual",
+      "topic": "queues",
+      "code_snippet": null
+    },
+    {
+      "question": "Which of the following data structures finds its use in recursion?",
+      "type": "mcq",
+      "options": ["Stack", "Arrays", "LinkedList", "Queues"],
+      "answer": "Stack",
+      "category": "conceptual",
+      "topic": "recursion",
+      "code_snippet": null
+    },
+    {
+      "question": "Which of the following data structures allow insertion and deletion from both ends?",
+      "type": "mcq",
+      "options": ["Stack", "Deque", "Queue", "Strings"],
+      "answer": "Deque",
+      "category": "conceptual",
+      "topic": "data structures",
+      "code_snippet": null
+    },
+    {
+      "question": "What will be the output of the following code snippet?",
+      "type": "mcq",
+      "options": ["1 2 3 4 5", "5 4 3 2 1", "1 3 5 2 4", "5 3 1 2 4"],
+      "answer": "5 3 1 2 4",
+      "category": "code snippet",
+      "topic": "deque",
+      "code_snippet": "void solve() {\n     deque<int> dq;\n     for(int i = 1; i <= 5; i++) {\n         if(i % 2 == 0) {\n             dq.push_back(i);\n         }\n         else {\n             dq.push_front(i);\n         }\n     }\n     for(auto x: dq) {\n         cout << x << \" \";\n     }\n     cout << endl;\n  }"
+    },
+    {
+      "question": "Which of the following sorting algorithms provide the best time complexity in the worst-case scenario?",
+      "type": "mcq",
+      "options": ["Merge Sort", "Quick Sort", "Bubble Sort", "Selection Sort"],
+      "answer": "Merge Sort",
+      "category": "conceptual",
+      "topic": "sorting algorithms",
+      "code_snippet": null
+    },
+    {
+      "question": "What is the maximum number of swaps that can be performed in the Selection Sort algorithm?",
+      "type": "mcq",
+      "options": ["n - 1", "n", "1", "n - 2"],
+      "answer": "n - 1",
+      "category": "algorithm",
+      "topic": "selection sort",
+      "explanation": "n - 1 swaps are performed at max to sort any array by Selection Sort."
+    },
+    {
+      "question": "Which of the following is a Divide and Conquer algorithm?",
+      "type": "mcq",
+      "options": ["Bubble Sort", "Selection Sort", "Heap Sort", "Merge Sort"],
+      "answer": "Merge Sort",
+      "category": "algorithm",
+      "topic": "divide and conquer",
+      "explanation": "Merge Sort is a Divide and Conquer algorithm."
+    },
+    {
+      "question": "What will be the best sorting algorithm, given that the array elements are small (<= 1e6)?",
+      "type": "mcq",
+      "options": ["Bubble Sort", "Merge Sort", "Counting Sort", "Heap Sort"],
+      "answer": "Counting Sort",
+      "category": "algorithm",
+      "topic": "sorting algorithms",
+      "explanation": "Counting sort sorts an array in O(n) time complexity, taking up an extra space complexity of O(max(a[i]))."
+    },
+    {
+      "question": "Which of the following are applications of Topological Sort of a graph?",
+      "type": "mcq",
+      "options": [
+        "Sentence Ordering",
+        "Course Scheduling",
+        "OS Deadlock Detection",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "category": "graph theory",
+      "topic": "topological sort",
+      "explanation": "All the above options are applicable."
+    },
+    {
+      "question": "Which of the following is known to be not an NP-Hard Problem?",
+      "type": "mcq",
+      "options": [
+        "Vertex Cover Problem",
+        "0/1 Knapsack Problem",
+        "Maximal Independent Set Problem",
+        "Travelling Salesman Problem"
+      ],
+      "answer": "0/1 Knapsack Problem",
+      "category": "complexity theory",
+      "topic": "NP-hard problems",
+      "explanation": "The 0/1 Knapsack is not an NP-Hard problem."
+    },
+    {
+      "question": "Which of the following algorithms are used for string and pattern matching problems?",
+      "type": "mcq",
+      "options": [
+        "Z Algorithm",
+        "Rabin Karp Algorithm",
+        "KMP Algorithm",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "category": "algorithm",
+      "topic": "string and pattern matching",
+      "explanation": "All the above algorithms are used for string and pattern matching."
+    },
+    {
+      "question": "Consider we have a function, getLCA(), which returns us the Lowest Common Ancestor between 2 nodes of a tree. Using this getLCA() function, how can we calculate the distance between 2 nodes, given that distance from the root, to each node is calculated?",
+      "type": "mcq",
+      "options": [
+        "dist(u) + dist(v) - 2 * dist(getLCA(u, v))",
+        "dist(u) + dist(v) + 2 * dist(getLCA(u, v))",
+        "dist(u) + dist(v)",
+        "dist(u) + dist(v) - dist(getLCA(u, v))"
+      ],
+      "answer": "dist(u) + dist(v) - 2 * dist(getLCA(u, v))",
+      "category": "tree algorithms",
+      "topic": "distance calculation",
+      "explanation": "The distance between 2 nodes can be calculated using this formula."
+    },
+    {
+      "question": "Which of the following algorithms are useful for processing queries on trees?",
+      "type": "mcq",
+      "options": [
+        "Centroid Decomposition.",
+        "Heavy Light Decomposition.",
+        "Both (A) and (B).",
+        "Neither (A) nor (B)."
+      ],
+      "answer": "Both (A) and (B).",
+      "category": "tree algorithms",
+      "topic": "query processing",
+      "explanation": "Both (A) and (B) are used to handle queries on trees."
+    },
+    {
+      "question": "What will the output of the following code snippet be?",
+      "type": "mcq",
+      "options": ["1 2 3 4 5", "5 4 3 2 1", "1 3 5 2 4", "2 4 1 3 5"],
+      "answer": "2 4 1 3 5",
+      "category": "programming",
+      "topic": "code output",
+      "explanation": "The code snippet sorts the array based on a custom comparator.",
+      "code_snippet": "void solve() {\n    vector<int> a = {1, 2, 3, 4, 5};\n    sort(a.begin(), a.end(), [&](const int &x, const int &y) {\n        return x % 2 < y % 2;\n    });\n    for(int x: a) {\n        cout << x << ' ';\n    }\n    cout << endl;\n}"
+    },
+    {
+      "question": "Consider the following code snippet: void solve(vector<int> &a) { int queries; cin >> queries; while(queries--) { int type; cin >> type; if(type == 1) { int index, value; cin >> index >> value; update(a, index, value); } else { int l, r; cin >> l >> r; cout << getXOR(a, l, r) << endl; } } } The update() function updates the element at the given index in the array to some given value. The getXOR() function returns the XOR of the elements in the array a, in the range [l, r]. Which of the following data structures can perform the above tasks optimally?",
+      "type": "mcq",
+      "options": ["Segment Trees.", "Prefix XOR Arrays.", "Tries.", "Stacks."],
+      "answer": "Segment Trees.",
+      "category": "data structures",
+      "topic": "query optimization",
+      "explanation": "Segment trees would be an optimal choice for such operations."
+    },
+    {
+      "question": "Which of the following algorithms are used for string and pattern matching problems?",
+      "type": "mcq",
+      "options": [
+        "Z Algorithm",
+        "Rabin Karp Algorithm",
+        "KMP Algorithm",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "category": "Conceptual",
+      "topic": "String and Pattern Matching"
+    },
+    {
+      "question": "Consider we have a function, getLCA(), which returns us the Lowest Common Ancestor between 2 nodes of a tree. Using this getLCA() function, how can we calculate the distance between 2 nodes, given that distance from the root, to each node is calculated?",
+      "type": "mcq",
+      "options": [
+        "dist(u) + dist(v) - 2 * dist(getLCA(u, v))",
+        "dist(u) + dist(v) + 2 * dist(getLCA(u, v))",
+        "dist(u) + dist(v)",
+        "dist(u) + dist(v) - dist(getLCA(u, v))"
+      ],
+      "answer": "dist(u) + dist(v) - 2 * dist(getLCA(u, v))",
+      "category": "Conceptual",
+      "topic": "Tree Algorithms"
+    },
+    {
+      "question": "Which of the following algorithms are useful for processing queries on trees?",
+      "type": "mcq",
+      "options": [
+        "Centroid Decomposition.",
+        "Heavy Light Decomposition.",
+        "Both (A) and (B).",
+        "Neither (A) nor (B)."
+      ],
+      "answer": "Both (A) and (B).",
+      "category": "Conceptual",
+      "topic": "Tree Algorithms"
+    },
+    {
+      "question": "What will the output of the following code snippet be? void solve() { vector<int> a = {1, 2, 3, 4, 5}; sort(a.begin(), a.end(), [&](const int &x, const int &y) { return x % 2 < y % 2; }); for(int x: a) { cout << x << \" \"; } cout << endl; }",
+      "type": "textInput",
+      "answer": "2 4 1 3 5",
+      "category": "Syntax",
+      "topic": "C++"
+    },
+    {
+      "question": "Consider the following code snippet: void solve(vector<int> &a) { int queries; cin >> queries; while(queries--) { int type; cin >> type; if(type == 1) { int index, value; cin >> index >> value; update(a, index, value); } else { int l, r; cin >> l >> r; cout << getXOR(a, l, r) << endl; } } } The update() function updates the element at the given index in the array to some given value. The getXOR() function returns the XOR of the elements in the array a, in the range [l, r]. Which of the following data structures can perform the above tasks optimally?",
+      "type": "textInput",
+      "answer": "Segment Trees.",
+      "category": "Conceptual",
+      "topic": "Data Structures"
+    },
+    {
+      "question": "What is the time complexity of the binary search algorithm?",
+      "type": "mcq",
+      "options": ["O(n)", "O(1)", "O(log2n)", "O(n^2)"],
+      "answer": "O(log2n)",
+      "category": "Conceptual",
+      "topic": "Algorithms"
+    },
+    {
+      "question": "Kruskal’s Algorithm for finding the Minimum Spanning Tree of a graph is a kind of a?",
+      "type": "mcq",
+      "options": [
+        "DP Problem.",
+        "Greedy Algorithm.",
+        "Adhoc Problem.",
+        "None of the above."
+      ],
+      "answer": "Greedy Algorithm.",
+      "category": "Conceptual",
+      "topic": "Algorithms"
+    },
+    {
+      "question": "What will be the output of the following code snippet?",
+      "type": "textInput",
+      "answer": "7",
+      "category": "Code Output",
+      "topic": "Binary Search"
+    },
+    {
+      "question": "Maps in C++ are implemented using which of the following data structures?",
+      "type": "mcq",
+      "options": [
+        "Red-Black Trees.",
+        "Binary Search Trees.",
+        "AVL Trees.",
+        "Hash Tables."
+      ],
+      "answer": "Red-Black Trees.",
+      "category": "Conceptual",
+      "topic": "Data Structures"
+    },
+    {
+      "question": "What will be the output of the following code snippet?",
+      "type": "textInput",
+      "answer": "4",
+      "category": "Code Output",
+      "topic": "Binary Search"
+    },
+    {
+      "question": "What is the time complexity of the Sieve of Eratosthenes to check if a number is prime?",
+      "type": "mcq",
+      "options": [
+        "O(nlog(logn)) Precomputation, O(1) for check.",
+        "O(n) Precomputation, O(1) for the check.",
+        "O(n * logn) Precomputation, O(logn) for check.",
+        "O(n) Precomputation, O(logn) for check."
+      ],
+      "answer": "O(nlog(logn)) Precomputation, O(1) for check.",
+      "category": "Conceptual",
+      "topic": "Algorithms"
+    },
+    {
+      "question": "What will be the output of the following code snippet?",
+      "type": "textInput",
+      "answer": "3",
+      "category": "Code Output",
+      "topic": "Binary Search"
+    },
+    {
+      "question": "What is the best case time complexity of the binary search algorithm?",
+      "type": "mcq",
+      "options": ["O(1)", "O(n)", "O(log2n)", "O(n^2)"],
+      "answer": "O(1)",
+      "category": "Conceptual",
+      "topic": "Algorithms"
+    },
+    {
+      "question": "What is the time complexity to insert an element to the front of a LinkedList(head pointer given)?",
+      "type": "mcq",
+      "options": ["O(n)", "O(1)", "O(logn)", "O(n * logn)"],
+      "answer": "O(1)",
+      "category": "Conceptual",
+      "topic": "Data Structures"
+    },
+    {
+      "question": "What is the time complexity to insert an element to the rear of a LinkedList(head pointer given)?",
+      "type": "mcq",
+      "options": ["O(n)", "O(1)", "O(logn)", "O(n * logn)"],
+      "answer": "O(n)",
+      "category": "Conceptual",
+      "topic": "Data Structures"
+    },
+    {
+      "question": "What will be the value of 'sum' after the following code snippet terminates?",
+      "code_snippet": "void solve(ListNode* root) {\n   /*\n   The LinkedList is defined as:\n   root-> val = value of the node\n   root-> next = address of next element from the node\n   The List is 1 -> 2 -> 3 -> 4 -> 5\n   */\n   int sum = 0;\n   while(root -> next != NULL) {\n       sum += root -> val;\n       root = root -> next;\n   }\n   cout << sum << endl;\n}",
+      "type": "mcq",
+      "options": ["10", "20", "5", "1"],
+      "answer": "10",
+      "category": "Conceptual",
+      "topic": "LinkedLists"
+    },
+    {
+      "question": "Which of the following can be done with LinkedList?",
+      "type": "mcq",
+      "options": [
+        "Implementation of Stacks and Queues",
+        "Implementation of Binary Trees",
+        "Implementation of Data Structures that can simulate Dynamic Arrays",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "category": "Conceptual",
+      "topic": "LinkedLists"
+    },
+    {
+      "question": "What is the information, which a LinkedList's Node must store?",
+      "type": "text_input",
+      "answer": "Both (A) and (B)",
+      "category": "Conceptual",
+      "topic": "LinkedLists"
+    },
+    {
+      "question": "What is the maximum number of children a node can have in an n-ary tree?",
+      "type": "text_input",
+      "answer": "n",
+      "category": "Conceptual",
+      "topic": "Trees"
+    },
+    {
+      "question": "Worst case time complexity to access an element in a BST can be?",
+      "type": "mcq",
+      "options": ["O(n)", "O(n * logn)", "O(1)", "O(logn)"],
+      "answer": "O(n)",
+      "category": "Conceptual",
+      "topic": "Binary Search Trees"
+    },
+    {
+      "question": "Which of the following represents the Postorder Traversal of a Binary Tree?",
+      "type": "mcq",
+      "options": [
+        "Left -> Right -> Root",
+        "Left -> Root -> Right",
+        "Right -> Left -> Root",
+        "Right -> Root -> Left"
+      ],
+      "answer": "Left -> Right -> Root",
+      "category": "Conceptual",
+      "topic": "Binary Trees"
+    },
+    {
+      "question": "In what time complexity can we find the diameter of a binary tree optimally?",
+      "type": "mcq",
+      "options": ["O(V + E)", "O(V)", "O(E)", "O(V * logE)"],
+      "answer": "O(V + E)",
+      "explanation": "We can compute the diameter of a binary tree using a single DFS, which takes the time of O(V + E)."
+    },
+    {
+      "question": "Which of the following statements is true about AVL Trees?",
+      "type": "mcq",
+      "options": [
+        "The difference between the heights of left and right nodes cannot be more than 1.",
+        "The height of an AVL Tree always remains of the order of O(logn)",
+        "AVL Trees are a type of self-balancing Binary Search Trees.",
+        "All of the above."
+      ],
+      "answer": "All of the above.",
+      "explanation": "All the above options are applicable for an AVL Tree."
+    },
+    {
+      "question": "What does the following code snippet calculate (edges represent the adjacency list representation of a graph)?\n\nvoid solve(vector<vector<int>> edges) {\n   int count = 0;\n   for(auto x: edges) {\n       for(auto y: x) {\n           count += 1;\n       }\n   }\n   cout << count / 2 << endl;\n}",
+      "type": "mcq",
+      "code_snippet": "void solve(vector<vector<int>> edges) {\n   int count = 0;\n   for(auto x: edges) {\n       for(auto y: x) {\n           count += 1;\n       }\n   }\n   cout << count / 2 << endl;\n}",
+      "options": [
+        "Calculates the number of edges in an undirected graph.",
+        "Calculates the number of nodes in a given graph.",
+        "Calculates the sum of degrees of all nodes in a given graph.",
+        "None of the above."
+      ],
+      "answer": "Calculates the number of edges in an undirected graph.",
+      "explanation": "The above code snippet calculates the number of edges in an undirected graph."
+    },
+    {
+      "question": "In a graph of n nodes and n edges, how many cycles will be present?",
+      "type": "mcq",
+      "options": [
+        "Exactly 1",
+        "At most 1",
+        "At most 2",
+        "Depends on the graph"
+      ],
+      "answer": "Exactly 1",
+      "explanation": "A tree contains by definition n nodes and n - 1 edges, and it is an acyclic graph. When we add 1 edge to the tree, we can form exactly one cycle by adding this edge."
+    },
+    {
+      "question": "A node in a tree, such that removing it splits the tree into forests, with size of each connected component being not greater than n / 2 is called?",
+      "type": "mcq",
+      "options": ["Center", "Diameter", "Centroid", "Path"],
+      "answer": "Centroid",
+      "explanation": "Such a node in a tree is called a centroid of the tree."
+    }
+  ]
+}
