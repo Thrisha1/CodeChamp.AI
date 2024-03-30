@@ -81,39 +81,38 @@ export default function LoginPage(){
     }
 
     return (
-        <main className="h-screen flex items-center justify-center bg-purple-300 p-6">
-          <div className="bg-white p-8 rounded-lg shadow-md w-96">
-            <input 
-              type="email" 
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email"
-              className="mb-4 w-full p-3 rounded-md border border-purple-700 bg-white text-black placeholder-purple-300 focus:outline-none focus:border-purple-500"
-            />
-            <input 
-              type="password" 
-              name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
-              className="mb-4 w-full p-3 rounded-md border border-purple-700 bg-white text-black placeholder-purple-300 focus:outline-none focus:border-purple-500"
-            />
-            <button 
-              onClick={handleSignUp}
-              className="w-full mb-2 p-3 rounded-md bg-purple-600 text-white hover:bg-purple-700 focus:outline-none"
-            >
-              Sign Up
-            </button>
-            <button 
-              onClick={handleSignIn}
-              className="w-full p-3 rounded-md bg-purple-700 text-white hover:bg-purple-600 focus:outline-none"
-            >
-              Sign In
-            </button>
-          </div>
-        </main>
-      );
-      
-
+      <main className="h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 to-purple-600 px-6">
+        <div className="bg-white p-8 rounded-lg shadow-md w-96">
+          <input 
+            type="email" 
+            name="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            className="mb-4 w-full px-4 py-3 rounded-md border border-purple-400 bg-purple-100 text-purple-800 placeholder-purple-400 focus:outline-none focus:border-purple-600"
+          />
+          <input 
+            type="password" 
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            className="mb-4 w-full px-4 py-3 rounded-md border border-purple-400 bg-purple-100 text-purple-800 placeholder-purple-400 focus:outline-none focus:border-purple-600"
+          />
+          <button 
+            onClick={handleSignUp}
+            className="w-full mb-2 px-4 py-3 rounded-md bg-purple-500 text-white hover:bg-purple-600 focus:outline-none"
+          >
+            Sign Up
+          </button>
+          <button 
+            onClick={handleSignIn}
+            className="w-full px-4 py-3 rounded-md bg-purple-700 text-white hover:bg-purple-800 focus:outline-none"
+          >
+            Sign In
+          </button>
+        </div>
+      </main>
+    );
+    
 }
