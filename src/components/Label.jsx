@@ -1,69 +1,85 @@
-"use client"
+"use client";
 
-
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from "react";
+import Head from "next/head";
 
 const RatingPage = () => {
-    const [likeCount, setLikeCount] = useState(0);
+  const [likeCount, setLikeCount] = useState(0);
   const [lastClickedIndex, setLastClickedIndex] = useState(-1);
-
 
   const handleClick = (index) => {
     if (index === 0 || index === lastClickedIndex + 1) {
       setLikeCount(likeCount + 1);
       setLastClickedIndex(index);
     } else {
-      
       setLikeCount(0);
       setLastClickedIndex(-1);
     }
-  }; 
+  };
   return (
-    <div className="h-screen flex items-center justify-center bg-gradient-to-r from-blue-200 via-blue-300 to-pink-200 mt-10" >
+    <div className="h-screen flex items-center justify-center bg-gradient-to-r from-black via-green-500 to-black mt-10">
       <Head>
         <title>Rate Your Skills</title>
-        <meta name="description"content="Rate your skills in different areas" />
+        <meta
+          name="description"
+          content="Rate your skills in different areas"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="h-98 px-8 py-12 bg-white rounded-lg row-md ">
-        <h1 className="text-3xl font-semibold text-center mb-8">Rate Your Skills</h1>
+      <main className="h-98 px-8 py-12 bg-white bg-opacity-25 rounded-lg row-md ">
+        <h1 className="text-3xl font-semibold text-center mb-8">
+          Rate Your Skills
+        </h1>
         <div className="h-50 flex justify-between">
-  <div className="h-50 bg-blue-400 flex-1 p-6 rounded-lg shadow-md mr-4 hover:bg-blue-500">
-    <a href="/dsa">
-      <h2 className="text-xl font-semibold text-white mb-4">Beginner</h2>
-      <p className="text-gray-700">Rate your beginner-level skills here</p>
-    </a>
-  </div>
-  <div className="bg-pink-400 flex-1 p-6 rounded-lg shadow-md mx-2 hover:bg-pink-500">
-    <a href="/dsa">
-      <h2 className="text-xl font-semibold text-white mb-4">Intermediate</h2>
-      <p className="text-gray-700">Rate your intermediate-level skills here</p>
-    </a>
-  </div>
-  <div className="bg-blue-400 flex-1 p-6 rounded-lg shadow-md ml-4 hover:bg-blue-500">
-    <a href="/dsa">
-      <h2 className="text-xl font-semibold text-white mb-4">Expertise</h2>
-      <p className="text-gray-700">Rate your expertise-level skills here</p>
-    </a>
-  </div>
-</div>
+          <div className="h-50 bg-green-200 text-black flex-1 p-6 rounded-lg shadow-md mr-4 hover:translate-y-3 duration-500">
+            <a href="/dsa">
+              <h2 className="text-xl font-semibold mb-4">
+                Beginner
+              </h2>
+              <p className="text-gray-700">
+                Rate your beginner-level skills here
+              </p>
+            </a>
+          </div>
+          <div className="bg-green-400 flex-1 p-6 rounded-lg shadow-md mx-2 hover:translate-y-3 duration-500">
+            <a href="/dsa">
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Intermediate
+              </h2>
+              <p className="text-gray-700">
+                Rate your intermediate-level skills here
+              </p>
+            </a>
+          </div>
+          <div className="bg-green-600 flex-1 p-6 rounded-lg shadow-md ml-4 hover:translate-y-3 duration-500">
+            <a href="/dsa">
+              <h2 className="text-xl font-semibold text-white mb-4">
+                Expertise
+              </h2>
+              <p className="text-gray-700">
+                Rate your expertise-level skills here
+              </p>
+            </a>
+          </div>
+        </div>
 
-
-         <div>
-         <h1 className="text-center text-bold mt-7">OR</h1>
-         </div>
-         <div>
-            <p className="text-3xl font-semibold text-center mt-8 mb-8">RATE YOUR CODING SKILLS OUT OF {likeCount}/10</p>
-         </div>
-         <div div className = "flex justify-center">
-        
-         {[...Array(10).keys()].map((index) => (
+        <div>
+          <h1 className="text-center text-bold mt-7">OR</h1>
+        </div>
+        <div>
+          <p className="text-3xl font-semibold text-center mt-8 mb-8">
+            RATE YOUR CODING SKILLS OUT OF {likeCount}/10
+          </p>
+        </div>
+        <div div className="flex justify-center">
+          {[...Array(10).keys()].map((index) => (
             <svg
               key={index}
               onClick={() => handleClick(index)}
-              className={`h-10 w-10 fill-current ${index <= lastClickedIndex ? 'text-yellow-500' : 'text-gray-400'} cursor-pointer`}
+              className={`h-10 w-10 fill-current ${
+                index <= lastClickedIndex ? "text-yellow-500" : "text-white"
+              } cursor-pointer`}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
             >
@@ -73,8 +89,8 @@ const RatingPage = () => {
                 clipRule="evenodd"
               />
             </svg>
-              ))}
-              </div> 
+          ))}
+        </div>
       </main>
     </div>
   );
