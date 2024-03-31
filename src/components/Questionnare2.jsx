@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Questionnaire from "../../syllabus_dsa/Questionnare.json";
+import Questionnaire from "../../syllabus_dsa/questionsPrep.json";
 import Modals from "@/components/Modal";
 import supabase from "@/supabase";
 import { useRouter } from "next/navigation";
@@ -72,10 +72,10 @@ export default function Questionnare2({ func, result }) {
 
   useEffect(() => {
     console.log("resultArray", resultArray);
-    console.log("conceptual", conceptual);
-    console.log("logical", logical);
-    console.log("errorHandling", errorHandling);
-    console.log("syntax", syntax);
+    // console.log("conceptual", conceptual);
+    // console.log("logical", logical);
+    // console.log("errorHandling", errorHandling);
+    // console.log("syntax", syntax);
   }, [resultArray, conceptual, logical, errorHandling, syntax]);
 
   function handleSubmit() {
@@ -158,7 +158,7 @@ export default function Questionnare2({ func, result }) {
       return error;
     }
 
-    console.log("calculation_data", calculation_data);
+    // console.log("calculation_data", calculation_data);
 
     router.push("/dashboard");
   }
@@ -166,14 +166,14 @@ export default function Questionnare2({ func, result }) {
   return (
     <div className="w-full bg-black">
       <div className="w-3/4 mx-10">
-      <p className="text-3xl font-bold text-center p-5 text-purple-600">
+      <p className="text-3xl font-bold text-center p-5 text-green-500">
         Questionnaire : Basics of DSA
       </p>
       {nextBatch.map((q, index) => (
         <form key={index}>
           <div
             className={`my-5 bg-black text-white p-10 w-full border-4 rounded-xl ${
-              q && q?.correct === true ? "border-green-500" : "border-purple-500"
+              q && q?.correct === true ? "border-green-500" : "border-white"
             }`}
           >
             <label className="text-xl flex mb-5 font-bold">
