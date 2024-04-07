@@ -32,7 +32,6 @@ export default function LoginPage() {
       alert("Passwords do not match");
       return;
     }
-  
     try {
       const res = await supabase.auth.signUp({
         email,
@@ -53,16 +52,23 @@ export default function LoginPage() {
   };
   
   const handleSignIn = async () => {
-    const res = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-    setUser(res.data.user);
-    router.push("/");
-    setEmail("");
-    setPassword("");
+    try {
+      const res = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+      setUser(res.data.user);
+      setEmail("");
+      setPassword("");
+      router.push("/");
+    } catch (error) {
+      console.error("Error signing in:", error.message);
+      // Display an error message to the user
+      alert("Wrong credentials");
+    }
   };
-
+  
+  
   const handleLogout = async () => {
     await supabase.auth.signOut();
     router.refresh();
