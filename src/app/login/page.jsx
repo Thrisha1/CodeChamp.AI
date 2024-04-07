@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [newUser, setNewUser] = useState(false);
   const router = useRouter();
   const [user, setUser] = useState(null);
@@ -32,7 +32,7 @@ export default function LoginPage() {
       alert("Passwords do not match");
       return;
     }
-  
+
     try {
       const res = await supabase.auth.signUp({
         email,
@@ -46,12 +46,12 @@ export default function LoginPage() {
       setEmail("");
       setPassword("");
       setConfirmPassword("");
-      setNewUser(false) // Clear the confirm password input
+      setNewUser(false); // Clear the confirm password input
     } catch (error) {
       console.error("Error signing up:", error.message);
     }
   };
-  
+
   const handleSignIn = async () => {
     const res = await supabase.auth.signInWithPassword({
       email,
@@ -138,7 +138,7 @@ export default function LoginPage() {
       </div>
       <div className="h-screen font-mono w-1/2 flex flex-col items-center justify-center bg-gray-950 px-6">
         <div className="mb-2">
-          <h1 className="text-white text-5xl">Welcome</h1>        
+          <h1 className="text-white text-5xl">Welcome</h1>
         </div>
         <div className="bg-transparent p-8 rounded-lg shadow-md w-96">
           <input
@@ -157,26 +157,32 @@ export default function LoginPage() {
             placeholder="Password"
             className="mb-4 w-full px-4 py-3 rounded-md border  bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:border-gray-600"
           />
-          {newUser && (<input
-            type="password"
-            name="confirmPassword"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            placeholder="Re-enter Password"
-            className="mb-4 w-full px-4 py-3 rounded-md border  bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:border-gray-600"
-          />)}
-          {!newUser && (<button
-            onClick={handleSignIn}
-            className="w-full px-4 py-3 rounded-md bg-green-400 text-white hover:bg-purple-800 focus:outline-none"
-          >
-            Log In
-          </button>)}
-          {newUser && (<button
-            onClick={handleSignUp}
-            className="w-full px-4 py-3 rounded-md bg-green-400 text-white hover:bg-purple-600 focus:outline-none"
-          >
-            Sign Up
-          </button>)}
+          {newUser && (
+            <input
+              type="password"
+              name="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder="Re-enter Password"
+              className="mb-4 w-full px-4 py-3 rounded-md border  bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:border-gray-600"
+            />
+          )}
+          {!newUser && (
+            <button
+              onClick={handleSignIn}
+              className="w-full px-4 py-3 rounded-md bg-green-400 text-white hover:bg-purple-800 focus:outline-none"
+            >
+              Log In
+            </button>
+          )}
+          {newUser && (
+            <button
+              onClick={handleSignUp}
+              className="w-full px-4 py-3 rounded-md bg-green-400 text-white hover:bg-purple-600 focus:outline-none"
+            >
+              Sign Up
+            </button>
+          )}
           {!newUser && (
             <p className="text-white mt-5">
               New user?{" "}
