@@ -3,6 +3,7 @@
 import { Inter } from "next/font/google";
 import './globals.css';
 import { createContext, useState } from 'react'
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+      <Navbar />
         <ProblemContext.Provider value={{ contextValues, updateVariables }}>
           {children}
         </ProblemContext.Provider>

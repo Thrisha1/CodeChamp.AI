@@ -2,6 +2,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { ProblemContext } from "@/app/layout";
 import syllabus_dsa from "../../syllabus_dsa/dsa.json"
+import Link from "next/link";
 
 export default function CodeEditor({ getCode, result }) {
     console.log("response", syllabus_dsa)
@@ -129,9 +130,9 @@ export default function CodeEditor({ getCode, result }) {
                         {loading ? "Loading..." : "Run"}{" "}
                         {/* Show loading text when loading */}
                     </button>
-                    <button className="ml-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600">
+                    <Link href={"/dsa/Beginner"} className="ml-2 px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600">
                         Submit
-                    </button>
+                    </Link>
                     {error && (
                         <div className="bg-red-100 p-4 mt-2 border border-red-500 rounded-md">
                             {error}
