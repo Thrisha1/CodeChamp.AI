@@ -32,7 +32,7 @@ export default function LoginPage() {
       alert("Passwords do not match");
       return;
     }
-  
+
     try {
       const res = await supabase.auth.signUp({
         email,
@@ -41,6 +41,17 @@ export default function LoginPage() {
           emailRedirectTo: `${location.origin}/auth/callback`,
         },
       });
+      console.log(res.data.user);
+
+      const { data, error } = await supabase
+        .from("student_test_data")
+        .insert([{ email: res.data.user.email,name:"rinshad" }])
+        .select();
+
+        if (error) {
+          console.log(error)
+        }
+
       setUser(res.data.user);
       router.refresh();
       setEmail("");
@@ -58,6 +69,7 @@ export default function LoginPage() {
         email,
         password,
       });
+      console.log(res.data.user);
       setUser(res.data.user);
       setEmail("");
       setPassword("");
@@ -68,8 +80,7 @@ export default function LoginPage() {
       alert("Wrong credentials");
     }
   };
-  
-  
+
   const handleLogout = async () => {
     await supabase.auth.signOut();
     router.refresh();
