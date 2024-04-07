@@ -7,7 +7,7 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div>
+    <div className='bg-black'>
 
       <Hero />
       <RatingPage />
@@ -15,5 +15,6 @@ export default function Home() {
       <Footer />
 
     </div>
+    
   );
 }

@@ -1,0 +1,537 @@
+{
+  "questions": [
+    {
+      "question": "What is the purpose of declaring variables in programming?",
+      "type": "textInput",
+      "answer": "To store and manipulate data",
+      "category": "Conceptual",
+      "topic": "Variables",
+      "programming_language": null
+    },
+    {
+      "question": "Identify the error in the following variable declaration: int 3num = 5;",
+      "type": "textInput",
+      "answer": "Variable name cannot start with a number",
+      "category": "Error",
+      "topic": "Variables",
+      "programming_language": null
+    },
+    {
+      "question": "What is the syntax for declaring a variable of type float in many programming languages?",
+      "type": "mcq",
+      "options": ["float", "var", "real", "decimal"],
+      "answer": "float",
+      "category": "Syntax",
+      "topic": "Variables",
+      "programming_language": null
+    },
+    {
+      "question": "Explain the concept of variable scope in programming.",
+      "type": "textInput",
+      "answer": "Variable scope defines where a variable is accessible within a program.",
+      "category": "Conceptual",
+      "topic": "Variables",
+      "programming_language": null
+    },
+    {
+      "question": "What is the maximum value that can be stored in an unsigned integer of 32 bits?",
+      "type": "textInput",
+      "answer": "4294967295",
+      "category": "conceptual",
+      "topic": "data types",
+      "programming_language": null
+    },
+    {
+      "question": "What will be the result of multiplying a float and an integer?",
+      "type": "textInput",
+      "answer": "a float",
+      "category": "logical",
+      "topic": "data types",
+      "programming_language": null
+    },
+    {
+      "question": "Identify the error in the following statement: float x = 10.5;",
+      "type": "textInput",
+      "answer": "The variable type and value type mismatch. It should be double x = 10.5;",
+      "category": "error",
+      "topic": "data types",
+      "programming_language": null
+    },
+    {
+      "question": "In many programming languages, what data type is used to store single characters?",
+      "type": "mcq",
+      "options": ["int", "char", "string", "boolean"],
+      "answer": "char",
+      "category": "syntax",
+      "topic": "data types",
+      "programming_language": null
+    },
+    {
+      "question": "What is the result of 7 / 2 in integer division?",
+      "type": "textInput",
+      "answer": "3",
+      "category": "Logical",
+      "topic": "Operators",
+      "programming_language": null
+    },
+    {
+      "question": "Which operator is used to perform exponentiation in many programming languages?",
+      "type": "mcq",
+      "options": ["^", "", "*", "/"],
+      "answer": "",
+      "category": "Syntax",
+      "topic": "Operators",
+      "programming_language": null
+    },
+    {
+      "question": "What is the result of 10 % 3?",
+      "type": "textInput",
+      "answer": "1",
+      "category": "Conceptual",
+      "topic": "Operators",
+      "programming_language": null
+    },
+    {
+      "question": "Identify the error in the following expression: x = 5 + * 3;",
+      "type": "textInput",
+      "answer": "*",
+      "category": "Error",
+      "topic": "Operators",
+      "programming_language": null
+    },
+
+    {
+      "question": "What is the purpose of using if-else statements in programming?",
+      "type": "mcq",
+      "options": [
+        "To execute a block of code if a condition is true, otherwise execute another block of code",
+        "To execute a block of code repeatedly until a condition is true",
+        "To define a function in programming languages",
+        "To import external libraries into the program"
+      ],
+      "answer": "To execute a block of code if a condition is true, otherwise execute another block of code",
+      "category": "Conceptual",
+      "topic": "If-Else",
+      "programming_language": null
+    },
+
+    {
+      "question": "What is the correct syntax for an if-else statement in many programming languages?",
+      "type": "textInput",
+      "answer": "if (condition) {\n // code block to be executed if condition is true\n} else {\n // code block to be executed if condition is false\n}",
+      "category": "Syntax",
+      "topic": "If-Else",
+      "programming_language": null
+    },
+
+    {
+      "question": "Given the following pseudocode, what will be the value of x after execution?\n\nif (a > b) {\n x = a;\n} else {\n x = b;\n}",
+      "type": "textInput",
+      "answer": "x will be assigned the value of whichever variable is greater between 'a' and 'b'.",
+      "category": "Logical",
+      "topic": "If-Else",
+      "programming_language": null
+    },
+
+    {
+      "question": "Identify the error in the following if-else statement:\n\nif (x == 5)\n{\n print('x is equal to 5');\n} else\n{\n print('x is not equal to 5');\n}",
+      "type": "textInput",
+      "answer": "The error is the missing parentheses around the condition in the if statement.",
+      "category": "Error",
+      "topic": "If-Else",
+      "programming_language": null
+    },
+    {
+      "question": "What is the purpose of using a loop in programming?",
+      "type": "mcq",
+      "options": [
+        "To repeat a set of instructions multiple times",
+        "To execute a single instruction once",
+        "To skip certain instructions in a program",
+        "To terminate the program execution"
+      ],
+      "answer": "To repeat a set of instructions multiple times",
+      "category": "Conceptual",
+      "topic": "Loops",
+      "programming_language": null
+    },
+    {
+      "question": "Which loop in Python is best suited for iterating over a sequence of elements?",
+      "type": "mcq",
+      "options": [
+        "for loop",
+        "while loop",
+        "do-while loop",
+        "repeat-until loop"
+      ],
+      "answer": "for loop",
+      "category": "Syntax",
+      "topic": "Loops",
+      "programming_language": "Python"
+    },
+    {
+      "question": "Identify the error in the following loop syntax in Java:\nfor (int i = 0; i < 5; i++)\n{\n   System.out.println(i);\n}",
+      "type": "mcq",
+      "options": [
+        "There is no error",
+        "The loop condition is incorrect",
+        "The loop initialization is incorrect",
+        "The loop increment is incorrect"
+      ],
+      "answer": "There is no error",
+      "category": "Error",
+      "topic": "Loops",
+      "programming_language": "Java"
+    },
+    {
+      "question": "Given a list of numbers, write a Python program using a loop to find the sum of all the elements.",
+      "type": "textInput",
+      "answer": "sum = 0\nfor num in numbers:\n    sum += num",
+      "category": "Logical",
+      "topic": "Loops",
+      "programming_language": "Python"
+    },
+    {
+      "question": "What is the purpose of functions in programming?",
+      "type": "mcq",
+      "options": [
+        "To repeat code blocks",
+        "To organize code into reusable blocks",
+        "To create loops",
+        "To define variables"
+      ],
+      "answer": "To organize code into reusable blocks",
+      "category": "Conceptual",
+      "topic": "Functions",
+      "programming_language": null
+    },
+    {
+      "question": "Which of the following is true about function parameters?",
+      "type": "mcq",
+      "options": [
+        "Parameters are optional in functions",
+        "Parameters are used to return values from a function",
+        "Parameters define the inputs a function expects",
+        "Parameters can only be of integer type"
+      ],
+      "answer": "Parameters define the inputs a function expects",
+      "category": "Syntax",
+      "topic": "Functions",
+      "programming_language": null
+    },
+    {
+      "question": "Write a function in pseudo code to calculate the factorial of a given number.",
+      "type": "textInput",
+      "answer": "function factorial(number)\n  if number equals 0 or 1\n    return 1\n  else\n    return number * factorial(number - 1)",
+      "category": "Logical",
+      "topic": "Functions",
+      "programming_language": null
+    },
+    {
+      "question": "Identify the error in the following function definition:\n\nfunction calculateAverage(a, b) {\n  return a + b / 2;\n}",
+      "type": "textInput",
+      "answer": "The function does not have proper parentheses to ensure correct order of operations. It should be: return (a + b) / 2;",
+      "category": "Error",
+      "topic": "Functions",
+      "programming_language": null
+    },
+    {
+      "question": "What is recursion?",
+      "type": "textInput",
+      "answer": "Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem.",
+      "category": "Conceptual",
+      "topic": "Recursion",
+      "programming_language": null
+    },
+    {
+      "question": "Write a recursive function to calculate the factorial of a number.",
+      "type": "textInput",
+      "answer": "function factorial(n) {\n  if (n === 0 || n === 1) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n}",
+      "category": "Logical",
+      "topic": "Recursion",
+      "programming_language": null
+    },
+    {
+      "question": "Identify the error in the following recursive function to calculate the nth Fibonacci number: \nfunction fibonacci(n) {\n  if (n <= 1) {\n    return n;\n  }\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}",
+      "type": "textInput",
+      "answer": "This function has exponential time complexity because it recalculates Fibonacci numbers multiple times, leading to inefficient performance.",
+      "category": "Error",
+      "topic": "Recursion",
+      "programming_language": null
+    },
+    {
+      "question": "In many programming languages, what is the base case of a recursive function?",
+      "type": "mcq",
+      "options": [
+        "The condition that stops the recursion and returns a specific value.",
+        "The initial function call.",
+        "The case where the function calls itself.",
+        "The case where the function returns the result."
+      ],
+      "answer": "The condition that stops the recursion and returns a specific value.",
+      "category": "Syntax",
+      "topic": "Recursion",
+      "programming_language": null
+    },
+    {
+      "question": "What is an array?",
+      "type": "mcq",
+      "options": [
+        "A data structure that stores a collection of elements of the same type",
+        "A loop structure used for iteration",
+        "A conditional statement used for decision making",
+        "A variable used to store a single value"
+      ],
+      "answer": "A data structure that stores a collection of elements of the same type",
+      "category": "Conceptual",
+      "topic": "Arrays",
+      "programming_language": null
+    },
+    {
+      "question": "What is the time complexity of accessing an element in an array by its index?",
+      "type": "mcq",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+      "answer": "O(1)",
+      "category": "Logical",
+      "topic": "Arrays",
+      "programming_language": null
+    },
+    {
+      "question": "What is the error in the following array declaration in C++? \n\nint arr[5]; arr[6] = 10;",
+      "type": "textInput",
+      "answer": "Array index out of bounds",
+      "category": "Error",
+      "topic": "Arrays",
+      "programming_language": "C++"
+    },
+    {
+      "question": "Which of the following syntax correctly initializes an array in Python with 5 elements, all set to 0?",
+      "type": "mcq",
+      "options": [
+        "arr = [0, 0, 0, 0, 0]",
+        "arr = [0] * 5",
+        "arr(5, 0)",
+        "arr[5] = {0}"
+      ],
+      "answer": "arr = [0] * 5",
+      "category": "Syntax",
+      "topic": "Arrays",
+      "programming_language": "Python"
+    },
+    {
+      "question": "What is the time complexity of linear search?",
+      "type": "mcq",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+      "answer": "O(n)",
+      "category": "time and space complexity",
+      "topic": "Time Complexity",
+      "programming_language": null
+    },
+    {
+      "question": "What is the space complexity of a recursive algorithm with constant extra space?",
+      "type": "mcq",
+      "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
+      "answer": "O(n)",
+      "category": "time and space complexity",
+      "topic": "Space Complexity",
+      "programming_language": null
+    },
+    {
+      "question": "What is the concept of amortized analysis in time complexity?",
+      "type": "textInput",
+      "answer": "It's a method for analyzing the average time complexity of a sequence of operations, considering both expensive and inexpensive operations.",
+      "category": "time and space complexity",
+      "topic": "Time Complexity",
+      "programming_language": null
+    },
+    {
+      "question": "Explain the Big O notation and its significance in analyzing algorithm efficiency.",
+      "type": "textInput",
+      "answer": "The Big O notation represents the upper bound on the time or space complexity of an algorithm. It is crucial for understanding how an algorithm's performance scales with input size, allowing for comparisons and optimizations.",
+      "category": "time and space complexity",
+      "topic": "Time and Space Complexity",
+      "programming_language": null
+    },
+    {
+      "question": "What is the primary advantage of using a linked list over an array?",
+      "type": "mcq",
+      "options": [
+        "Constant-time insertion and deletion at any position",
+        "Faster random access",
+        "Fixed size",
+        "Less memory consumption"
+      ],
+      "answer": "Constant-time insertion and deletion at any position",
+      "category": "Conceptual",
+      "topic": "Linked Lists",
+      "programming_language": null
+    },
+    {
+      "question": "Write a function in pseudocode to reverse a singly linked list.",
+      "type": "textInput",
+      "answer": "function reverseList(head)\n    prev = null\n    current = head\n    while current != null\n        next = current.next\n        current.next = prev\n        prev = current\n        current = next\n    return prev",
+      "category": "Logical",
+      "topic": "Linked Lists",
+      "programming_language": null
+    },
+    {
+      "question": "Identify the error in the following code snippet that attempts to delete a node with a given value from a singly linked list.",
+      "type": "mcq",
+      "options": [
+        "The 'next' pointer of the previous node is not updated",
+        "No error",
+        "The 'next' pointer of the current node is not updated",
+        "Incorrect loop termination condition"
+      ],
+      "answer": "The 'next' pointer of the previous node is not updated",
+      "category": "Error",
+      "topic": "Linked Lists",
+      "programming_language": "pseudocode"
+    },
+    {
+      "question": "Which statement correctly allocates memory for a new node in a singly linked list in C++?",
+      "type": "mcq",
+      "options": [
+        "Node* newNode = new Node();",
+        "Node* newNode = Node();",
+        "Node* newNode = malloc(sizeof(Node));",
+        "Node newNode;"
+      ],
+      "answer": "Node* newNode = new Node();",
+      "category": "Syntax",
+      "topic": "Linked Lists",
+      "programming_language": "C++"
+    },
+    {
+      "question": "What is a stack in data structure?",
+      "type": "textInput",
+      "answer": "A stack is a linear data structure that follows the Last In, First Out (LIFO) principle, where elements are inserted and removed from the same end called the top.",
+      "category": "Conceptual",
+      "topic": "Stacks",
+      "programming_language": null
+    },
+    {
+      "question": "What is the result of pushing 5, 3, and 8 onto an initially empty stack, and then popping an element?",
+      "type": "textInput",
+      "answer": "8",
+      "category": "Logical",
+      "topic": "Stacks",
+      "programming_language": null
+    },
+    {
+      "question": "Identify the error in the following stack implementation code: \n\n\nclass Stack:\n def __init__(self):\n self.stack = []\n \n def push(self, element):\n self.stack.append(element)\n \n def pop(self):\n if len(self.stack) == 0:\n return 'Stack is empty'\n else:\n return self.stack.pop()\n \n def peek(self):\n return self.stack[-1]\n",
+      "type": "textInput",
+      "answer": "The error is in the pop() method's conditional statement. It should check if the length of the stack is greater than 0, not equal to 0.",
+      "category": "Error",
+      "topic": "Stacks",
+      "programming_language": null
+    },
+    {
+      "question": "Which symbol is commonly used to represent the top of a stack in pseudocode?",
+      "type": "mcq",
+      "options": ["^", ">", "-", "^"],
+      "answer": "^",
+      "category": "Syntax",
+      "topic": "Stacks",
+      "programming_language": null
+    },
+    {
+      "question": "What is the fundamental principle behind a Queue data structure?",
+      "type": "mcq",
+      "options": ["Last In, First Out (LIFO)", "First In, First Out (FIFO)", "Random Access Memory (RAM)", "Binary Search Tree (BST)"],
+      "answer": "First In, First Out (FIFO)",
+      "category": "conceptual",
+      "topic": "Queues"
+    },
+    {
+      "question": "You have a queue with elements [1, 2, 3, 4, 5]. If you perform two dequeues followed by an enqueue operation with the value 6, what will be the resulting queue?",
+      "type": "textInput",
+      "answer": "[3, 4, 5, 6]",
+      "category": "logical",
+      "topic": "Queues"
+    },
+    {
+      "question": "Identify the error in the following queue implementation code snippet:\n\n```python\nclass Queue:\n    def __init__(self):\n        self.items = []\n    def enqueue(self, item):\n        self.items.insert(0, item)\n    def dequeue(self):\n        if not self.is_empty():\n            return self.items.pop()\n    def is_empty(self):\n        return len(self.items) == 0\n    def size(self):\n        return len(self.items)\n```",
+      "type": "textInput",
+      "answer": "The error is in the `enqueue` method where elements are inserted at index 0. This causes elements to be added at the beginning of the list, which does not maintain the FIFO property of the queue.",
+      "category": "error",
+      "topic": "Queues"
+    },
+    {
+      "question": "In Python, how would you create an empty queue using the `queue` module?",
+      "type": "mcq",
+      "options": ["queue = Queue()", "queue = Queue.Queue()", "queue = queue.Queue()", "queue = queue()"],
+      "answer": "queue = queue.Queue()",
+      "category": "syntax",
+      "topic": "Queues"
+    },
+    {
+      "question": "What is the time complexity of the bubble sort algorithm?",
+      "type": "mcq",
+      "options": ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"],
+      "answer": "O(n^2)",
+      "category": "Conceptual",
+      "topic": "Sorting algorithms",
+      "programming_language": null
+    },
+    
+    {
+      "question": "In bubble sort, what happens during each iteration?",
+      "type": "textInput",
+      "answer": "Comparison and swapping of adjacent elements",
+      "category": "Logical",
+      "topic": "Sorting algorithms",
+      "programming_language": null
+    },
+    
+    {
+      "question": "Identify the error in the following implementation of selection sort:\n\nfor i from 0 to n:\n\tmin_index = i\n\tfor j from i+1 to n:\n\t\tif arr[j] < arr[min_index]:\n\t\t\tmin_index = j\n\ttemp = arr[i]\n\tarr[i] = arr[min_index]\n\tarr[min_index] = temp",
+      "type": "textInput",
+      "answer": "The swapping operation should be performed only if min_index != i, and it should be inside the outer loop.",
+      "category": "Error",
+      "topic": "Sorting algorithms",
+      "programming_language": null
+    },
+    
+    {
+      "question": "Which sorting algorithm is known for its divide-and-conquer approach?",
+      "type": "mcq",
+      "options": ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+      "answer": "Merge Sort",
+      "category": "Syntax",
+      "topic": "Sorting algorithms",
+      "programming_language": null
+    },
+    {
+      "question": "What is the fundamental principle behind binary search algorithm?",
+      "type": "mcq",
+      "options": ["Divide and Conquer", "Linear search", "Randomized search", "Bubble sort"],
+      "answer": "Divide and Conquer",
+      "category": "conceptual",
+      "topic": "Searching algorithms"
+    },
+    {
+      "question": "You are given a sorted array of integers. Write a function in pseudocode to implement binary search to find the index of a given target element.",
+      "type": "textInput",
+      "answer": "BinarySearch(array, target):\n   low = 0\n   high = length(array) - 1\n   while low <= high:\n       mid = (low + high) / 2\n       if array[mid] == target:\n           return mid\n       else if array[mid] < target:\n           low = mid + 1\n       else:\n           high = mid - 1\n   return -1",
+      "category": "logical",
+      "topic": "Searching algorithms"
+    },
+    {
+      "question": "Identify the error in the following implementation of linear search algorithm in Python:\n def linear_search(arr, target):\n   for i in range(len(arr)):\n       if arr[i] = target:\n           return i\n   return -1",
+      "type": "mcq",
+      "options": ["Incorrect comparison operator in the if condition", "Missing return statement", "Range function usage is incorrect", "SyntaxError: Invalid syntax"],
+      "answer": "Incorrect comparison operator in the if condition",
+      "category": "error",
+      "topic": "Searching algorithms"
+    },
+    {
+      "question": "Which of the following statements is used to break out of a loop prematurely in Python?",
+      "type": "mcq",
+      "options": ["halt", "exit", "break", "stop"],
+      "answer": "break",
+      "category": "syntax",
+      "topic": "Searching algorithms"
+    }
+  ]
+}
