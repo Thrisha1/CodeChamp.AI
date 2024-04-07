@@ -34,13 +34,16 @@ export default function LoginPage() {
     }
 
     try {
-      const res = await supabase.auth.signUp({
+      const { data : res, error:signupError } = await supabase.auth.signUp({
         email,
         password,
         options: {
           emailRedirectTo: `${location.origin}/auth/callback`,
         },
       });
+      if(signupError){
+        console.log("Signup error: " + signupError)
+      }
       console.log(res.data.user);
 
       const { data, error } = await supabase
