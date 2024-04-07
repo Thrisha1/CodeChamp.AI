@@ -3,6 +3,7 @@
 
 import { Sidebar } from 'flowbite-react';
 import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from 'react-icons/hi';
+import Link from "next/link";
 
 function SideBar() {
     return (
@@ -10,10 +11,10 @@ function SideBar() {
             <Sidebar.Items>
                 <Sidebar.ItemGroup className="flex flex-col gap-5">
                     <Sidebar.Item className="flex gap-x-3" href="#" icon={HiChartPie}>
-                        Dashboard
+                        <Link href="/dashboard">Dashboard</Link>
                     </Sidebar.Item>
                     <Sidebar.Item className="flex gap-x-3" href="#" icon={HiViewBoards} label="Pro" labelColor="dark">
-                        Kanban
+                        <Link href="/test">Test</Link>
                     </Sidebar.Item>
                     <Sidebar.Item className="flex gap-x-3" href="#" icon={HiInbox} label="3">
                         Inbox

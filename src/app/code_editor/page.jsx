@@ -35,7 +35,6 @@ export default function page() {
     }
     return (
         <div>
-            <Navbar/>
             <CodeEditor getCode={getCode} result={Response}/>
         </div>
     )

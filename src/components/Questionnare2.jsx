@@ -164,15 +164,15 @@ export default function Questionnare2({ func, result }) {
   }
 
   return (
-    <div className="w-full bg-black">
-      <div className="w-3/4 mx-10">
+    <div className="w-full flex justify-center items-center">
+      <div className="mx-10">
       <p className="text-3xl font-bold text-center p-5 text-purple-600">
         Questionnaire : Basics of DSA
       </p>
       {nextBatch.map((q, index) => (
         <form key={index}>
           <div
-            className={`my-5 bg-black text-white p-10 w-full border-4 rounded-xl ${
+            className={`my-5 text-black p-10 w-full border-4 rounded-xl ${
               q && q?.correct === true ? "border-green-500" : "border-purple-500"
             }`}
           >

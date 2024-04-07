@@ -14,13 +14,13 @@ const Navbar = () => {
           <div className="flex gap-3 items-center">
             <ul className="flex gap-4">
               <li>
-                <a href="#" className="text-white  hover:text-blue-500">Home</a>
+                <Link href="/" className="text-white  hover:text-blue-500">Home</Link>
               </li>
               <li>
-                <a href="#" className="text-white  hover:text-blue-500">About Us</a>
+                <a href="/" className="text-white  hover:text-blue-500">About Us</a>
               </li>
               <li>
-                <a href="#" className="text-white  hover:text-blue-500">Contact Us</a>
+                <a href="/" className="text-white  hover:text-blue-500">Contact Us</a>
               </li>
             </ul>
 
