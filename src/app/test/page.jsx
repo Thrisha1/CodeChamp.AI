@@ -10,7 +10,7 @@ export default function page() {
 
     const getDatas = (a) => {
         // result = await getData(a)
-        // console.log("data",a)
+        console.log("data",a)
         getData(a).then((getDataResponse) => {
             console.log("getDataResponse", getDataResponse)
             if(getDataResponse === undefined)
@@ -33,6 +33,7 @@ export default function page() {
 // use api to send the data and get response
 
 async function getData(a) {
+
     const res = await fetch("http://localhost:3000/api/validate", {
         method: "POST",
         headers: {
