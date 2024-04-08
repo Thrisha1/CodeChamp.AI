@@ -49,7 +49,7 @@ export default function LoginPage() {
 
       const { data, error } = await supabase
         .from("student_test_data")
-        .upsert([{ email: email, name: "rinshad" }])
+        .upsert([{ email: email, name: userName }])
         .select();
 
       if (error) {
