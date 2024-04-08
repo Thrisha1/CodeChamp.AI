@@ -83,7 +83,7 @@
       "topic": "Operators",
       "programming_language": null
     },
-    { 
+    {
       "question": "What is the result of 10 % 3?",
       "type": "textInput",
       "answer": "1",
@@ -438,7 +438,12 @@
     {
       "question": "What is the fundamental principle behind a Queue data structure?",
       "type": "mcq",
-      "options": ["Last In, First Out (LIFO)", "First In, First Out (FIFO)", "Random Access Memory (RAM)", "Binary Search Tree (BST)"],
+      "options": [
+        "Last In, First Out (LIFO)",
+        "First In, First Out (FIFO)",
+        "Random Access Memory (RAM)",
+        "Binary Search Tree (BST)"
+      ],
       "answer": "First In, First Out (FIFO)",
       "category": "conceptual",
       "topic": "Queues"
@@ -460,7 +465,12 @@
     {
       "question": "In Python, how would you create an empty queue using the `queue` module?",
       "type": "mcq",
-      "options": ["queue = Queue()", "queue = Queue.Queue()", "queue = queue.Queue()", "queue = queue()"],
+      "options": [
+        "queue = Queue()",
+        "queue = Queue.Queue()",
+        "queue = queue.Queue()",
+        "queue = queue()"
+      ],
       "answer": "queue = queue.Queue()",
       "category": "syntax",
       "topic": "Queues"
@@ -474,7 +484,7 @@
       "topic": "Sorting algorithms",
       "programming_language": null
     },
-    
+
     {
       "question": "In bubble sort, what happens during each iteration?",
       "type": "textInput",
@@ -483,7 +493,7 @@
       "topic": "Sorting algorithms",
       "programming_language": null
     },
-    
+
     {
       "question": "Identify the error in the following implementation of selection sort:\n\nfor i from 0 to n:\n\tmin_index = i\n\tfor j from i+1 to n:\n\t\tif arr[j] < arr[min_index]:\n\t\t\tmin_index = j\n\ttemp = arr[i]\n\tarr[i] = arr[min_index]\n\tarr[min_index] = temp",
       "type": "textInput",
@@ -492,11 +502,16 @@
       "topic": "Sorting algorithms",
       "programming_language": null
     },
-    
+
     {
       "question": "Which sorting algorithm is known for its divide-and-conquer approach?",
       "type": "mcq",
-      "options": ["Bubble Sort", "Insertion Sort", "Merge Sort", "Selection Sort"],
+      "options": [
+        "Bubble Sort",
+        "Insertion Sort",
+        "Merge Sort",
+        "Selection Sort"
+      ],
       "answer": "Merge Sort",
       "category": "Syntax",
       "topic": "Sorting algorithms",
@@ -505,7 +520,12 @@
     {
       "question": "What is the fundamental principle behind binary search algorithm?",
       "type": "mcq",
-      "options": ["Divide and Conquer", "Linear search", "Randomized search", "Bubble sort"],
+      "options": [
+        "Divide and Conquer",
+        "Linear search",
+        "Randomized search",
+        "Bubble sort"
+      ],
       "answer": "Divide and Conquer",
       "category": "conceptual",
       "topic": "Searching algorithms"
@@ -520,7 +540,12 @@
     {
       "question": "Identify the error in the following implementation of linear search algorithm in Python:\n def linear_search(arr, target):\n   for i in range(len(arr)):\n       if arr[i] = target:\n           return i\n   return -1",
       "type": "mcq",
-      "options": ["Incorrect comparison operator in the if condition", "Missing return statement", "Range function usage is incorrect", "SyntaxError: Invalid syntax"],
+      "options": [
+        "Incorrect comparison operator in the if condition",
+        "Missing return statement",
+        "Range function usage is incorrect",
+        "SyntaxError: Invalid syntax"
+      ],
       "answer": "Incorrect comparison operator in the if condition",
       "category": "error",
       "topic": "Searching algorithms"

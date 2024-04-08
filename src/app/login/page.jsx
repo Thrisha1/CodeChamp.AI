@@ -34,33 +34,37 @@ export default function LoginPage() {
     }
 
     try {
-      const { data : res, error:signupError } = await supabase.auth.signUp({
+      const { data: res, error: signupError } = await supabase.auth.signUp({
         email,
         password,
-        options: {
-          emailRedirectTo: `${location.origin}/auth/callback`,
-        },
       });
-      if(signupError){
-        console.log("Signup error: " + signupError)
+      if (signupError) {
+        console.log("Signup error: " + signupError);
+        alert(signupError);
+        return;
       }
-      console.log(res.data.user);
+      console.log("User signed up successfully")
+      console.log(res);
 
       const { data, error } = await supabase
         .from("student_test_data")
-        .insert([{ email: res.data.user.email,name:"rinshad" }])
+        .upsert([{ email: email, name: "rinshad" }])
         .select();
 
-        if (error) {
-          console.log(error)
-        }
+      if (error) {
+        console.log("table creation error : " + error.message);
+        return;
+      }
+      console.log("data inserted")
+
+      console.log("data inserted : " + data)
 
       setUser(res.data.user);
-      router.refresh();
       setEmail("");
       setPassword("");
       setConfirmPassword("");
       setNewUser(false); // Clear the confirm password input
+      router.push("/");
     } catch (error) {
       console.error("Error signing up:", error.message);
     }

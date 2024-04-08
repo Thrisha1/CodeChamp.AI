@@ -37,10 +37,14 @@ function Modals({ correct, optionSelected }) {
               <p className={"underline underline-offset-2"}>Explanation</p>
               {correct?.explanation}
             </p>
-            <p className={"underline underline-offset-2"}>Code Snippet</p>
-            <p className="bg-black px-3 py-2 text-base leading-relaxed text-yellow-500">
-              {correct?.code_snippet}
-            </p>
+            {correct.code_snippet && (
+              <div className="">
+                <p className={"underline underline-offset-2"}>Code Snippet</p>
+                <p className="bg-black px-3 py-2 text-base leading-relaxed text-yellow-500">
+                  {correct?.code_snippet}
+                </p>
+              </div>
+            )}
             <p className="text-base leading-relaxed ">
               <p className={"underline underline-offset-2"}>Feedback</p>
               {correct.feedback}
