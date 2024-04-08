@@ -8,9 +8,15 @@ export async function POST(req) {
   // console.log("data", data )
 
   function compareAnswers(preWrittenAnswer, userAnswer) {
+
+    console.log("preWrittenAnswer", preWrittenAnswer);
     // Split the answers into words
     let preWrittenWords = new Set(preWrittenAnswer.toLowerCase().split(/\s+/));
     let userWords = new Set(userAnswer.toLowerCase().split(/\s+/));
+
+    console.log("preWrittenWords", preWrittenWords)
+    console.log("userWords", userWords)
+
 
     // If there are no words in the user's answer, return 0 marks
     if (userWords.size === 0) {

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useEffect } from "react";
 const Navbar = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({});
   const router = useRouter();
   const supabase = createClientComponentClient();
   useEffect(() => {
@@ -14,6 +14,7 @@ const Navbar = () => {
         data: { user },
       } = await supabase.auth.getUser();
       setUser(user);
+      console.log("user", user);
     }
     getUser();
   }, []);
@@ -48,20 +49,26 @@ const Navbar = () => {
           <div className="flex gap-6 items-center">
             <ul className="flex gap-4">
               <li>
-                <a href="#" className="text-white  hover:text-green-500 duration-300">
+                <Link
+                  href="/"
+                  className="text-white  hover:text-green-500 duration-300"
+                >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-white  hover:text-green-500 duration-300">
+                <Link
+                  href="/#features"
+                  className="text-white  hover:text-green-500 duration-300"
+                >
                   About Us
-                </a>
+                </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-white  hover:text-green-500 duration-300">
                   Contact Us
                 </a>
-              </li>
+              </li> */}
             </ul>
             <select className="bg-green-500 px-6 py-1  text-white rounded-lg">
               <option>English</option>
@@ -69,12 +76,27 @@ const Navbar = () => {
               <option>Telugu</option>
               <option>Arabic</option>
             </select>
-            {!user && (<Link href="/login" className="border-2 border-green-500 hover:bg-green-500 duration-300 ease-in-out px-6 py-1  text-white rounded-lg ml-4">
-              Log In
-            </Link>)}
-            {user && (<button onClick={handleLogout} className="border-2 border-green-500 hover:bg-green-500 duration-300 ease-in-out px-6 py-1  text-white rounded-lg ml-4">
-              Log Out
-            </button>)}
+            {!user && (
+              <div>
+                <Link
+                  href="/login"
+                  className="border-2 border-green-500 hover:bg-green-500 duration-300 ease-in-out px-6 py-1  text-white rounded-lg ml-4"
+                >
+                  Log In
+                </Link>
+              </div>
+            )}
+            {user && (
+              <div className="flex text-white justify-center items-center">
+                <h1>Welcome back {user?.email}!</h1>
+                <button
+                  onClick={handleLogout}
+                  className="border-2 border-green-500 hover:bg-green-500 duration-300 ease-in-out px-6 py-1  text-white rounded-lg ml-4"
+                >
+                  Log Out
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </nav>

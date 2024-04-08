@@ -32,6 +32,8 @@ export default function Questionnare2({ func, result }) {
   const [errorAttended, setErrorAttended] = useState(0);
   const [syntaxAttended, setSyntaxAttended] = useState(0);
 
+
+
   useEffect(() => {
     console.log("optionSelected", optionSelected);
   }, [optionSelected]);
@@ -66,6 +68,7 @@ export default function Questionnare2({ func, result }) {
           setSyntax(syntax + 1);
         }
       }
+
     }
     setSubmit(false);
   }, [result]);
@@ -121,6 +124,8 @@ export default function Questionnare2({ func, result }) {
         Correct_answers: errorHandling,
       },
     ];
+
+
 
     console.log("data", data);
 
