@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import Head from "next/head";
+import { useRouter } from "next/navigation";
 
 const RatingPage = () => {
+  const router = useRouter();
   const [likeCount, setLikeCount] = useState(0);
   const [lastClickedIndex, setLastClickedIndex] = useState(-1);
 
@@ -33,34 +35,43 @@ const RatingPage = () => {
         </h1>
         <div className="h-50 flex justify-between">
           <div className="h-50 bg-green-200 text-black flex-1 p-6 rounded-lg shadow-md mr-4 hover:translate-y-3 duration-500">
-            <a href="/dsa">
+            <div onClick={()=>{
+              alert("Congradualtions on getting started.Now lets go for a test run!!");
+              router.push("/#starting")
+            }}>
               <h2 className="text-xl font-semibold mb-4">
                 Beginner
               </h2>
               <p className="text-gray-700">
                 Rate your beginner-level skills here
               </p>
-            </a>
+            </div>
           </div>
           <div className="bg-green-400 flex-1 p-6 rounded-lg shadow-md mx-2 hover:translate-y-3 duration-500">
-            <a href="/dsa">
+            <div onClick={()=>{
+              alert("Congradualtions on being in Intermediate.Now lets go for a test run!!");
+              router.push("/#starting")
+            }}>
               <h2 className="text-xl font-semibold text-white mb-4">
                 Intermediate
               </h2>
               <p className="text-gray-700">
                 Rate your intermediate-level skills here
               </p>
-            </a>
+            </div>
           </div>
           <div className="bg-green-600 flex-1 p-6 rounded-lg shadow-md ml-4 hover:translate-y-3 duration-500">
-            <a href="/dsa">
+            <div onClick={()=>{
+              alert("You are an Expert? .Now lets go for a test run!!");
+              router.push("/#starting")
+            }}>
               <h2 className="text-xl font-semibold text-white mb-4">
                 Expertise
               </h2>
               <p className="text-gray-700">
                 Rate your expertise-level skills here
               </p>
-            </a>
+            </div>
           </div>
         </div>
 

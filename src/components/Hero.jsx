@@ -18,7 +18,7 @@ export default function Hero() {
     getUser();
   }, []);
   return (
-    <div className="flex w-full h-screen mb-36">
+    <div id="starting" className="flex w-full h-screen mb-36">
       <div className="w-full bg-black text-white flex flex-col items-center justify-center">
         <h1 className="justify-center text-center font-bold text-6xl font-mono">
           HELLO <span className="text-green-400 tracking-widest">CODERS!</span>
