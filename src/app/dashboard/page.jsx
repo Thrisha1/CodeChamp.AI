@@ -34,10 +34,11 @@ export const page = () => {
     },[])
     
     return (
-        <div className="h-screen overflow-hidden">
-            <div className="h-full pb-32 flex">
+        <div className="h-screen overflow-hidden bg-black font-mono text-white">
+            <Navbar />
+            <div className="h-full pb-32 flex items-center">
                 <SideBar />
-                <div className="w-1/2 mr-20">
+                <div className="w-full mr-20 flex flex-col justify-center items-center">
                     <Header />
                     <div className="flex justify-around w-full">
                         <div>

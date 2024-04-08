@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [newUser, setNewUser] = useState(false);
@@ -68,6 +69,7 @@ export default function LoginPage() {
     } catch (error) {
       console.error("Error signing up:", error.message);
     }
+    
   };
 
   const handleSignIn = async () => {
@@ -157,7 +159,6 @@ export default function LoginPage() {
               d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
             />
           </svg>
-
           <text className="text-green-400 text-6xl font-bold">CODEchampAI</text>
         </div>
       </div>
@@ -174,6 +175,14 @@ export default function LoginPage() {
             placeholder="Email"
             className="mb-4 w-full px-4 py-3 rounded-md border  bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:border-gray-600"
           />
+          {newUser && (<input
+              type="text"
+              name="user name"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              placeholder="User name"
+              className="mb-4 w-full px-4 py-3 rounded-md border  bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:border-gray-600"
+            />)}
           <input
             type="password"
             name="password"
@@ -181,33 +190,28 @@ export default function LoginPage() {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             className="mb-4 w-full px-4 py-3 rounded-md border  bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:border-gray-600"
-          />
-          {newUser && (
-            <input
-              type="password"
-              name="confirmPassword"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              placeholder="Re-enter Password"
-              className="mb-4 w-full px-4 py-3 rounded-md border  bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:border-gray-600"
             />
-          )}
-          {!newUser && (
-            <button
-              onClick={handleSignIn}
-              className="w-full px-4 py-3 rounded-md bg-green-400 text-white hover:bg-purple-800 focus:outline-none"
-            >
-              Log In
-            </button>
-          )}
-          {newUser && (
-            <button
-              onClick={handleSignUp}
-              className="w-full px-4 py-3 rounded-md bg-green-400 text-white hover:bg-purple-600 focus:outline-none"
-            >
-              Sign Up
-            </button>
-          )}
+            
+          {newUser && (<input
+            type="password"
+            name="confirmPassword"
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder="Re-enter Password"
+            className="mb-4 w-full px-4 py-3 rounded-md border  bg-gray-100 text-black placeholder-gray-500 focus:outline-none focus:border-gray-600"
+          />)}
+          {!newUser && (<button
+            onClick={handleSignIn}
+            className="w-full px-4 py-3 rounded-md bg-green-400 text-white hover:bg-purple-800 focus:outline-none"
+          >
+            Log In
+          </button>)}
+          {newUser && (<button
+            onClick={handleSignUp}
+            className="w-full px-4 py-3 rounded-md bg-green-400 text-white hover:bg-purple-600 focus:outline-none"
+          >
+            Sign Up
+          </button>)}
           {!newUser && (
             <p className="text-white mt-5">
               New user?{" "}

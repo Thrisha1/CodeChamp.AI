@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export const Header = () => {
     return (
-        <div className="w-full flex justify-between bg-gradient-to-r from-purple-800 to-purple-300 h-max my-10 rounded-xl ">
+        <div className="w-3/4 flex justify-between bg-gradient-to-r from-green-800 to-green-300 h-max my-10 rounded-xl ">
            <div className="p-20 ">
                <p className=" text-xl font-bold text-white tracking-widest"> Welcome Back User...</p>
                <p className="text-gray-300">Stay Updated</p>

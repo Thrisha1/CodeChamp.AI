@@ -14,7 +14,7 @@ function Modals({data}) {
 
     return (
         <>
-            <button className="bg-purple-600 text-white py-2 px-5 rounded-md text-sm w-20" onClick={() => setOpenModal(true)}>View</button>
+            <button className="bg-green-600 text-white py-2 px-5 rounded-md text-sm w-20" onClick={() => setOpenModal(true)}>View</button>
             <Modal className="w-full flex justify-center px-32 bg-black bg-opacity-35" show={openModal} onClose={() => setOpenModal(false)}>
                 <Modal.Header>Your Progress</Modal.Header>
                 <Modal.Body className="flex justify-center">
