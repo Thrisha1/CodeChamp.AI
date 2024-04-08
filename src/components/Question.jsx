@@ -3,8 +3,10 @@
 import Link from "next/link";
 import React, { useState, createContext, useContext } from "react";
 import dsa from "../../syllabus_dsa/dsa.json";
+import code from "../../syllabus_dsa/code.json";
 import { ProblemContext } from "../app/layout";
 import {useRouter} from "next/navigation"
+import supabase from "@/supabase";
 
 const Question = ({level}) => {
     const router = useRouter();
@@ -14,16 +16,23 @@ const Question = ({level}) => {
     setShowSubCardIndex(showSubCardIndex === index ? null : index);
   };
 
+  // get data from supabase students_test_data table
+    const getStudentsTestData = async () => {
+        const { data, error } = await supabase.from('students_test_data').select('percentages');
+        if (error) console.log("error", error);
+        console.log("data", data);
+    };
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-8">Topics</h1>
       <div className="flex flex-wrap">
-        {Object.keys(dsa).map((topic, index) => (
+        {Object.keys(code).map((topic, index) => (
           <Card
             key={index}
-            title={dsa[topic].heading}
+            title={code[topic].heading}
             index={index}
-            subtopics={dsa[topic]}
+            subtopics={code[topic]}
             showSubCardIndex={showSubCardIndex}
             toggleSubCard={toggleSubCard}
             level = {level}
