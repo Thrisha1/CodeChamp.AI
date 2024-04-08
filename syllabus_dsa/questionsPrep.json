@@ -1,562 +1,828 @@
-{
-  "questions": [
-    {
-      "question": "What is the purpose of declaring variables in programming?",
-      "type": "textInput",
-      "answer": "To store and manipulate data",
-      "category": "Conceptual",
-      "topic": "Variables",
-      "programming_language": null
-    },
-    {
-      "question": "Identify the error in the following variable declaration: int 3num = 5;",
-      "type": "textInput",
-      "answer": "Variable name cannot start with a number",
-      "category": "Error",
-      "topic": "Variables",
-      "programming_language": null
-    },
-    {
-      "question": "What is the syntax for declaring a variable of type float in many programming languages?",
-      "type": "mcq",
-      "options": ["float", "var", "real", "decimal"],
-      "answer": "float",
-      "category": "Syntax",
-      "topic": "Variables",
-      "programming_language": null
-    },
-    {
-      "question": "Explain the concept of variable scope in programming.",
-      "type": "textInput",
-      "answer": "Variable scope defines where a variable is accessible within a program.",
-      "category": "Conceptual",
-      "topic": "Variables",
-      "programming_language": null
-    },
-    {
-      "question": "What is the maximum value that can be stored in an unsigned integer of 32 bits?",
-      "type": "textInput",
-      "answer": "4294967295",
-      "category": "conceptual",
-      "topic": "data types",
-      "programming_language": null
-    },
-    {
-      "question": "What will be the result of multiplying a float and an integer?",
-      "type": "textInput",
-      "answer": "a float",
-      "category": "logical",
-      "topic": "data types",
-      "programming_language": null
-    },
-    {
-      "question": "Identify the error in the following statement: float x = 10.5;",
-      "type": "textInput",
-      "answer": "The variable type and value type mismatch. It should be double x = 10.5;",
-      "category": "error",
-      "topic": "data types",
-      "programming_language": null
-    },
-    {
-      "question": "In many programming languages, what data type is used to store single characters?",
-      "type": "mcq",
-      "options": ["int", "char", "string", "boolean"],
-      "answer": "char",
-      "category": "syntax",
-      "topic": "data types",
-      "programming_language": null
-    },
-    {
-      "question": "What is the result of 7 / 2 in integer division?",
-      "type": "textInput",
-      "answer": "3",
-      "category": "Logical",
-      "topic": "Operators",
-      "programming_language": null
-    },
-    {
-      "question": "Which operator is used to perform exponentiation in many programming languages?",
-      "type": "mcq",
-      "options": ["^", "&", "*", "/"],
-      "answer": "",
-      "category": "Syntax",
-      "topic": "Operators",
-      "programming_language": null
-    },
-    {
-      "question": "What is the result of 10 % 3?",
-      "type": "textInput",
-      "answer": "1",
-      "category": "Conceptual",
-      "topic": "Operators",
-      "programming_language": null
-    },
-    {
-      "question": "Identify the error in the following expression: x = 5 + * 3;",
-      "type": "textInput",
-      "answer": "*",
-      "category": "Error",
-      "topic": "Operators",
-      "programming_language": null
-    },
-
-    {
-      "question": "What is the purpose of using if-else statements in programming?",
-      "type": "mcq",
-      "options": [
-        "To execute a block of code if a condition is true, otherwise execute another block of code",
-        "To execute a block of code repeatedly until a condition is true",
-        "To define a function in programming languages",
-        "To import external libraries into the program"
-      ],
-      "answer": "To execute a block of code if a condition is true, otherwise execute another block of code",
-      "category": "Conceptual",
-      "topic": "If-Else",
-      "programming_language": null
-    },
-
-    {
-      "question": "What is the correct syntax for an if-else statement in many programming languages?",
-      "type": "textInput",
-      "answer": "if (condition) {\n // code block to be executed if condition is true\n} else {\n // code block to be executed if condition is false\n}",
-      "category": "Syntax",
-      "topic": "If-Else",
-      "programming_language": null
-    },
-
-    {
-      "question": "Given the following pseudocode, what will be the value of x after execution?\n\nif (a > b) {\n x = a;\n} else {\n x = b;\n}",
-      "type": "textInput",
-      "answer": "x will be assigned the value of whichever variable is greater between 'a' and 'b'.",
-      "category": "Logical",
-      "topic": "If-Else",
-      "programming_language": null
-    },
-
-    {
-      "question": "Identify the error in the following if-else statement:\n\nif (x == 5)\n{\n print('x is equal to 5');\n} else\n{\n print('x is not equal to 5');\n}",
-      "type": "textInput",
-      "answer": "The error is the missing parentheses around the condition in the if statement.",
-      "category": "Error",
-      "topic": "If-Else",
-      "programming_language": null
-    },
-    {
-      "question": "What is the purpose of using a loop in programming?",
-      "type": "mcq",
-      "options": [
-        "To repeat a set of instructions multiple times",
-        "To execute a single instruction once",
-        "To skip certain instructions in a program",
-        "To terminate the program execution"
-      ],
-      "answer": "To repeat a set of instructions multiple times",
-      "category": "Conceptual",
-      "topic": "Loops",
-      "programming_language": null
-    },
-    {
-      "question": "Which loop in Python is best suited for iterating over a sequence of elements?",
-      "type": "mcq",
-      "options": [
-        "for loop",
-        "while loop",
-        "do-while loop",
-        "repeat-until loop"
-      ],
-      "answer": "for loop",
-      "category": "Syntax",
-      "topic": "Loops",
-      "programming_language": "Python"
-    },
-    {
-      "question": "Identify the error in the following loop syntax in Java:\nfor (int i = 0; i < 5; i++)\n{\n   System.out.println(i);\n}",
-      "type": "mcq",
-      "options": [
-        "There is no error",
-        "The loop condition is incorrect",
-        "The loop initialization is incorrect",
-        "The loop increment is incorrect"
-      ],
-      "answer": "There is no error",
-      "category": "Error",
-      "topic": "Loops",
-      "programming_language": "Java"
-    },
-    {
-      "question": "Given a list of numbers, write a Python program using a loop to find the sum of all the elements.",
-      "type": "textInput",
-      "answer": "sum = 0\nfor num in numbers:\n    sum += num",
-      "category": "Logical",
-      "topic": "Loops",
-      "programming_language": "Python"
-    },
-    {
-      "question": "What is the purpose of functions in programming?",
-      "type": "mcq",
-      "options": [
-        "To repeat code blocks",
-        "To organize code into reusable blocks",
-        "To create loops",
-        "To define variables"
-      ],
-      "answer": "To organize code into reusable blocks",
-      "category": "Conceptual",
-      "topic": "Functions",
-      "programming_language": null
-    },
-    {
-      "question": "Which of the following is true about function parameters?",
-      "type": "mcq",
-      "options": [
-        "Parameters are optional in functions",
-        "Parameters are used to return values from a function",
-        "Parameters define the inputs a function expects",
-        "Parameters can only be of integer type"
-      ],
-      "answer": "Parameters define the inputs a function expects",
-      "category": "Syntax",
-      "topic": "Functions",
-      "programming_language": null
-    },
-    {
-      "question": "Write a function in pseudo code to calculate the factorial of a given number.",
-      "type": "textInput",
-      "answer": "function factorial(number)\n  if number equals 0 or 1\n    return 1\n  else\n    return number * factorial(number - 1)",
-      "category": "Logical",
-      "topic": "Functions",
-      "programming_language": null
-    },
-    {
-      "question": "Identify the error in the following function definition:\n\nfunction calculateAverage(a, b) {\n  return a + b / 2;\n}",
-      "type": "textInput",
-      "answer": "The function does not have proper parentheses to ensure correct order of operations. It should be: return (a + b) / 2;",
-      "category": "Error",
-      "topic": "Functions",
-      "programming_language": null
-    },
-    {
-      "question": "What is recursion?",
-      "type": "textInput",
-      "answer": "Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem.",
-      "category": "Conceptual",
-      "topic": "Recursion",
-      "programming_language": null
-    },
-    {
-      "question": "Write a recursive function to calculate the factorial of a number.",
-      "type": "textInput",
-      "answer": "function factorial(n) {\n  if (n === 0 || n === 1) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n}",
-      "category": "Logical",
-      "topic": "Recursion",
-      "programming_language": null
-    },
-    {
-      "question": "Identify the error in the following recursive function to calculate the nth Fibonacci number: \nfunction fibonacci(n) {\n  if (n <= 1) {\n    return n;\n  }\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}",
-      "type": "textInput",
-      "answer": "This function has exponential time complexity because it recalculates Fibonacci numbers multiple times, leading to inefficient performance.",
-      "category": "Error",
-      "topic": "Recursion",
-      "programming_language": null
-    },
-    {
-      "question": "In many programming languages, what is the base case of a recursive function?",
-      "type": "mcq",
-      "options": [
-        "The condition that stops the recursion and returns a specific value.",
-        "The initial function call.",
-        "The case where the function calls itself.",
-        "The case where the function returns the result."
-      ],
-      "answer": "The condition that stops the recursion and returns a specific value.",
-      "category": "Syntax",
-      "topic": "Recursion",
-      "programming_language": null
-    },
-    {
-      "question": "What is an array?",
-      "type": "mcq",
-      "options": [
-        "A data structure that stores a collection of elements of the same type",
-        "A loop structure used for iteration",
-        "A conditional statement used for decision making",
-        "A variable used to store a single value"
-      ],
-      "answer": "A data structure that stores a collection of elements of the same type",
-      "category": "Conceptual",
-      "topic": "Arrays",
-      "programming_language": null
-    },
-    {
-      "question": "What is the time complexity of accessing an element in an array by its index?",
-      "type": "mcq",
-      "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
-      "answer": "O(1)",
-      "category": "Logical",
-      "topic": "Arrays",
-      "programming_language": null
-    },
-    {
-      "question": "What is the error in the following array declaration in C++? \n\nint arr[5]; arr[6] = 10;",
-      "type": "textInput",
-      "answer": "Array index out of bounds",
-      "category": "Error",
-      "topic": "Arrays",
-      "programming_language": "C++"
-    },
-    {
-      "question": "Which of the following syntax correctly initializes an array in Python with 5 elements, all set to 0?",
-      "type": "mcq",
-      "options": [
-        "arr = [0, 0, 0, 0, 0]",
-        "arr = [0] * 5",
-        "arr(5, 0)",
-        "arr[5] = {0}"
-      ],
-      "answer": "arr = [0] * 5",
-      "category": "Syntax",
-      "topic": "Arrays",
-      "programming_language": "Python"
-    },
-    {
-      "question": "What is the time complexity of linear search?",
-      "type": "mcq",
-      "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
-      "answer": "O(n)",
-      "category": "time and space complexity",
-      "topic": "Time Complexity",
-      "programming_language": null
-    },
-    {
-      "question": "What is the space complexity of a recursive algorithm with constant extra space?",
-      "type": "mcq",
-      "options": ["O(1)", "O(log n)", "O(n)", "O(n^2)"],
-      "answer": "O(n)",
-      "category": "time and space complexity",
-      "topic": "Space Complexity",
-      "programming_language": null
-    },
-    {
-      "question": "What is the concept of amortized analysis in time complexity?",
-      "type": "textInput",
-      "answer": "It's a method for analyzing the average time complexity of a sequence of operations, considering both expensive and inexpensive operations.",
-      "category": "time and space complexity",
-      "topic": "Time Complexity",
-      "programming_language": null
-    },
-    {
-      "question": "Explain the Big O notation and its significance in analyzing algorithm efficiency.",
-      "type": "textInput",
-      "answer": "The Big O notation represents the upper bound on the time or space complexity of an algorithm. It is crucial for understanding how an algorithm's performance scales with input size, allowing for comparisons and optimizations.",
-      "category": "time and space complexity",
-      "topic": "Time and Space Complexity",
-      "programming_language": null
-    },
-    {
-      "question": "What is the primary advantage of using a linked list over an array?",
-      "type": "mcq",
-      "options": [
-        "Constant-time insertion and deletion at any position",
-        "Faster random access",
-        "Fixed size",
-        "Less memory consumption"
-      ],
-      "answer": "Constant-time insertion and deletion at any position",
-      "category": "Conceptual",
-      "topic": "Linked Lists",
-      "programming_language": null
-    },
-    {
-      "question": "Write a function in pseudocode to reverse a singly linked list.",
-      "type": "textInput",
-      "answer": "function reverseList(head)\n    prev = null\n    current = head\n    while current != null\n        next = current.next\n        current.next = prev\n        prev = current\n        current = next\n    return prev",
-      "category": "Logical",
-      "topic": "Linked Lists",
-      "programming_language": null
-    },
-    {
-      "question": "Identify the error in the following code snippet that attempts to delete a node with a given value from a singly linked list.",
-      "type": "mcq",
-      "options": [
-        "The 'next' pointer of the previous node is not updated",
-        "No error",
-        "The 'next' pointer of the current node is not updated",
-        "Incorrect loop termination condition"
-      ],
-      "answer": "The 'next' pointer of the previous node is not updated",
-      "category": "Error",
-      "topic": "Linked Lists",
-      "programming_language": "pseudocode"
-    },
-    {
-      "question": "Which statement correctly allocates memory for a new node in a singly linked list in C++?",
-      "type": "mcq",
-      "options": [
-        "Node* newNode = new Node();",
-        "Node* newNode = Node();",
-        "Node* newNode = malloc(sizeof(Node));",
-        "Node newNode;"
-      ],
-      "answer": "Node* newNode = new Node();",
-      "category": "Syntax",
-      "topic": "Linked Lists",
-      "programming_language": "C++"
-    },
-    {
-      "question": "What is a stack in data structure?",
-      "type": "textInput",
-      "answer": "A stack is a linear data structure that follows the Last In, First Out (LIFO) principle, where elements are inserted and removed from the same end called the top.",
-      "category": "Conceptual",
-      "topic": "Stacks",
-      "programming_language": null
-    },
-    {
-      "question": "What is the result of pushing 5, 3, and 8 onto an initially empty stack, and then popping an element?",
-      "type": "textInput",
-      "answer": "8",
-      "category": "Logical",
-      "topic": "Stacks",
-      "programming_language": null
-    },
-    {
-      "question": "Identify the error in the following stack implementation code: \n\n\nclass Stack:\n def __init__(self):\n self.stack = []\n \n def push(self, element):\n self.stack.append(element)\n \n def pop(self):\n if len(self.stack) == 0:\n return 'Stack is empty'\n else:\n return self.stack.pop()\n \n def peek(self):\n return self.stack[-1]\n",
-      "type": "textInput",
-      "answer": "The error is in the pop() method's conditional statement. It should check if the length of the stack is greater than 0, not equal to 0.",
-      "category": "Error",
-      "topic": "Stacks",
-      "programming_language": null
-    },
-    {
-      "question": "Which symbol is commonly used to represent the top of a stack in pseudocode?",
-      "type": "mcq",
-      "options": ["^", ">", "-", "^"],
-      "answer": "^",
-      "category": "Syntax",
-      "topic": "Stacks",
-      "programming_language": null
-    },
-    {
-      "question": "What is the fundamental principle behind a Queue data structure?",
-      "type": "mcq",
-      "options": [
-        "Last In, First Out (LIFO)",
-        "First In, First Out (FIFO)",
-        "Random Access Memory (RAM)",
-        "Binary Search Tree (BST)"
-      ],
-      "answer": "First In, First Out (FIFO)",
-      "category": "conceptual",
-      "topic": "Queues"
-    },
-    {
-      "question": "You have a queue with elements [1, 2, 3, 4, 5]. If you perform two dequeues followed by an enqueue operation with the value 6, what will be the resulting queue?",
-      "type": "textInput",
-      "answer": "[3, 4, 5, 6]",
-      "category": "logical",
-      "topic": "Queues"
-    },
-    {
-      "question": "Identify the error in the following queue implementation code snippet:\n\n```python\nclass Queue:\n    def __init__(self):\n        self.items = []\n    def enqueue(self, item):\n        self.items.insert(0, item)\n    def dequeue(self):\n        if not self.is_empty():\n            return self.items.pop()\n    def is_empty(self):\n        return len(self.items) == 0\n    def size(self):\n        return len(self.items)\n```",
-      "type": "textInput",
-      "answer": "The error is in the `enqueue` method where elements are inserted at index 0. This causes elements to be added at the beginning of the list, which does not maintain the FIFO property of the queue.",
-      "category": "error",
-      "topic": "Queues"
-    },
-    {
-      "question": "In Python, how would you create an empty queue using the `queue` module?",
-      "type": "mcq",
-      "options": [
-        "queue = Queue()",
-        "queue = Queue.Queue()",
-        "queue = queue.Queue()",
-        "queue = queue()"
-      ],
-      "answer": "queue = queue.Queue()",
-      "category": "syntax",
-      "topic": "Queues"
-    },
-    {
-      "question": "What is the time complexity of the bubble sort algorithm?",
-      "type": "mcq",
-      "options": ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"],
-      "answer": "O(n^2)",
-      "category": "Conceptual",
-      "topic": "Sorting algorithms",
-      "programming_language": null
-    },
-
-    {
-      "question": "In bubble sort, what happens during each iteration?",
-      "type": "textInput",
-      "answer": "Comparison and swapping of adjacent elements",
-      "category": "Logical",
-      "topic": "Sorting algorithms",
-      "programming_language": null
-    },
-
-    {
-      "question": "Identify the error in the following implementation of selection sort:\n\nfor i from 0 to n:\n\tmin_index = i\n\tfor j from i+1 to n:\n\t\tif arr[j] < arr[min_index]:\n\t\t\tmin_index = j\n\ttemp = arr[i]\n\tarr[i] = arr[min_index]\n\tarr[min_index] = temp",
-      "type": "textInput",
-      "answer": "The swapping operation should be performed only if min_index != i, and it should be inside the outer loop.",
-      "category": "Error",
-      "topic": "Sorting algorithms",
-      "programming_language": null
-    },
-
-    {
-      "question": "Which sorting algorithm is known for its divide-and-conquer approach?",
-      "type": "mcq",
-      "options": [
-        "Bubble Sort",
-        "Insertion Sort",
-        "Merge Sort",
-        "Selection Sort"
-      ],
-      "answer": "Merge Sort",
-      "category": "Syntax",
-      "topic": "Sorting algorithms",
-      "programming_language": null
-    },
-    {
-      "question": "What is the fundamental principle behind binary search algorithm?",
-      "type": "mcq",
-      "options": [
-        "Divide and Conquer",
-        "Linear search",
-        "Randomized search",
-        "Bubble sort"
-      ],
-      "answer": "Divide and Conquer",
-      "category": "conceptual",
-      "topic": "Searching algorithms"
-    },
-    {
-      "question": "You are given a sorted array of integers. Write a function in pseudocode to implement binary search to find the index of a given target element.",
-      "type": "textInput",
-      "answer": "BinarySearch(array, target):\n   low = 0\n   high = length(array) - 1\n   while low <= high:\n       mid = (low + high) / 2\n       if array[mid] == target:\n           return mid\n       else if array[mid] < target:\n           low = mid + 1\n       else:\n           high = mid - 1\n   return -1",
-      "category": "logical",
-      "topic": "Searching algorithms"
-    },
-    {
-      "question": "Identify the error in the following implementation of linear search algorithm in Python:\n def linear_search(arr, target):\n   for i in range(len(arr)):\n       if arr[i] = target:\n           return i\n   return -1",
-      "type": "mcq",
-      "options": [
-        "Incorrect comparison operator in the if condition",
-        "Missing return statement",
-        "Range function usage is incorrect",
-        "SyntaxError: Invalid syntax"
-      ],
-      "answer": "Incorrect comparison operator in the if condition",
-      "category": "error",
-      "topic": "Searching algorithms"
-    },
-    {
-      "question": "Which of the following statements is used to break out of a loop prematurely in Python?",
-      "type": "mcq",
-      "options": ["halt", "exit", "break", "stop"],
-      "answer": "break",
-      "category": "syntax",
-      "topic": "Searching algorithms"
-    }
-  ]
-}
+[
+  {
+    "topic": "Variables, data types, and operators",
+    "questions": [
+      {
+        "question": "What is the purpose of declaring variables in programming?",
+        "type": "textInput",
+        "answer": "To store and manipulate data",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Identify the error in the following variable declaration: int 3num = 5;",
+        "type": "textInput",
+        "answer": "Variable name cannot start with a number",
+        "category": "Error",
+        "programming_language": null
+      },
+      {
+        "question": "What is the syntax for declaring a variable of type float in many programming languages?",
+        "type": "mcq",
+        "options": ["float", "var", "real", "decimal"],
+        "answer": "float",
+        "category": "Syntax",
+        "programming_language": null
+      },
+      {
+        "question": "What is the result of 7 / 2 in integer division?",
+        "type": "textInput",
+        "answer": "3",
+        "category": "Logical",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Control flow (if statements, loops)",
+    "questions": [
+      {
+        "question": "What is the purpose of using if-else statements in programming?",
+        "type": "mcq",
+        "options": [
+          "To execute a block of code if a condition is true, otherwise execute another block of code",
+          "To execute a block of code repeatedly until a condition is true",
+          "To define a function in programming languages",
+          "To import external libraries into the program"
+        ],
+        "answer": "To execute a block of code if a condition is true, otherwise execute another block of code",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the correct syntax for an if-else statement in many programming languages?",
+        "type": "textInput",
+        "answer": "if (condition) {\n // code block to be executed if condition is true\n} else {\n // code block to be executed if condition is false\n}",
+        "category": "Syntax",
+        "programming_language": null
+      },
+      {
+        "question": "What is the result of 10 % 3?",
+        "type": "textInput",
+        "answer": "1",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Identify the error in the following expression: x = 5 + * 3;",
+        "type": "textInput",
+        "answer": "*",
+        "category": "Error",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Functions and recursion",
+    "questions": [
+      {
+        "question": "What is the purpose of functions in programming?",
+        "type": "mcq",
+        "options": [
+          "To repeat code blocks",
+          "To organize code into reusable blocks",
+          "To create loops",
+          "To define variables"
+        ],
+        "answer": "To organize code into reusable blocks",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Write a function in pseudo code to calculate the factorial of a given number.",
+        "type": "textInput",
+        "answer": "function factorial(number)\n  if number equals 0 or 1\n    return 1\n  else\n    return number * factorial(number - 1)",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is recursion?",
+        "type": "textInput",
+        "answer": "Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Write a recursive function to calculate the factorial of a number.",
+        "type": "textInput",
+        "answer": "function factorial(n) {\n  if (n === 0 || n === 1) {\n    return 1;\n  }\n  return n * factorial(n - 1);\n}",
+        "category": "Logical",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Arrays and strings",
+    "questions": [
+      {
+        "question": "What is an array?",
+        "type": "mcq",
+        "options": [
+          "A data structure that stores a collection of elements of the same type",
+          "A loop structure used for iteration",
+          "A conditional statement used for decision making",
+          "A variable used to store a single value"
+        ],
+        "answer": "A data structure that stores a collection of elements of the same type",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the syntax for accessing an element in an array in many programming languages?",
+        "type": "textInput",
+        "answer": "arrayName[index]",
+        "category": "Syntax",
+        "programming_language": null
+      },
+      {
+        "question": "Identify the error in the following code: int[] numbers = {1, 2, 3, 4, 5};\nSystem.out.println(numbers[5]);",
+        "type": "textInput",
+        "answer": "Array index out of bounds",
+        "category": "Error",
+        "programming_language": null
+      },
+      {
+        "question": "What is a string?",
+        "type": "textInput",
+        "answer": "A sequence of characters",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Arrays",
+    "questions": [
+      {
+        "question": "What is the difference between an array and a linked list?",
+        "type": "textInput",
+        "answer": "An array is a fixed-size data structure, while a linked list is a dynamic-size data structure.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the syntax for declaring an array in many programming languages?",
+        "type": "textInput",
+        "answer": "dataType[] arrayName = new dataType[arraySize];",
+        "category": "Syntax",
+        "programming_language": null
+      },
+      {
+        "question": "Identify the error in the following code: int[] numbers = new int[5];\nnumbers[5] = 10;",
+        "type": "textInput",
+        "answer": "Array index out of bounds",
+        "category": "Error",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of accessing an element in an array?",
+        "type": "textInput",
+        "answer": "O(1)",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Linked Lists (Singly and Doubly)",
+    "questions": [
+      {
+        "question": "What is a linked list?",
+        "type": "mcq",
+        "options": [
+          "A data structure that stores elements in contiguous memory locations",
+          "A data structure that stores elements in non-contiguous memory locations",
+          "A sorting algorithm",
+          "A loop structure"
+        ],
+        "answer": "A data structure that stores elements in non-contiguous memory locations",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the difference between a singly linked list and a doubly linked list?",
+        "type": "textInput",
+        "answer": "A singly linked list each node has a reference to the next node, while in a doubly linked list, each node has references to both the next and previous nodes.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity for inserting an element at the end of a singly linked list?",
+        "type": "textInput",
+        "answer": "O(n)",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Identify the error in the following code for deleting a node from a linked list: current.next = current.next.next;",
+        "type": "textInput",
+        "answer": "The code will fail to delete the last node of the list if current.next.next is null.",
+        "category": "Error",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Stacks and Queues",
+    "questions": [
+      {
+        "question": "What is a stack?",
+        "type": "mcq",
+        "options": [
+          "A data structure that follows the first-in, first-out (FIFO) principle",
+          "A data structure that follows the last-in, first-out (LIFO) principle",
+          "A sorting algorithm",
+          "A loop structure"
+        ],
+        "answer": "A data structure that follows the last-in, first-out (LIFO) principle",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the purpose of using a stack in programming?",
+        "type": "textInput",
+        "answer": "To keep track of function calls, to implement undo mechanisms, to evaluate expressions, etc.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is a queue?",
+        "type": "textInput",
+        "answer": "A data structure that follows the first-in, first-out (FIFO) principle",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Identify the error in the following code to enqueue an element in a queue: queue[rear] = item;",
+        "type": "textInput",
+        "answer": "There is no rear pointer to indicate the position for enqueueing the item.",
+        "category": "Error",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Sorting algorithms (Bubble sort, Insertion sort, Selection sort)",
+    "questions": [
+      {
+        "question": "What is the purpose of sorting algorithms?",
+        "type": "mcq",
+        "options": [
+          "To organize data in a structured manner",
+          "To delete elements from a data structure",
+          "To create loops",
+          "To define variables"
+        ],
+        "answer": "To organize data in a structured manner",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Explain the bubble sort algorithm.",
+        "type": "textInput",
+        "answer": "Bubble sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of bubble sort?",
+        "type": "textInput",
+        "answer": "O(n^2)",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Identify the error in the following implementation of insertion sort: for (int i = 1; i <= n; i++) {\n  int key = arr[i];\n}",
+        "type": "textInput",
+        "answer": "The loop should start from i = 0 instead of i = 1.",
+        "category": "Error",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Searching algorithms (Linear search, Binary search)",
+    "questions": [
+      {
+        "question": "What is the purpose of searching algorithms?",
+        "type": "mcq",
+        "options": [
+          "To organize data in a structured manner",
+          "To locate a specific item in a collection of data",
+          "To delete elements from a data structure",
+          "To create loops"
+        ],
+        "answer": "To locate a specific item in a collection of data",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Explain the linear search algorithm.",
+        "type": "textInput",
+        "answer": "Linear search sequentially checks each element of the list until it finds an element that matches the target value.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of linear search?",
+        "type": "textInput",
+        "answer": "O(n)",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of binary search?",
+        "type": "textInput",
+        "answer": "O(log n)",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Trees (Binary trees, Binary search trees, AVL trees, Red-black trees)",
+    "questions": [
+      {
+        "question": "What is a tree data structure?",
+        "type": "mcq",
+        "options": [
+          "A data structure that organizes elements in a linear sequence",
+          "A data structure that organizes elements in a hierarchical manner",
+          "A sorting algorithm",
+          "A loop structure"
+        ],
+        "answer": "A data structure that organizes elements in a hierarchical manner",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is a binary tree?",
+        "type": "textInput",
+        "answer": "A tree data structure in which each node has at most two children, referred to as the left child and the right child.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is a binary search tree?",
+        "type": "textInput",
+        "answer": "A binary tree in which the left child of a node contains only values less than the node's value, and the right child contains only values greater than the node's value.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity for finding an element in a binary search tree?",
+        "type": "textInput",
+        "answer": "O(log n)",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Graphs (Representation, traversal algorithms like BFS and DFS)",
+    "questions": [
+      {
+        "question": "What is a graph?",
+        "type": "mcq",
+        "options": [
+          "A data structure that organizes elements in a hierarchical manner",
+          "A data structure that organizes elements in a linear sequence",
+          "A data structure that represents a set of connections between pairs of elements",
+          "A sorting algorithm"
+        ],
+        "answer": "A data structure that represents a set of connections between pairs of elements",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the difference between breadth-first search (BFS) and depth-first search (DFS)?",
+        "type": "textInput",
+        "answer": "BFS explores all neighbor nodes at the present depth prior to moving on to nodes at the next depth level, while DFS explores as far as possible along each branch before backtracking.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of BFS?",
+        "type": "textInput",
+        "answer": "O(V + E)",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of DFS?",
+        "type": "textInput",
+        "answer": "O(V + E)",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Heaps (Min heap, Max heap)",
+    "questions": [
+      {
+        "question": "What is a heap?",
+        "type": "mcq",
+        "options": [
+          "A data structure that organizes elements in a linear sequence",
+          "A data structure that represents a set of connections between pairs of elements",
+          "A binary tree with a special property where the value of each node is greater than or equal to the values of its children",
+          "A sorting algorithm"
+        ],
+        "answer": "A binary tree with a special property where the value of each node is greater than or equal to the values of its children",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is a min heap?",
+        "type": "textInput",
+        "answer": "A binary tree where the value of each node is less than or equal to the values of its children.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity for finding the minimum element in a min heap?",
+        "type": "textInput",
+        "answer": "O(1)",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity for finding the maximum element in a max heap?",
+        "type": "textInput",
+        "answer": "O(1)",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Hash tables",
+    "questions": [
+      {
+        "question": "What is a hash table?",
+        "type": "mcq",
+        "options": [
+          "A data structure that organizes elements in a hierarchical manner",
+          "A data structure that organizes elements in a linear sequence",
+          "A data structure that maps keys to values, allowing for efficient retrieval of data",
+          "A sorting algorithm"
+        ],
+        "answer": "A data structure that maps keys to values, allowing for efficient retrieval of data",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is a collision in the context of hash tables?",
+        "type": "textInput",
+        "answer": "A collision occurs when two or more keys hash to the same index in a hash table.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the purpose of a hash function in a hash table?",
+        "type": "textInput",
+        "answer": "To compute an index (hash value) for a given key, which determines the location where the key-value pair will be stored in the table.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity for retrieving an element from a hash table?",
+        "type": "textInput",
+        "answer": "O(1)",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Sorting algorithms (Merge sort, Quick sort)",
+    "questions": [
+      {
+        "question": "What is the purpose of merge sort and quick sort?",
+        "type": "mcq",
+        "options": [
+          "To organize data in a structured manner",
+          "To locate a specific item in a collection of data",
+          "To delete elements from a data structure",
+          "To sort elements in a collection of data"
+        ],
+        "answer": "To sort elements in a collection of data",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Explain the merge sort algorithm.",
+        "type": "textInput",
+        "answer": "Merge sort divides the array into two halves, recursively sorts the two halves, and then merges the sorted halves.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "Explain the quick sort algorithm.",
+        "type": "textInput",
+        "answer": "Quick sort picks an element as a pivot and partitions the given array around the picked pivot.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of merge sort?",
+        "type": "textInput",
+        "answer": "O(n log n)",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Searching algorithms (Hashing)",
+    "questions": [
+      {
+        "question": "What is the purpose of hashing?",
+        "type": "mcq",
+        "options": [
+          "To organize data in a structured manner",
+          "To locate a specific item in a collection of data",
+          "To delete elements from a data structure",
+          "To map data to keys in a hash table for efficient retrieval"
+        ],
+        "answer": "To map data to keys in a hash table for efficient retrieval",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Explain the process of hashing.",
+        "type": "textInput",
+        "answer": "Hashing involves using a hash function to map data to keys in a hash table, where the data can be efficiently retrieved based on its key.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is a collision resolution technique used in hashing?",
+        "type": "mcq",
+        "options": [
+          "Linear probing",
+          "Merge sort",
+          "Bubble sort",
+          "Selection sort"
+        ],
+        "answer": "Linear probing",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity for retrieving an element from a hash table using hashing?",
+        "type": "textInput",
+        "answer": "O(1)",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Graph algorithms (Shortest path algorithms like Dijkstra's, Minimum Spanning Tree algorithms like Prim's and Kruskal's)",
+    "questions": [
+      {
+        "question": "What is the purpose of shortest path algorithms like Dijkstra's?",
+        "type": "mcq",
+        "options": [
+          "To find the longest path between two nodes in a graph",
+          "To find the shortest path between two nodes in a graph",
+          "To sort elements in a collection of data",
+          "To locate a specific item in a collection of data"
+        ],
+        "answer": "To find the shortest path between two nodes in a graph",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is Dijkstra's algorithm?",
+        "type": "textInput",
+        "answer": "Dijkstra's algorithm is a graph search algorithm that finds the shortest path between nodes in a graph with non-negative edge weights.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of Dijkstra's algorithm?",
+        "type": "textInput",
+        "answer": "O(V^2) or O(E log V) with a min-priority queue",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is a minimum spanning tree?",
+        "type": "mcq",
+        "options": [
+          "A binary tree with the least number of nodes",
+          "A tree that connects all the nodes in a graph with the minimum number of edges",
+          "A binary tree with the maximum height",
+          "A tree with the maximum number of nodes"
+        ],
+        "answer": "A tree that connects all the nodes in a graph with the minimum number of edges",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Dynamic Programming",
+    "questions": [
+      {
+        "question": "What is dynamic programming?",
+        "type": "mcq",
+        "options": [
+          "A programming paradigm that involves using dynamic variables",
+          "A programming technique used to solve problems by breaking them down into simpler subproblems",
+          "A programming language",
+          "A sorting algorithm"
+        ],
+        "answer": "A programming technique used to solve problems by breaking them down into simpler subproblems",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is memoization?",
+        "type": "textInput",
+        "answer": "Memoization is a technique used in dynamic programming to store the results of expensive function calls and reuse them when the same inputs occur again.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of dynamic programming solutions?",
+        "type": "textInput",
+        "answer": "It varies depending on the problem and the specific dynamic programming approach used.",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Give an example of a problem that can be solved using dynamic programming.",
+        "type": "textInput",
+        "answer": "The Fibonacci sequence, shortest path problems, knapsack problem, etc.",
+        "category": "Logical",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Greedy algorithms",
+    "questions": [
+      {
+        "question": "What are greedy algorithms?",
+        "type": "mcq",
+        "options": [
+          "Algorithms that always make the optimal choice at each step with the hope of finding a global optimum",
+          "Algorithms that make locally optimal choices at each step with the hope of finding a global optimum",
+          "Algorithms that make suboptimal choices",
+          "Algorithms that make random choices"
+        ],
+        "answer": "Algorithms that make locally optimal choices at each step with the hope of finding a global optimum",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Explain the process of Huffman coding.",
+        "type": "textInput",
+        "answer": "Huffman coding is a greedy algorithm used for lossless data compression. It builds a variable-length prefix code tree based on the frequency of occurrence of each character in the input text.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of Huffman coding?",
+        "type": "textInput",
+        "answer": "O(n log n)",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is an example of a problem that can be solved using greedy algorithms?",
+        "type": "textInput",
+        "answer": "The coin change problem, scheduling problems, etc.",
+        "category": "Logical",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Recursion and backtracking",
+    "questions": [
+      {
+        "question": "What is recursion?",
+        "type": "mcq",
+        "options": [
+          "A programming technique that uses a loop structure",
+          "A programming technique that uses functions that call themselves",
+          "A programming technique that uses dynamic programming",
+          "A programming technique that uses greedy algorithms"
+        ],
+        "answer": "A programming technique that uses functions that call themselves",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is backtracking?",
+        "type": "textInput",
+        "answer": "Backtracking is a technique used to solve problems by trying different paths sequentially and abandoning a path as soon as it determines that the path cannot lead to a solution.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "Give an example of a problem that can be solved using recursion.",
+        "type": "textInput",
+        "answer": "Factorial calculation, Fibonacci sequence, etc.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of backtracking algorithms?",
+        "type": "textInput",
+        "answer": "It varies depending on the problem and the specific backtracking approach used.",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Divide and conquer",
+    "questions": [
+      {
+        "question": "What is the divide and conquer strategy?",
+        "type": "mcq",
+        "options": [
+          "A programming paradigm that divides the code into small, manageable parts",
+          "A programming technique that breaks down a problem into sub-problems of the same or related type, until they become simple enough to be solved directly",
+          "A programming language feature",
+          "A sorting algorithm"
+        ],
+        "answer": "A programming technique that breaks down a problem into sub-problems of the same or related type, until they become simple enough to be solved directly",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Explain the process of merge sort using the divide and conquer strategy.",
+        "type": "textInput",
+        "answer": "Merge sort divides the array into two halves, recursively sorts the two halves, and then merges the sorted halves.",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is the time complexity of merge sort using the divide and conquer strategy?",
+        "type": "textInput",
+        "answer": "O(n log n)",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "Give an example of a problem that can be solved using the divide and conquer strategy.",
+        "type": "textInput",
+        "answer": "Binary search, finding the maximum subarray sum, etc.",
+        "category": "Logical",
+        "programming_language": null
+      }
+    ]
+  },
+  {
+    "topic": "Bit manipulation",
+    "questions": [
+      {
+        "question": "What is bit manipulation?",
+        "type": "mcq",
+        "options": [
+          "A programming technique that uses bitwise operators to manipulate individual bits of an integer",
+          "A sorting algorithm",
+          "A loop structure",
+          "A programming technique that uses recursion"
+        ],
+        "answer": "A programming technique that uses bitwise operators to manipulate individual bits of an integer",
+        "category": "Conceptual",
+        "programming_language": null
+      },
+      {
+        "question": "What is the bitwise AND operator?",
+        "type": "mcq",
+        "options": [
+          "&",
+          "|",
+          "^",
+          "~"
+        ],
+        "answer": "&",
+        "category": "Syntax",
+        "programming_language": null
+      },
+      {
+        "question": "What is the result of 5 << 2?",
+        "type": "textInput",
+        "answer": "20",
+        "category": "Logical",
+        "programming_language": null
+      },
+      {
+        "question": "What is the purpose of using bit manipulation?",
+        "type": "textInput",
+        "answer": "To perform operations at the bit level such as setting, clearing, or toggling bits, or extracting specific bits from an integer.",
+        "category": "Conceptual",
+        "programming_language": null
+      }
+    ]
+  }
+]

@@ -9,9 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/auth-helpers-nextjs": "^0.9.0",
-    "@supabase/supabase-js": "^2.39.8",
-    "next": "14.1.1",
     "@emotion/cache": "^11.11.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
@@ -19,12 +16,16 @@
     "@mui/material": "^5.15.14",
     "@mui/material-nextjs": "^5.15.11",
     "@mui/x-charts": "^6.19.5",
+    "@supabase/auth-helpers-nextjs": "^0.9.0",
     "@supabase/ssr": "^0.1.0",
+    "@supabase/supabase-js": "^2.39.8",
     "bootstrap": "^5.3.3",
     "flowbite": "^2.3.0",
     "flowbite-react": "^0.7.3",
+    "next": "14.1.1",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "recharts": "^2.12.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
