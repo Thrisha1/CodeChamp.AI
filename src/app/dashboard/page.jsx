@@ -35,7 +35,6 @@ export const page = () => {
     
     return (
         <div className="h-screen overflow-hidden">
-            <Navbar />
             <div className="h-full pb-32 flex">
                 <SideBar />
                 <div className="w-1/2 mr-20">

@@ -1,0 +1,442 @@
+[
+    {
+      "Topic": "Variables, data types, and operators",
+      "Level": "Beginner",
+      "Question": "Write a program to calculate the area of a rectangle given its length and width.",
+      "Input": {"length": 5, "width": 3},
+      "Output": 15
+    },
+    {
+      "Topic": "Variables, data types, and operators",
+      "Level": "Intermediate",
+      "Question": "Create a program to convert temperature from Celsius to Fahrenheit.",
+      "Input": {"celsius": 32},
+      "Output": 89.6
+    },
+    {
+      "Topic": "Variables, data types, and operators",
+      "Level": "Advanced",
+      "Question": "Write a function to calculate the factorial of a given number using recursion.",
+      "Input": 5,
+      "Output": 120
+    },
+    {
+      "Topic": "Control flow (if statements, loops)",
+      "Level": "Beginner",
+      "Question": "Write a program to check if a number is even or odd using if-else statements.",
+      "Input": 7,
+      "Output": "Odd"
+    },
+    {
+      "Topic": "Control flow (if statements, loops)",
+      "Level": "Intermediate",
+      "Question": "Create a program to find the largest among three numbers using nested if-else statements.",
+      "Input": [5, 10, 7],
+      "Output": 10
+    },
+    {
+      "Topic": "Control flow (if statements, loops)",
+      "Level": "Advanced",
+      "Question": "Write a program to generate Fibonacci series up to n terms using a while loop.",
+      "Input": 8,
+      "Output": [0, 1, 1, 2, 3, 5, 8, 13]
+    },
+    {
+      "Topic": "Functions and recursion",
+      "Level": "Beginner",
+      "Question": "Create a function to add two numbers.",
+      "Input": {"num1": 5, "num2": 3},
+      "Output": 8
+    },
+    {
+      "Topic": "Functions and recursion",
+      "Level": "Intermediate",
+      "Question": "Write a recursive function to calculate the nth term of the Fibonacci series.",
+      "Input": 6,
+      "Output": 5
+    },
+    {
+      "Topic": "Functions and recursion",
+      "Level": "Advanced",
+      "Question": "Implement the Tower of Hanoi problem using recursion.",
+      "Input": {"n": 3, "source": "A", "auxiliary": "B", "destination": "C"},
+      "Output": [["Move disk 1 from A to C"], ["Move disk 2 from A to B"], ["Move disk 1 from C to B"], ["Move disk 3 from A to C"], ["Move disk 1 from B to A"], ["Move disk 2 from B to C"], ["Move disk 1 from A to C"]]
+    },
+    {
+      "Topic": "Arrays and strings",
+      "Level": "Beginner",
+      "Question": "Write a program to find the largest element in an array.",
+      "Input": [3, 5, 2, 9, 7],
+      "Output": 9
+    },
+    {
+      "Topic": "Arrays and strings",
+      "Level": "Intermediate",
+      "Question": "Create a function to reverse a given string.",
+      "Input": "hello",
+      "Output": "olleh"
+    },
+    {
+      "Topic": "Arrays and strings",
+      "Level": "Advanced",
+      "Question": "Write a program to check if two strings are anagrams.",
+      "Input": {"str1": "listen", "str2": "silent"},
+      "Output": true
+    },
+    {
+      "Topic": "Arrays",
+      "Level": "Beginner",
+      "Question": "Implement a program to find the sum of all elements in an array.",
+      "Input": [1, 2, 3, 4, 5],
+      "Output": 15
+    },
+    {
+      "Topic": "Arrays",
+      "Level": "Intermediate",
+      "Question": "Write a function to find the second largest element in an array.",
+      "Input": [7, 3, 9, 5, 2],
+      "Output": 7
+    },
+    {
+      "Topic": "Arrays",
+      "Level": "Advanced",
+      "Question": "Create a program to rotate an array to the right by k steps.",
+      "Input": {"array": [1, 2, 3, 4, 5], "k": 2},
+      "Output": [4, 5, 1, 2, 3]
+    },
+    {
+      "Topic": "Linked Lists (Singly and Doubly)",
+      "Level": "Beginner",
+      "Question": "Implement a program to insert a node at the end of a singly linked list.",
+      "Input": {"linked_list": [1, 2, 3], "value": 4},
+      "Output": [1, 2, 3, 4]
+    },
+    {
+      "Topic": "Linked Lists (Singly and Doubly)",
+      "Level": "Intermediate",
+      "Question": "Write a function to delete a node with a given value from a doubly linked list.",
+      "Input": {"linked_list": [1, 2, 3, 4, 5], "value": 3},
+      "Output": [1, 2, 4, 5]
+    },
+    {
+      "Topic": "Linked Lists (Singly and Doubly)",
+      "Level": "Advanced",
+      "Question": "Create a program to reverse a doubly linked list.",
+      "Input": [1, 2, 3, 4, 5],
+      "Output": [5, 4, 3, 2, 1]
+    },
+    {
+      "Topic": "Stacks and Queues",
+      "Level": "Beginner",
+      "Question": "Implement a stack using an array and write functions to push and pop elements.",
+      "Input": "push(3), push(5), pop(), push(2)",
+      "Output": [3, 2]
+    },
+    {
+      "Topic": "Stacks and Queues",
+      "Level": "Intermediate",
+      "Question": "Create a program to check if a given string is a palindrome using a queue.",
+      "Input": "radar",
+      "Output": true
+    },
+    {
+      "Topic": "Stacks and Queues",
+      "Level": "Advanced",
+      "Question": "Write a function to implement a priority queue using a max heap.",
+      "Input": ["enqueue(3), enqueue(5), enqueue(2), dequeue()"],
+      "Output": 5
+    },
+    {
+      "Topic": "Sorting algorithms (Bubble sort, Insertion sort, Selection sort)",
+      "Level": "Beginner",
+      "Question": "Implement the Bubble Sort algorithm to sort an array in ascending order.",
+      "Input": [1, 4, 2, 5, 3],
+      "Output": [1, 2, 3, 4, 5]
+    },
+    {
+      "Topic": "Sorting algorithms (Bubble sort, Insertion sort, Selection sort)",
+      "Level": "Intermediate",
+      "Question": "Write a program to sort an array of strings in lexicographical order using Insertion Sort.",
+      "Input": ["banana", "apple", "orange", "grape"],
+      "Output": ["apple", "banana", "grape", "orange"]
+    },
+    {
+      "Topic": "Sorting algorithms (Bubble sort, Insertion sort, Selection sort)",
+      "Level": "Advanced",
+      "Question": "Implement the Selection Sort algorithm to sort an array in descending order.",
+      "Input": [5, 3, 8, 2, 7],
+      "Output": [8, 7, 5, 3, 2]
+    },
+    {
+      "Topic": "Searching algorithms (Linear search, Binary search)",
+      "Level": "Beginner",
+      "Question": "Create a program to search for a given element in an array using linear search.",
+      "Input": {"array": [1, 3, 5, 7, 9], "element": 5},
+      "Output": true
+    },
+    {
+      "Topic": "Searching algorithms (Linear search, Binary search)",
+      "Level": "Intermediate",
+      "Question": "Write a function to perform binary search on a sorted array and return the index of the target element.",
+      "Input": {"array": [2, 4, 6, 8, 10], "target": 6},
+      "Output": 2
+    },
+    {
+      "Topic": "Searching algorithms (Linear search, Binary search)",
+      "Level": "Advanced",
+      "Question": "Implement interpolation search to find the position of a given value in a sorted array of integers.",
+      "Input": {"array": [10, 20, 30, 40, 50], "value": 30},
+      "Output": 2
+    },
+    {
+      "Topic": "Trees (Binary trees, Binary search trees, AVL trees, Red-black trees)",
+      "Level": "Beginner",
+      "Question": "Implement a program to perform inorder traversal of a binary tree.",
+      "Input": [3, 9, 20, null, null, 15, 7],
+      "Output": [9, 3, 15, 20, 7]
+    },
+    {
+      "Topic": "Trees (Binary trees, Binary search trees, AVL trees, Red-black trees)",
+      "Level": "Intermediate",
+      "Question": "Write a function to check if a binary tree is a binary search tree.",
+      "Input": [2, 1, 3],
+      "Output": true
+    },
+    {
+      "Topic": "Trees (Binary trees, Binary search trees, AVL trees, Red-black trees)",
+      "Level": "Advanced",
+      "Question": "Implement the AVL tree insertion algorithm.",
+      "Input": [10, 20, 30, 40, 50],
+      "Output": [30, 20, 40, 10, null, null, 50]
+    },
+    {
+      "Topic": "Graphs (Representation, traversal algorithms like BFS and DFS)",
+      "Level": "Beginner",
+      "Question": "Create a program to perform breadth-first search (BFS) traversal of a graph.",
+      "Input": {"graph": {"A": ["B", "C"], "B": ["A", "D", "E"], "C": ["A", "F"], "D": ["B"], "E": ["B", "F"], "F": ["C", "E"]}, "start": "A"},
+      "Output": ["A", "B", "C", "D", "E", "F"]
+    },
+    {
+      "Topic": "Graphs (Representation, traversal algorithms like BFS and DFS)",
+      "Level": "Intermediate",
+      "Question": "Write a program to perform depth-first search (DFS) traversal of a graph.",
+      "Input": {"graph": {"A": ["B", "C"], "B": ["A", "D", "E"], "C": ["A", "F"], "D": ["B"], "E": ["B", "F"], "F": ["C", "E"]}, "start": "A"},
+      "Output": ["A", "B", "D", "E", "F", "C"]
+    },
+    {
+      "Topic": "Graphs (Representation, traversal algorithms like BFS and DFS)",
+      "Level": "Advanced",
+      "Question": "Implement the Kruskal's algorithm to find the minimum spanning tree of a graph.",
+      "Input": {"graph": {"A": {"B": 4, "F": 2}, "B": {"A": 4, "C": 6, "F": 3}, "C": {"B": 6, "F": 5, "D": 3}, "D": {"C": 3, "F": 1, "E": 7}, "E": {"D": 7, "F": 8}, "F": {"A": 2, "B": 3, "C": 5, "D": 1, "E": 8}}},
+      "Output": {"A": {"F": 2}, "F": {"A": 2, "D": 1}, "D": {"F": 1}, "B": {"F": 3}, "C": {"D": 3}, "E": {"D": 7}}
+    },
+    {
+      "Topic": "Heaps (Min heap, Max heap)",
+      "Level": "Beginner",
+      "Question": "Implement a program to build a max heap from an array of integers.",
+      "Input": [3, 5, 2, 9, 7],
+      "Output": [9, 7, 2, 3, 5]
+    },
+    {
+      "Topic": "Heaps (Min heap, Max heap)",
+      "Level": "Intermediate",
+      "Question": "Write a function to perform heap sort on an array of integers in ascending order.",
+      "Input": [5, 3, 8, 2, 7],
+      "Output": [2, 3, 5, 7, 8]
+    },
+    {
+      "Topic": "Heaps (Min heap, Max heap)",
+      "Level": "Advanced",
+      "Question": "Create a program to implement a priority queue using a min heap.",
+      "Input": ["enqueue(3), enqueue(5), enqueue(2), dequeue()"],
+      "Output": 2
+    },
+    {
+      "Topic": "Hash tables",
+      "Level": "Beginner",
+      "Question": "Implement a program to store and retrieve student names and their corresponding grades using a hash table.",
+      "Input": {"Alice": 85, "Bob": 90, "Charlie": 80},"Output": {"Alice": 85, "Bob": 90, "Charlie": 80}
+    },
+    {
+      "Topic": "Hash tables",
+      "Level": "Intermediate",
+      "Question": "Write a function to check if two given strings are anagrams using hash tables.",
+      "Input": {"str1": "listen", "str2": "silent"},
+      "Output": true
+    },
+    {
+      "Topic": "Hash tables",
+      "Level": "Advanced",
+      "Question": "Create a program to find the longest substring without repeating characters using a hash table.",
+      "Input": "abcabcbb",
+      "Output": "abc"
+    },
+    {
+      "Topic": "Sorting algorithms (Merge sort, Quick sort)",
+      "Level": "Beginner",
+      "Question": "Implement the Merge Sort algorithm to sort an array in ascending order.",
+      "Input": [3, 1, 4, 2, 5],
+      "Output": [1, 2, 3, 4, 5]
+    },
+    {
+      "Topic": "Sorting algorithms (Merge sort, Quick sort)",
+      "Level": "Intermediate",
+      "Question": "Write a program to sort an array of strings using Quick Sort.",
+      "Input": ["banana", "apple", "orange", "grape"],
+      "Output": ["apple", "banana", "grape", "orange"]
+    },
+    {
+      "Topic": "Sorting algorithms (Merge sort, Quick sort)",
+      "Level": "Advanced",
+      "Question": "Implement the Quick Sort algorithm to sort an array in descending order.",
+      "Input": [5, 3, 8, 2, 7],
+      "Output": [8, 7, 5, 3, 2]
+    },
+    {
+      "Topic": "Searching algorithms (Hashing)",
+      "Level": "Beginner",
+      "Question": "Create a program to search for a given element in an array using hash table.",
+      "Input": {"array": [1, 3, 5, 7, 9], "element": 5},
+      "Output": true
+    },
+    {
+      "Topic": "Searching algorithms (Hashing)",
+      "Level": "Intermediate",
+      "Question": "Write a function to perform linear probing for collision resolution in a hash table.",
+      "Input": {"hash_table": {"0": "Alice", "1": "Bob", "2": "", "3": "Charlie", "4": ""}, "key": "David"},
+      "Output": {"0": "Alice", "1": "Bob", "2": "David", "3": "Charlie", "4": ""}
+    },
+    {
+      "Topic": "Searching algorithms (Hashing)",
+      "Level": "Advanced",
+      "Question": "Implement the Rabin-Karp algorithm for string matching.",
+      "Input": {"text": "abxabcabcaby", "pattern": "abcaby"},
+      "Output": 7
+    },
+    {
+      "Topic": "Graph algorithms (Shortest path algorithms like Dijkstra's, Minimum Spanning Tree algorithms like Prim's and Kruskal's)",
+      "Level": "Beginner",
+      "Question": "Create a program to find the shortest path between two nodes in a graph using Dijkstra's algorithm.",
+      "Input": {"graph": {"A": {"B": 4, "C": 2}, "B": {"A": 4, "D": 5}, "C": {"A": 2, "D": 1}, "D": {"B": 5, "C": 1}}, "start": "A", "end": "D"},
+      "Output": ["A", "C", "D"]
+    },
+    {
+      "Topic": "Graph algorithms (Shortest path algorithms like Dijkstra's, Minimum Spanning Tree algorithms like Prim's and Kruskal's)",
+      "Level": "Intermediate",
+      "Question": "Write a program to find the minimum spanning tree of a graph using Prim's algorithm.",
+      "Input": {"graph": {"A": {"B": 2, "C": 3}, "B": {"A": 2, "C": 1, "D": 1}, "C": {"A": 3, "B": 1, "D": 1}, "D": {"B": 1, "C": 1}}, "start": "A"},
+      "Output": {"A": {"B": 2}, "B": {"A": 2, "C": 1}, "C": {"B": 1}, "D": {}}
+    },
+    {
+      "Topic": "Graph algorithms (Shortest path algorithms like Dijkstra's, Minimum Spanning Tree algorithms like Prim's and Kruskal's)",
+      "Level": "Advanced",
+      "Question": "Implement Kruskal's algorithm to find the minimum spanning tree of a graph.",
+      "Input": {"graph": {"A": {"B": 4, "F": 2}, "B": {"A": 4, "C": 6, "F": 3}, "C": {"B": 6, "F": 5, "D": 3}, "D": {"C": 3, "F": 1, "E": 7}, "E": {"D": 7, "F": 8}, "F": {"A": 2, "B": 3, "C": 5, "D": 1, "E": 8}}},
+      "Output": {"A": {"F": 2}, "F": {"A": 2, "D": 1}, "D": {"F": 1}, "B": {"F": 3}, "C": {"D": 3}, "E": {"D": 7}}
+    },
+    {
+      "Topic": "Dynamic Programming",
+      "Level": "Beginner",
+      "Question": "Create a program to find the nth Fibonacci number using dynamic programming.",
+      "Input": 6,
+      "Output": 8
+    },
+    {
+      "Topic": "Dynamic Programming",
+      "Level": "Intermediate",
+      "Question": "Write a function to find the length of the longest increasing subsequence in an array using dynamic programming.",
+      "Input": [10, 9, 2, 5, 3, 7, 101, 18],
+      "Output": 4
+    },
+    {
+      "Topic": "Dynamic Programming",
+      "Level": "Advanced",
+      "Question": "Implement the 0-1 Knapsack problem using dynamic programming.",
+      "Input": {"weights": [1, 2, 3], "values": [60, 100, 120], "capacity": 5},
+      "Output": 220
+    },
+    {
+      "Topic": "Greedy algorithms",
+      "Level": "Beginner",
+      "Question": "Create a program to find the minimum number of coins required to make a given amount using a greedy algorithm.",
+      "Input": {"coins": [1, 5, 10, 25], "amount": 32},
+      "Output": 4
+    },
+    {
+      "Topic": "Greedy algorithms",
+      "Level": "Intermediate",
+      "Question": "Write a function to schedule tasks in such a way that the CPU remains idle for the least amount of time using a greedy algorithm.",
+      "Input": {"tasks": [1, 1, 2, 1], "n": 2},
+      "Output": 7
+    },
+    {
+      "Topic": "Greedy algorithms",
+      "Level": "Advanced",
+      "Question": "Implement Huffman coding algorithm to compress a given string.",
+      "Input": "aabbbbbbbbbccddddddddddddd",
+      "Output": "011010101010101010101011111111111111111100000000000000"
+    },
+    {
+      "Topic": "Recursion and backtracking",
+      "Level": "Beginner",
+      "Question": "Create a recursive function to calculate the factorial of a given number.",
+      "Input": 5,
+      "Output": 120
+    },
+    {
+      "Topic": "Recursion and backtracking",
+      "Level": "Intermediate",
+      "Question": "Write a program to generate all possible permutations of a given string using recursion.",
+      "Input": "abc",
+      "Output": ["abc", "acb", "bac", "bca", "cab", "cba"]
+    },
+    {
+      "Topic": "Recursion and backtracking",
+      "Level": "Advanced",
+      "Question": "Implement the N-Queens problem using backtracking.",
+      "Input": 4,
+      "Output": [[".Q..", "...Q", "Q...", "..Q."], ["..Q.", "Q...", "...Q", ".Q.."]]
+    },
+    {
+      "Topic": "Divide and conquer",
+      "Level": "Beginner",
+      "Question": "Create a program to find the maximum element in an array using divide and conquer approach.",
+      "Input": [3, 5, 2, 9, 7],
+      "Output": 9
+    },
+    {
+      "Topic": "Divide and conquer",
+      "Level": "Intermediate",
+      "Question": "Write a function to merge two sorted arrays into a single sorted array using divide and conquer approach.",
+      "Input": {"arr1": [1, 3, 5], "arr2": [2, 4, 6]},
+      "Output": [1, 2, 3, 4, 5, 6]
+    },
+    {
+      "Topic": "Divide and conquer",
+      "Level": "Advanced",
+      "Question": "Implement the Closest Pair of Points problem using divide and conquer approach.",
+      "Input": [{"x": [2, 4, 7, 9, 12], "y": [3, 5, 8, 10, 15]}],
+      "Output": {"point1": [7, 8], "point2": [9, 10]}
+    },
+    {
+      "Topic": "Bit manipulation",
+      "Level": "Beginner",
+      "Question": "Create a program to check if a given number is even or odd using bitwise operators.",
+      "Input": 7,
+      "Output": "Odd"
+    },
+    {
+      "Topic": "Bit manipulation",
+      "Level": "Intermediate",
+      "Question": "Write a function to count the number of set bits in a given integer using bitwise operators.",
+      "Input": 12,
+      "Output": 2
+    },
+    {
+      "Topic": "Bit manipulation",
+      "Level": "Advanced",
+      "Question": "Implement the Gray Code algorithm to generate a sequence of binary numbers without repetition.",
+      "Input": 3,
+      "Output": [0, 1, 3, 2]
+    }
+  ]

@@ -1,6 +1,27 @@
-import React from "react";
-
+"use client";
+import React, { useState } from "react";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { useEffect } from "react";
 const Navbar = () => {
+  const [user, setUser] = useState(null);
+  const router = useRouter();
+  const supabase = createClientComponentClient();
+  useEffect(() => {
+    async function getUser() {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      setUser(user);
+    }
+    getUser();
+  }, []);
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    router.refresh();
+    setUser(null);
+  };
   return (
     <header className="antialiased bg-black">
       <nav className="px-4 lg:px-6 py-2.5 bg-dark-blue items-center">
@@ -48,9 +69,12 @@ const Navbar = () => {
               <option>Telugu</option>
               <option>Arabic</option>
             </select>
-            <button className="border-2 border-green-500 hover:bg-green-500 duration-300 ease-in-out px-6 py-1  text-white rounded-lg ml-4">
-              Sign In
-            </button>
+            {!user && (<Link href="/login" className="border-2 border-green-500 hover:bg-green-500 duration-300 ease-in-out px-6 py-1  text-white rounded-lg ml-4">
+              Log In
+            </Link>)}
+            {user && (<button onClick={handleLogout} className="border-2 border-green-500 hover:bg-green-500 duration-300 ease-in-out px-6 py-1  text-white rounded-lg ml-4">
+              Log Out
+            </button>)}
           </div>
         </div>
       </nav>
