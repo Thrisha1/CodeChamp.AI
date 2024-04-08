@@ -40,15 +40,29 @@ export default function LoginPage() {
           emailRedirectTo: `${location.origin}/auth/callback`,
         },
       });
+    
+      // Insert email into student_test_data table
+      const { data, error } = await supabase
+        .from('student_test_data')
+        .insert([{ email: res.data.user.email, name: "ammu"}])
+        .select();
+    
+      if (error) {
+        console.error("Error inserting email:", error.message);
+        // Handle error as needed
+      }
+    
+      // Update user state, refresh router, and clear form inputs
       setUser(res.data.user);
       router.refresh();
       setEmail("");
       setPassword("");
       setConfirmPassword("");
-      setNewUser(false) // Clear the confirm password input
+      setNewUser(false); // Clear the confirm password input
     } catch (error) {
       console.error("Error signing up:", error.message);
     }
+    
   };
   
   const handleSignIn = async () => {
