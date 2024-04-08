@@ -16,7 +16,7 @@ const Navbar = () => {
       setUser(user);
       // console.log("user", user);
     }
-    getUser();
+    getUser();  
   }, []);
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -88,7 +88,9 @@ const Navbar = () => {
             )}
             {user && (
               <div className="flex text-white justify-center items-center">
-                <h1>Welcome back {user?.email}!</h1>
+                <h1>Welcome back {
+                  user?.email ? user?.email : "Hacker.."
+                  } !</h1>
                 <button
                   onClick={handleLogout}
                   className="border-2 border-green-500 hover:bg-green-500 duration-300 ease-in-out px-6 py-1  text-white rounded-lg ml-4"
